@@ -1,0 +1,223 @@
+<div class="pt-5 pb-5 mt-md-3 mb-3 mym">
+  <div class="row rounded" id="main">
+    <div class="row">
+      <div class="col-md-3">
+        <img
+          alt="image"
+          style="width: 150px; height: 150px"
+          class="rounded-circle m-2"
+        />
+      </div>
+      <div class="col-6">
+        <div class="row mt-md-3 mb-1">
+          <h4 class="col-12" style="color: #054a84">
+            {{ Job.jobRequirments.basicInformation.positionOffered }}
+          </h4>
+        </div>
+        <div class="row mt-md-3 mb-1">
+          <h4 class="col-12" style="color: #054a84">
+            {{ Job.jobDetails.jobTitle }}
+          </h4>
+        </div>
+        <div class="row mt-md-3 mb-1">
+          <h4 class="col-12" style="color: #054a84">
+            {{ Job.jobDetails.jobDescription }}
+          </h4>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-12" style="color: black">
+            {{ Job.jobRequirments.basicInformation.type }}
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-md-12" style="color: black">
+            Starting From {{ Job.jobRequirments.basicInformation.startDate }}
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <!-- <button class="btn btn-success" (click)="handleContact(mycandidate.id)">
+          Cotact me
+        </button> -->
+      </div>
+    </div>
+  </div>
+  <div class="row pt-3 pb-3" style="background-color: #eee">
+    <div class="row">
+      <h3 class="col-12 text-center">professional info</h3>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-5">
+        <p>
+          {{ Job.jobRequirments.candidatePreference.gender }} Gender Required
+        </p>
+      </div>
+      <div class="col-5">
+        <p>
+          Contract Type :
+          {{ Job.jobRequirments.candidatePreference.preferedCandidateContract }}
+        </p>
+      </div>
+      <div class="col-5">
+        <p>
+          It is prefered if candidate is in :
+          {{ Job.jobRequirments.candidatePreference.preferedCandidateLocation }}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <!-- <div class="col-5">
+        {{ Job.jobRequirments.candidatePreference.ExperienceYearsRequired[1] }}
+        years experience Required
+      </div>
+      <div class="col-5">
+        {{ Job.jobRequirments.candidatePreference.AgeRequired[0] }} To
+        {{ Job.jobRequirments.candidatePreference.AgeRequired[1] }} Years
+        Required
+      </div> -->
+    </div>
+  </div>
+  <div class="row pt-3 pb-3">
+    <div class="row">
+      <h3 class="col-12 text-center">Skills info</h3>
+    </div>
+    <!-- // -->
+    <div class="mb-2">
+      <div class="row">
+        <div class="col-4">
+          <h4 style="color: #054a84">Languages</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div
+            *ngFor="
+              let lang of Job.jobRequirments.requiredSkillsAndDuties
+                .languageSkills
+            "
+          >
+            <p>{{ lang }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // -->
+    <div class="row pt-3 pb-3">
+      <div class="row">
+        <div class="col-4">
+          <h5 style="color: #054a84">Main Skills</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <ng-container
+            *ngFor="
+              let skill of Job.jobRequirments.requiredSkillsAndDuties.mainSkills
+            "
+          >
+            <span>{{ skill }} |</span>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- // -->
+    <!-- // -->
+    <div>
+      <div class="row">
+        <div class="col-4">
+          <h5 style="color: #054a84">Cooking Skills</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <ng-container
+            *ngFor="
+              let skill of Job.jobRequirments.requiredSkillsAndDuties
+                .cookingSkills
+            "
+          >
+            <span>{{ skill }} |</span>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="row">
+        <div class="col-4">
+          <h5 style="color: #054a84">Most Important Skills</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <ng-container
+            *ngFor="
+              let skill of Job.jobRequirments.requiredSkillsAndDuties
+                .mostImportantSkills
+            "
+          >
+            <span>{{ skill }} |</span>
+          </ng-container>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <ng-container
+            *ngFor="
+              let skill of Job.jobRequirments.requiredSkillsAndDuties
+                .otherSkills
+            "
+          >
+            <span>{{ skill }} |</span>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- // -->
+  </div>
+  <!-- ///////about me  -->
+  <div class="row pt-3 pb-3" style="background-color: #eee">
+    <div class="row">
+      <h3 class="col-12 text-center">About Employer</h3>
+    </div>
+    <div>
+      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
+        Employer Type : {{ Job.aboutYou.aboutYouSub.employerType.type }}
+      </p>
+    </div>
+    <div *ngIf="Job.aboutYou.aboutYouSub.employerType.type=='Family'">
+      <div>
+        <p class="text-center" style="max-width: 95%; word-wrap: break-word">
+          Employer Nationality :
+          {{ Job.aboutYou.aboutYouSub.employerType.nationality }}
+        </p>
+      </div>
+      <div>
+        <p class="text-center" style="max-width: 95%; word-wrap: break-word">
+          Have Pets : {{ Job.aboutYou.aboutYouSub.employerType.havePets }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row pt-3 pb-3" style="background-color: #eee">
+    <div class="row">
+      <h3 class="col-12 text-center">About Offers</h3>
+    </div>
+    <div>
+      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
+        Accomodation : {{ Job.aboutYou.offersToCandidate.accomodation }}
+      </p>
+    </div>
+    <div>
+      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
+        Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }}
+      </p>
+    </div>
+    <div>
+      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
+        Salary : {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title }}
+      </p>
+    </div>
+  </div>
+</div>

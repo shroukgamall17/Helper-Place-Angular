@@ -1,0 +1,102 @@
+<!-- Footer -->
+<footer class="text-center text-lg-start  text-muted">
+
+  <!-- Section: Links  -->
+  <section class="footerContain">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-lg-8 col-md-10 row">
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4 logo">
+            <img
+              src="./../../../assets/Images/logo.svg"
+              alt="logo"
+              width="65%"
+              class="mb-3"
+            />
+            <p class="">helper plan</p>
+          </h6>
+          <p class="fw-bolder ">Free of charges for any Domestic Helpers and Job seekers.</p>
+  
+    
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="pages col-md-4 col-xl-3 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-black text-uppercase fw-bold mb-4 text-white">Pages</h6>
+          <div>
+            <a routerLink="/aboutus">About Us</a>
+          </div>
+          <div>
+            <a routerLink="">Happy Employers</a>
+          </div>
+          <div>
+            <a routerLink="">News & Tips</a>
+          </div>
+          <div>
+            <a routerLink="/contactus">Contact Us</a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="pages col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase text-black  fw-bold mb-4 text-white">Useful links</h6>
+          <div>
+            <a class="text-reset" *ngIf="role != 'Employer'" routerLink="/job"
+              >Search & Find Job</a
+            >
+          </div>
+          <div>
+            <a
+              class="text-reset"
+              *ngIf="role != 'Candidate'"
+              routerLink="/candidatepage"
+              >Find Helpers, Maids or Drivers</a
+            >
+          </div>
+          <div>
+            <a class="text-reset" routerLink="/pricing">Pricing</a>
+          </div>
+        </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        
+        <div class="col-lg-4">
+          <p>
+            We connect Employers, Maid Agencies and Domestic Helpers in Philip
+            and Saudi Arabia.
+          </p>
+          <div class="Social-media mt-3">
+            <a><font color="#007cc4"><i class="fab fa-facebook "></i></font></a>
+            <a><font color="#007cc4"><i class="fab fa-linkedin"></i></font></a>
+            <a><font color="#007cc4"><i class="fab fa-whatsapp"></i></font></a>
+            <a><font color="#007cc4"><i class="fab fa-instagram"></i></font></a>
+            <a><font color="#007cc4"><i class="fab fa-youtube"></i></font></a>
+          </div>
+        </div>
+          
+        </div>
+        <!-- Grid column -->
+      </div>
+
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="p-4 text-white d-flex justify-content-between align-content-center" >
+    <span routerLink="">Privacy Policy </span>
+    <p>© 2024 HelperPlan — All Rights Reserved</p>
+    <span routerLink="">Terms and Conditions</span>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->

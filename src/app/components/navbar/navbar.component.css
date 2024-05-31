@@ -1,0 +1,40 @@
+img {
+  width: 40px;
+  height: 35px;
+}
+.navbar {
+  padding: 1%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+.nav-item,
+.btn,
+.navbar-brand {
+  font-size: 1.1vw;
+  margin-right: 10px;
+}
+.navbar-collapse {
+  justify-content: space-between;
+}
+
+.navbar-collapse .Buttons {
+ 
+  flex-direction: row;
+}
+.navbar-collapse .MainLinks {
+  justify-content: space-evenly;
+}
+.MainLinks li a:hover{
+  color: rgb(1, 1, 133);
+}
+.addJob {
+  cursor: pointer;
+}
+.taps{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: black;
+    
+}

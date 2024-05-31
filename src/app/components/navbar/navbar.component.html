@@ -1,0 +1,117 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+    <a class="nav-link" href="#"
+      ><img
+        src="assets/Images/icononly_transparent_nobuffer.png"
+        alt=""
+        id="logo"
+    /></a>
+  </a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span style="font-size: 10vh;">≡</span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav MainLinks">
+      <li class="nav-item">
+        <a class="nav-link taps" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item" *ngIf="Role == 'Employer'">
+        <a class="nav-link addJob taps" (click)="handleAddJob()">Add Job</a>
+      </li>
+      <li class="nav-item " *ngIf="Role != 'Employer'">
+        <a class="nav-link taps" routerLink="/job">Find Job</a>
+      </li>
+      <li class="nav-item" *ngIf="Role != 'Candidate'">
+        <a class="nav-link taps" routerLink="/candidatepage">Candidates</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link taps" routerLink="/agency">Agency Services</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link taps dropdown-toggle"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          News & More
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li class="nav-item">
+            <a class="dropdown-item taps" routerLink="/aboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item taps" routerLink="/pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="dropdown-item taps" routerLink="/contactus">Contact Us</a>
+          </li>
+          <div *ngIf="IsLogged">
+          <li *ngIf="Role=='Candidate'" class="nav-item">
+            <a
+              class="dropdown-item"
+              routerLink="/candidateResume/candidatePersonalInfo"
+              >add resume</a
+            >
+          </li>
+            <li class="nav-item">
+              <a class="dropdown-item" routerLink="myaccount/profile"
+                >My Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="dropdown-item" routerLink="myaccount/changepassword"
+                >Change Password</a
+              >
+            </li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+    <!-- <ul  class="navbar-nav Buttons">
+
+    </ul> -->
+    <ul *ngIf="!loginService.IsLogged" class="navbar-nav Buttons">
+      <li *ngIf="Role == 'Admin'" class="nav-item">
+        <a class="btn btn-outline-danger" routerLink="/dashboard">Admin Dashboard</a
+        ><!-- *ngIf="Role == 'Admin'" -->
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-success" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-warning " routerLink="/Login"
+          >Login</a
+        >
+      </li>
+    </ul>
+    <ul *ngIf="loginService.IsLogged" class="navbar-nav Buttons">
+      <li *ngIf="Role == 'Admin'" class="nav-item">
+        <a class="btn btn-outline-danger"    routerLink="/dashboard">Admin Dashboard</a
+        ><!-- *ngIf="Role == 'Admin'" -->
+      </li>
+      <li class="nav-item">
+        <a
+          (click)="loginService.LogOutUser()"
+          class="btn btn-outline-warning"
+          routerLink="/Login"
+          >Logout</a
+        >
+      </li>
+    </ul>
+    </div>
+    </div>
+</nav>
+
+
