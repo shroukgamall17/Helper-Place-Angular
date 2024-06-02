@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { Loginservice } from './components/login/LoginService/loginservice.service';
 import { PostJobComponent } from './components/post-job/post-job.component';
 import { DashboardLayoutComponent } from './components/Admin-Dashboard/dashboard-layout/dashboard-layout.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,6 +19,7 @@ import { DashboardLayoutComponent } from './components/Admin-Dashboard/dashboard
     NavbarComponent,
     PostJobComponent,
     DashboardLayoutComponent,
+    FontAwesomeModule
   ],
 })
 export class AppComponent {
