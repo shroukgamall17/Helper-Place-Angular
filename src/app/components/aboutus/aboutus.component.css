@@ -2,3 +2,7 @@
   margin-top: 100px;
   margin-bottom: 100px;
 }
+.bg-green {
+    background: #25ae88 !important;
+    color: #fff;
+}
