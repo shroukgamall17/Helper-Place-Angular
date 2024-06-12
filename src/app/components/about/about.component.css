@@ -1,0 +1,21 @@
+.primary {
+    color: #054a84 !important;
+}
+.content {
+    font-size: calc(16px + 3 * (100vw - 300px) / 1620) !important;
+    line-height: 1.7 !important;
+}
+ a {
+    color: #25ae88 !important;
+    font-size: calc(16px + 2 * (100vw - 300px) / 1620) !important;
+    text-decoration: none;
+}
+b, strong {
+    font-weight: bolder;
+}
+h3 {
+    line-height: 2.4 !important;
+}
+.agency h1, .agency h2, .agency h3, .agency h4, .agency h5, .agency h6 {
+    color: #054a84;
+}
