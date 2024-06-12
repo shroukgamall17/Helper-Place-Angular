@@ -1,73 +1,73 @@
-<div class="ms-3">
-  <div   id="main">
+<div class="filter ms-3 mt-5 ">
+  <div id="main" class="border border-opacity-25 border-black p-4">
     <!-- 1 -->
-    <div class="row">
-      <h3 class="col-12 bluecolor">I am looking for </h3>
+    <div class=" mt-5">
+      <h3 class=" bluecolor mb-4">I am looking for </h3>
     </div>
-<!-- 2 -->
-<div class="row">
-  <div class="col-3 bluecolor">Filter</div>
-  <div class="col-6"></div>
-  <a class="col-3 res " (click)="empty()">Reset</a>
+    <!-- 2 -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="bluecolor">Filter</div>
+      <div class="">
+        <a class=" res d-flex" (click)="empty()"> <fa-icon [icon]="faRotate"></fa-icon>Reset</a>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="">
+      <div class=" bluecolor">jop position </div>
+    </div>
+    <!-- 4 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    <!-- 5 -->
+    <div>
 
-</div>
-<!-- 3 -->
-<div class="row">
-  <div class="col-12 bluecolor">jop position </div>
-</div>
-<!-- 4 -->
-<div class="row">
-  <div class="col-12 greencolor" style="height: 3px; background-color: green;"> </div>
-</div>
-<!-- 5 -->
-<div >
+      <input id="f" type="radio" name="position" value="Helper" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Position" />
+      <label for="f">Domestic helper</label><br>
 
-  <input id="f" type="radio" name="position" value="Helper" (change)="filt()" [(ngModel)]="testingfilter.Position"/>
-  <label for="f">Domestic helper</label><br>
+      <input id="f" type="radio" name="position" value="Driver" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Position" />
+      <label for="f">Driver</label><br>
+    </div>
+    <!-- 6 -->
+    <div class="">
+      <div class="mt-3 bluecolor"> StartDate</div>
+    </div>
+    <!-- 7-->
+    <div class="">
+      <div class="mb-3">
+        <input type="date" class="form-control" (change)="filt()" [(ngModel)]="testingfilter.StartDate">
+      </div>
+    </div>
 
-  <input id="f" type="radio" name="position" value="Driver" (change)="filt()" [(ngModel)]="testingfilter.Position"/>
-  <label for="f">Driver</label><br>
+    <!-- 8-->
+    <div class="">
+      <div class="bluecolor"> job type </div>
+    </div>
+    <!-- 9 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    <!-- 10-->
+    <div>
 
-</div>
-<!-- 6 -->
-<div class="row">
-  <div class="col-12 bluecolor"> StartDate</div>
-</div>
-<!-- 7-->
-<div class="row">
-  <div class="col-12 ">
-    <input type="date" class="form-control" (change)="filt()" [(ngModel)]="testingfilter.StartDate" >
-  </div>
-</div>
+      <input id="ff" type="radio" name="jobtype" value="full-time" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Jobtype" />
+      <label for="ff">full time</label><br>
 
-<!-- 8-->
-<div class="row">
-  <div class="col-12 bluecolor"> job type </div>
-</div>
-<!-- 9 -->
-<div class="row">
-  <div class="col-12 greencolor " style="height: 3px; background-color: green;"> </div>
-</div>
-<!-- 10-->
-<div >
-
-    <input id="ff" type="radio" name="jobtype" value="full-time" (change)="filt()" [(ngModel)]="testingfilter.Jobtype"/>
-    <label for="ff">full time</label><br>
-
-    <input id="fff" type="radio" name="jobtype" value="part-time" (change)="filt()" [(ngModel)]="testingfilter.Jobtype"/>
-    <label for="fff">part time</label><br>
+      <input id="fff" type="radio" name="jobtype" value="part-time" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Jobtype" />
+      <label for="fff">part time</label><br>
 
 
-    <input id="ffff" type="radio" name="jobtype" value="temporary" (change)="filt()" [(ngModel)]="testingfilter.Jobtype"/>
-    <label for="ffff">temporory</label><br>
+      <input id="ffff" type="radio" name="jobtype" value="temporary" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Jobtype" />
+      <label for="ffff">temporory</label><br>
 
-</div>
-<!-- 9-->
-<!-- <div class="row">
+    </div>
+    <!-- 9-->
+    <!-- <div class="row">
   <div class="col-12 bluecolor"> Contract status</div>
 </div> -->
-<!-- still not -->
-<!-- <div class="row">
+    <!-- still not -->
+    <!-- <div class="row">
   <div class="col-12">
     <ng-multiselect-dropdown
   [placeholder]="'Contract status'"
@@ -82,125 +82,271 @@
   </div>
 </div> -->
 
-<!-- 11-->
-<div class="row">
-  <div class="col-12 bluecolor"> working experience </div>
-</div>
-<!-- 12 -->
-<div class="row">
-  <div class="col-12 greencolor " style="height: 3px; background-color: green;"> </div>
-</div>
-<!-- 14 -->
-<div class="row">
-  <div class="col-12 " >
-    <input class="form-control" type="number" placeholder="experience period" (change)="filt()" [(ngModel)]="testingfilter.Workexperience">
+    <!-- 11-->
+    <div class="">
+      <div class=" bluecolor"> working experience </div>
+    </div>
+    <!-- 12 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+
+    <!-- 14 -->
+    <div class="">
+      <div class="">
+        <input type="number" class="form-control" placeholder="experience period" (change)="filt()"
+         [(ngModel)]="testingfilter.Workexperience" max="40">
+      </div>
+    </div>
+    <!-- 15 -->
+
+    <div class="">
+      <div class=" bluecolor"> language </div>
+    </div>
+    <!-- 16 -->
+
+    <div class="">
+      <div class="">
+        <ng-multiselect-dropdown [placeholder]="'language'" [settings]="dropdownSettings" [data]="languageDropdownList"
+          [(ngModel)]="languageSelectedItems" (onSelect)="onItemSelect($event)" (onDeSelect)="onItemDeselect($event)"
+          (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeselectAll($event)">
+        </ng-multiselect-dropdown>
+      </div>
+    </div>
+    <!-- 17 -->
+
+    <div class="mt-3">
+      <div class=" bluecolor"> Main Skills </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="mb-3">
+      <div class="">
+        <ng-multiselect-dropdown [placeholder]="'Main Skills'" [settings]="dropdownSettings" [data]="skillsDropdownList"
+          [(ngModel)]="skillsSelectedItems" (onSelect)="onItemSelect2($event)" (onDeSelect)="onItemDeselect2($event)"
+          (onSelectAll)="onSelectAll2($event)" (onDeSelectAll)="onDeselectAll2($event)">
+        </ng-multiselect-dropdown>
+      </div>
+    </div>
+
+    <!-- 19 -->
+
+    <div class="">
+      <div class="bluecolor"> Gender </div>
+    </div>
+    <!-- 20 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+
+    <!-- 21-->
+    <div>
+      <input id="ff" type="radio" name="gender" class="me-3" value="Male" (change)="filt()"
+        [(ngModel)]="testingfilter.Gender" />
+      <label for="ff">Male</label><br>
+
+      <input id="fff" type="radio" name="gender" class="me-3" value="Female" (change)="filt()"
+        [(ngModel)]="testingfilter.Gender" />
+      <label for="fff">Female</label><br>
+
+    </div>
+    <!-- 22 -->
+    <div class="">
+      <div class=" bluecolor"> Age </div>
+    </div>
+    <!-- 23 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    <!-- 24 -->
+    <div class="">
+      <div class="">
+        <input type="number" class="form-control" placeholder="enter age" (change)="filt()"
+          [(ngModel)]="testingfilter.Age" min="18" max="60">
+      </div>
+    </div>
   </div>
 </div>
- <!-- 15 -->
 
-<div class="row">
-  <div class="col-12 bluecolor"> language </div>
-</div>
-<!-- 16 -->
 
-<div class="row">
+
+
+
+
+<div class="filterPopUp">
+
+<button type="button" class="btn" style="background-color: #054a84; color: white;" (click)="openModal()">Filter</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="main" class="border border-opacity-25 border-black p-4">
+    <!-- 1 -->
+    <div class=" mt-5">
+      <h3 class=" bluecolor mb-4">I am looking for </h3>
+    </div>
+    <!-- 2 -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="bluecolor">Filter</div>
+      <div class="">
+        <a class=" res d-flex" (click)="empty()"> <fa-icon [icon]="faRotate"></fa-icon>Reset</a>
+      </div>
+
+    </div>
+    <!-- 3 -->
+    <div class="">
+      <div class=" bluecolor">jop position </div>
+    </div>
+    <!-- 4 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    <!-- 5 -->
+    <div>
+
+      <input id="f" type="radio" name="position" value="Helper" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Position" />
+      <label for="f">Domestic helper</label><br>
+
+      <input id="f" type="radio" name="position" value="Driver" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Position" />
+      <label for="f">Driver</label><br>
+
+    </div>
+    <!-- 6 -->
+    <div class="">
+      <div class="mt-3 bluecolor"> StartDate</div>
+    </div>
+    <!-- 7-->
+    <div class="">
+      <div class="mb-3">
+        <input type="date" class="form-control" (change)="filt()" [(ngModel)]="testingfilter.StartDate">
+      </div>
+    </div>
+
+    <!-- 8-->
+    <div class="">
+      <div class="bluecolor"> job type </div>
+    </div>
+    <!-- 9 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    <!-- 10-->
+    <div>
+
+      <input id="ff" type="radio" name="jobtype" value="full-time" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Jobtype" />
+      <label for="ff">full time</label><br>
+
+      <input id="fff" type="radio" name="jobtype" value="part-time" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Jobtype" />
+      <label for="fff">part time</label><br>
+
+
+      <input id="ffff" type="radio" name="jobtype" value="temporary" class="me-3" (change)="filt()"
+        [(ngModel)]="testingfilter.Jobtype" />
+      <label for="ffff">temporory</label><br>
+
+    </div>
+    <!-- 9-->
+    <!-- <div class="row">
+  <div class="col-12 bluecolor"> Contract status</div>
+</div> -->
+    <!-- still not -->
+    <!-- <div class="row">
   <div class="col-12">
     <ng-multiselect-dropdown
-  [placeholder]="'language'"
+  [placeholder]="'Contract status'"
   [settings]="dropdownSettings"
-  [data]="languageDropdownList"
-  [(ngModel)]="languageSelectedItems"
+  [data]="contractDropdownList"
+  [(ngModel)]="contractDropdownList"
   (onSelect)="onItemSelect($event)"
   (onDeSelect)="onItemDeselect($event)"
   (onSelectAll)="onSelectAll($event)"
-  (onDeSelectAll)="onDeselectAll($event)"
 >
 </ng-multiselect-dropdown>
   </div>
-</div>
-<!-- 17 -->
+</div> -->
 
-<div class="row">
-  <div class="col-12 bluecolor"> Main Skills </div>
-</div>
+    <!-- 11-->
+    <div class="">
+      <div class=" bluecolor"> working experience </div>
+    </div>
+    <!-- 12 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
 
-<!-- 18 -->
-<div class="row">
-  <div class="col-12">
-    <ng-multiselect-dropdown
-  [placeholder]="'Main Skills'"
-  [settings]="dropdownSettings"
-  [data]="skillsDropdownList"
-  [(ngModel)]="skillsSelectedItems"
-  (onSelect)="onItemSelect2($event)"
-  (onDeSelect)="onItemDeselect2($event)"
-  (onSelectAll)="onSelectAll2($event)"
-  (onDeSelectAll)="onDeselectAll2($event)"
+    <!-- 14 -->
+    <div class="">
+      <div class="">
+        <input type="number" class="form-control" placeholder="experience period" (change)="filt()"
+         [(ngModel)]="testingfilter.Workexperience" max="40">
+      </div>
+    </div>
+    <!-- 15 -->
 
->
-</ng-multiselect-dropdown>
+    <div class="">
+      <div class=" bluecolor"> language </div>
+    </div>
+    <!-- 16 -->
+
+    <div class="">
+      <div class="">
+        <ng-multiselect-dropdown [placeholder]="'language'" [settings]="dropdownSettings" [data]="languageDropdownList"
+          [(ngModel)]="languageSelectedItems" (onSelect)="onItemSelect($event)" (onDeSelect)="onItemDeselect($event)"
+          (onSelectAll)="onSelectAll($event)" (onDeSelectAll)="onDeselectAll($event)">
+        </ng-multiselect-dropdown>
+      </div>
+    </div>
+    <!-- 17 -->
+
+    <div class="mt-3">
+      <div class=" bluecolor"> Main Skills </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="mb-3">
+      <div class="">
+        <ng-multiselect-dropdown [placeholder]="'Main Skills'" [settings]="dropdownSettings" [data]="skillsDropdownList"
+          [(ngModel)]="skillsSelectedItems" (onSelect)="onItemSelect2($event)" (onDeSelect)="onItemDeselect2($event)"
+          (onSelectAll)="onSelectAll2($event)" (onDeSelectAll)="onDeselectAll2($event)">
+        </ng-multiselect-dropdown>
+      </div>
+    </div>
+
+    <!-- 19 -->
+
+    <div class="">
+      <div class="bluecolor"> Gender </div>
+    </div>
+    <!-- 20 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+
+    <!-- 21-->
+    <div>
+      <input id="ff" type="radio" name="gender" class="me-3" value="Male" (change)="filt()"
+        [(ngModel)]="testingfilter.Gender" />
+      <label for="ff">Male</label><br>
+
+      <input id="fff" type="radio" name="gender" class="me-3" value="Female" (change)="filt()"
+        [(ngModel)]="testingfilter.Gender" />
+      <label for="fff">Female</label><br>
+
+    </div>
+    <!-- 22 -->
+    <div class="">
+      <div class=" bluecolor"> Age </div>
+    </div>
+    <!-- 23 -->
+    <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    <!-- 24 -->
+    <div class="">
+      <div class="">
+        <input type="number" class="form-control" placeholder="enter age" (change)="filt()"
+          [(ngModel)]="testingfilter.Age" min="18" max="60">
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- 19 -->
-
-<div class="row">
-  <div class="col-12 bluecolor"> Gender </div>
 </div>
-<!-- 20 -->
-<div class="row">
-  <div class="col-12 greencolor " style="height: 3px; background-color: green;"> </div>
-</div>
-<!-- 21-->
-<div >
-
-    <input id="ff" type="radio" name="gender" value="Male" (change)="filt()" [(ngModel)]="testingfilter.Gender"/>
-    <label for="ff">Male</label><br>
-
-    <input id="fff" type="radio" name="gender" value="Female" (change)="filt()" [(ngModel)]="testingfilter.Gender"/>
-    <label for="fff">Female</label><br>
-
-
-</div>
-<!-- 22 -->
-<div class="row">
-  <div class="col-12 bluecolor"> Age </div>
-</div>
-<!-- 23 -->
-<div class="row">
-
-  <div class="col-12 greencolor " style="height: 3px; background-color: green;"> </div>
-
-
-</div>
-<!-- 24 -->
-<div class="row">
-  <div class="col-12 " >
-    <input type="number" class="form-control" placeholder="your age" (change)="filt()" [(ngModel)]="testingfilter.Age">
-  </div>
-</div>
-
-
-
-
-
-
-
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br>
-

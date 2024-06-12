@@ -42,6 +42,7 @@ import { AdminDetailsComponent } from './components/Admin-Dashboard/admin-dashbo
 import { ContactDetailsComponent } from './components/candidateCrud/Details/candidate-details/contact-details/contact-details.component';
 import { roledashboardguardGuard } from '../AuthRoutes/roledashboardguard.guard';
 import { JobDetailsComponent } from './components/job-page/Job-Details/Job-details.component';
+import { SelectorListContext } from '@angular/compiler';
 
 export const routes: Routes = [
    {

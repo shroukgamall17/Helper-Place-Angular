@@ -1,15 +1,35 @@
+
+.addResume{
+    background: center no-repeat url('../../../../assets/Images//home/Helper.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .Post-Resume
 {
-    display: flex;
-    justify-content: center;
+    margin:80px 0;
+    border-top: 15px solid #054a84;
 }
-.Post-Resume-Form
-{
-    margin: 2.5%;
-    width: 70%;
+.bg-blue{
+    background-color: #054a84;
 }
-.Gender-Selector
-{
-    display: flex;
-    flex-direction: column;
-}
+
+ .sprator{
+    height: 5px;
+    /* background: #000; */
+    margin-bottom: 7px;
+    width: 100%;
+    border-top: 1px dashed #504f4f86;
+ }
+ @media (max-width:630px) {
+    .wrapper{
+        width:50%;
+    }
+    .formSteps{
+        display: none !important;
+    }
+    .detailsRespon{
+        flex-direction: column;
+    }
+    
+ }

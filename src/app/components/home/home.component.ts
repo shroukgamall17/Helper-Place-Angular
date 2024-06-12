@@ -8,7 +8,9 @@ import {OurCommunitySectionComponent} from '../our-community-section/our-communi
 import { MoreConnectionsHomeSectionComponent } from '../more-connections-home-section/more-connections-home-section.component'
 import { Router } from '@angular/router';
 import { TestmonialsSliderCardsComponent } from '../testmonials-slider-cards/testmonials-slider-cards.component';
-import { SliderHelpersComponent } from '../../slider-helpers/slider-helpers.component';
+import { SliderHelpersComponent } from '../slider-helpers/slider-helpers.component';
+import { AvailableJobSliderComponent } from '../available-job-slider/available-job-slider.component';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -22,7 +24,8 @@ import { SliderHelpersComponent } from '../../slider-helpers/slider-helpers.comp
     HomePlacesComponent,
     MoreConnectionsHomeSectionComponent,
     TestmonialsSliderCardsComponent,
-    SliderHelpersComponent
+    SliderHelpersComponent,
+    AvailableJobSliderComponent,
   ],
 })
 export class HomeComponent {

@@ -21,5 +21,23 @@ export class SidebarComponent {
   SideBarServiceService: SideBarServiceService = new SideBarServiceService();
   queryParams: QueryParams = new QueryParams();
   @Output() ApplyChanges = new EventEmitter<QueryParams>();
-  constructor() {}
+  constructor() { }
+  
+  openModal(): void {
+    const modal = document.getElementById('exampleModal');
+    if (modal) {
+      modal.classList.add('show');
+      modal.style.display = 'block';
+      modal.setAttribute('aria-hidden', 'false');
+    }
+  }
+
+  closeModal(): void {
+    const modal = document.getElementById('exampleModal');
+    if (modal) {
+      modal.classList.remove('show');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  }
 }
