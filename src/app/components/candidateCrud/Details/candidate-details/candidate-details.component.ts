@@ -99,8 +99,6 @@ this.loginService.LoggedUser.subscribe({
             console.log('Candidates fetched successfully'); // Log completion
           }
         })
-
-
       }
       else{
         this.router.navigateByUrl('/Login')

@@ -1,11 +1,11 @@
-<div class="ms-3">
-  <div id="main">
+<div class="filter mt-5 ">
+  <div id="main" class="border border-opacity-25 border-black p-4 ">
     <!-- 1 -->
-    <div class="row">
-      <h3 class="col-12 bluecolor">I am looking for</h3>
+    <div class=" mt-5">
+      <h3 class="bluecolor mb-4">I am looking for</h3>
     </div>
-    <div class="row">
-      <div class="col-12">
+    <div class="mb-4">
+      <div class="">
         <app-multiple-search-select
           [PlaceHolder]="'Country Location'"
           [Data]="SideBarServiceService.countrylocationDropdownList"
@@ -18,21 +18,19 @@
       </div>
     </div>
     <!-- 2 -->
-    <div class="row">
-      <div class="col-3 bluecolor">Filter</div>
-      <div class="col-6"></div>
-      <a class="col-3">Reset</a>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class=" bluecolor">Filter</div>
+      <div class="">
+        <a class=" res d-flex justify-content-evenly align-items-center" > <i class="fa-solid fa-rotate"></i>Reset</a>
+      </div>
     </div>
     <!-- 3 -->
-    <div class="row">
-      <div class="col-12 bluecolor">jop position</div>
+    <div class="">
+      <div class=" bluecolor">jop position</div>
     </div>
     <!-- 4 -->
     <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+     <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
     </div>
     <!-- 5 -->
     <div>
@@ -42,6 +40,7 @@
         type="radio"
         name="position"
         value="Domestic Helper"
+        class="me-3"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
       <label for="gender">Domestic Helper</label><br />
@@ -51,17 +50,18 @@
         type="radio"
         name="position"
         value="Driver"
+        class="me-3"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
       <label for="f">Driver</label><br />
     </div>
     <!-- 6 -->
-    <div class="row">
-      <div class="col-12 bluecolor">StartDate</div>
+    <div class="">
+      <div class="mt-3 bluecolor">StartDate</div>
     </div>
     <!-- 7-->
-    <div class="row">
-      <div class="col-12">
+    <div class="">
+      <div class="">
         <input
           [(ngModel)]="queryParams.startdate"
           type="date"
@@ -72,15 +72,12 @@
     </div>
 
     <!-- 8-->
-    <div class="row">
-      <div class="col-12 bluecolor">job type</div>
+    <div class="">
+      <div class="bluecolor">job type</div>
     </div>
     <!-- 9 -->
-    <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+    <div class="">
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
     </div>
     <!-- 10-->
     <div>
@@ -90,6 +87,7 @@
           id="ff"
           type="radio"
           name="jobtype"
+          class="me-3"
           [value]="item"
           (ngModelChange)="ApplyChanges.emit(queryParams)"
         />
@@ -97,12 +95,12 @@
       </div>
     </div>
     <!-- 9-->
-    <div class="row">
-      <div class="col-12 bluecolor">Contract status</div>
+    <div class="">
+      <div class=" bluecolor mt-3">Contract status</div>
     </div>
     <!-- still not -->
-    <div class="row">
-      <div class="col-12">
+    <div class="">
+      <div class="">
         <app-multiple-search-select
           [PlaceHolder]="'Contract status'"
           [Data]="SideBarServiceService.contractDropdownList"
@@ -116,19 +114,16 @@
     </div>
 
     <!-- 11-->
-    <div class="row">
-      <div class="col-12 bluecolor">working experience</div>
+    <div class="">
+      <div class="mt-3 bluecolor">working experience</div>
     </div>
     <!-- 12 -->
-    <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+    <div class="">
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
     </div>
     <!-- 14 -->
-    <div class="row">
-      <div class="col-12">
+    <div class="">
+      <div class="">
         <input
           class="form-control"
           type="number"
@@ -140,13 +135,13 @@
     </div>
     <!-- 15 -->
 
-    <div class="row">
-      <div class="col-12 bluecolor">language</div>
+    <div class="">
+      <div class=" bluecolor">language</div>
     </div>
     <!-- 16 -->
 
-    <div class="row">
-      <div class="col-12">
+    <div class="">
+      <div class="">
         <app-multiple-search-select
           [PlaceHolder]="'language'"
           [Data]="SideBarServiceService.languageDropdownList"
@@ -160,13 +155,13 @@
     </div>
     <!-- 17 -->
 
-    <div class="row">
-      <div class="col-12 bluecolor">Main Skills</div>
+    <div class="">
+      <div class="mt-3 bluecolor">Main Skills</div>
     </div>
 
     <!-- 18 -->
     <div class="row">
-      <div class="col-12">
+      <div class="">
         <app-multiple-search-select
           [PlaceHolder]="'Main Skills'"
           [Data]="SideBarServiceService.skillsDropdownList"
@@ -182,14 +177,11 @@
     <!-- 19 -->
 
     <div class="row">
-      <div class="col-12 bluecolor">Gender</div>
+      <div class="mt-3 bluecolor">Gender</div>
     </div>
     <!-- 20 -->
     <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
     </div>
     <!-- 21-->
     <div>
@@ -201,7 +193,7 @@
         value="Male"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
-      <label for="ff">Male</label><br />
+      <label for="ff" class="ms-2">Male</label><br />
       <input
         [(ngModel)]="queryParams.gender"
         id="fff"
@@ -210,18 +202,15 @@
         value="Female"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
-      <label for="fff">Female</label><br />
+      <label for="fff" class="ms-2">Female</label><br />
     </div>
     <!-- 22 -->
     <div class="row">
-      <div class="col-12 bluecolor">Age</div>
+      <div class="mt-3 bluecolor">Age</div>
     </div>
     <!-- 23 -->
     <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
     </div>
     <!-- 24 -->
     <div class="row">
@@ -238,4 +227,274 @@
   </div>
 </div>
 <!-- <button (click)="ApplyChanges.emit(queryParams)"></button> -->
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="filterPopUp">
+
+<button type="button" class="btn" style="background-color: #054a84; color: white;" (click)="openModal()">Filter</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="mt-5">
+  <div id="main" class="border border-opacity-25 border-black p-4">
+    <!-- 1 -->
+    <div class=" mt-5">
+      <h3 class="bluecolor mb-4">I am looking for</h3>
+    </div>
+    <div class="mb-4">
+      <div class="">
+        <app-multiple-search-select
+          [PlaceHolder]="'Country Location'"
+          [Data]="SideBarServiceService.countrylocationDropdownList"
+          [AllowSingleSelection]="false"
+          (SelectedItemsChanged)="
+            queryParams.countrysSelectedItems = $event;
+            ApplyChanges.emit(queryParams)
+          "
+        ></app-multiple-search-select>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class=" bluecolor">Filter</div>
+      <div class="">
+        <a class=" res d-flex justify-content-evenly align-items-center" > <i class="fa-solid fa-rotate"></i>Reset</a>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="">
+      <div class=" bluecolor">jop position</div>
+    </div>
+    <!-- 4 -->
+    <div class="row">
+     <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    </div>
+    <!-- 5 -->
+    <div>
+      <input
+        [(ngModel)]="queryParams.JobPosition"
+        id="f"
+        type="radio"
+        name="position"
+        value="Domestic Helper"
+        class="me-3"
+        (ngModelChange)="ApplyChanges.emit(queryParams)"
+      />
+      <label for="gender">Domestic Helper</label><br />
+      <input
+        [(ngModel)]="queryParams.JobPosition"
+        id="f"
+        type="radio"
+        name="position"
+        value="Driver"
+        class="me-3"
+        (ngModelChange)="ApplyChanges.emit(queryParams)"
+      />
+      <label for="f">Driver</label><br />
+    </div>
+    <!-- 6 -->
+    <div class="">
+      <div class="mt-3 bluecolor">StartDate</div>
+    </div>
+    <!-- 7-->
+    <div class="">
+      <div class="">
+        <input
+          [(ngModel)]="queryParams.startdate"
+          type="date"
+          class="form-control"
+          (ngModelChange)="ApplyChanges.emit(queryParams)"
+        />
+      </div>
+    </div>
+
+    <!-- 8-->
+    <div class="">
+      <div class="bluecolor">job type</div>
+    </div>
+    <!-- 9 -->
+    <div class="">
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    </div>
+    <!-- 10-->
+    <div>
+      <div *ngFor="let item of SideBarServiceService.jobtypeDropdownList">
+        <input
+          [(ngModel)]="queryParams.JobType"
+          id="ff"
+          type="radio"
+          name="jobtype"
+          class="me-3"
+          [value]="item"
+          (ngModelChange)="ApplyChanges.emit(queryParams)"
+        />
+        <label for="ff">{{item}}</label>
+      </div>
+    </div>
+    <!-- 9-->
+    <div class="">
+      <div class=" bluecolor mt-3">Contract status</div>
+    </div>
+    <!-- still not -->
+    <div class="">
+      <div class="">
+        <app-multiple-search-select
+          [PlaceHolder]="'Contract status'"
+          [Data]="SideBarServiceService.contractDropdownList"
+          [AllowSingleSelection]="false"
+          (SelectedItemsChanged)="
+            queryParams.contractSelectedItems = $event;
+            ApplyChanges.emit(queryParams)
+          "
+        ></app-multiple-search-select>
+      </div>
+    </div>
+
+    <!-- 11-->
+    <div class="">
+      <div class="mt-3 bluecolor">working experience</div>
+    </div>
+    <!-- 12 -->
+    <div class="">
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    </div>
+    <!-- 14 -->
+    <div class="">
+      <div class="">
+        <input
+          class="form-control"
+          type="number"
+          placeholder="experience period"
+          [(ngModel)]="queryParams.WorkingExperience"
+          (ngModelChange)="ApplyChanges.emit(queryParams)"
+        />
+      </div>
+    </div>
+    <!-- 15 -->
+
+    <div class="">
+      <div class=" bluecolor">language</div>
+    </div>
+    <!-- 16 -->
+
+    <div class="">
+      <div class="">
+        <app-multiple-search-select
+          [PlaceHolder]="'language'"
+          [Data]="SideBarServiceService.languageDropdownList"
+          [AllowSingleSelection]="false"
+          (SelectedItemsChanged)="
+            queryParams.languageSelectedItems = $event;
+            ApplyChanges.emit(queryParams)
+          "
+        ></app-multiple-search-select>
+      </div>
+    </div>
+    <!-- 17 -->
+
+    <div class="">
+      <div class="mt-3 bluecolor">Main Skills</div>
+    </div>
+
+    <!-- 18 -->
+    <div class="row">
+      <div class="">
+        <app-multiple-search-select
+          [PlaceHolder]="'Main Skills'"
+          [Data]="SideBarServiceService.skillsDropdownList"
+          [AllowSingleSelection]="false"
+          (SelectedItemsChanged)="
+            queryParams.skillsSelectedItems = $event;
+            ApplyChanges.emit(queryParams)
+          "
+        ></app-multiple-search-select>
+      </div>
+    </div>
+
+    <!-- 19 -->
+
+    <div class="row">
+      <div class="mt-3 bluecolor">Gender</div>
+    </div>
+    <!-- 20 -->
+    <div class="row">
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    </div>
+    <!-- 21-->
+    <div>
+      <input
+        [(ngModel)]="queryParams.gender"
+        id="ff"
+        type="radio"
+        name="gender"
+        value="Male"
+        (ngModelChange)="ApplyChanges.emit(queryParams)"
+      />
+      <label for="ff" class="ms-2">Male</label><br />
+      <input
+        [(ngModel)]="queryParams.gender"
+        id="fff"
+        type="radio"
+        name="gender"
+        value="Female"
+        (ngModelChange)="ApplyChanges.emit(queryParams)"
+      />
+      <label for="fff" class="ms-2">Female</label><br />
+    </div>
+    <!-- 22 -->
+    <div class="row">
+      <div class="mt-3 bluecolor">Age</div>
+    </div>
+    <!-- 23 -->
+    <div class="row">
+       <div class=" greencolor" style="height: 3px; background-color: green; margin-block:14px;"> </div>
+    </div>
+    <!-- 24 -->
+    <div class="row">
+      <div class="col-12">
+        <input
+          [(ngModel)]="queryParams.Age"
+          type="number"
+          class="form-control"
+          placeholder="your age"
+          (ngModelChange)="ApplyChanges.emit(queryParams)"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

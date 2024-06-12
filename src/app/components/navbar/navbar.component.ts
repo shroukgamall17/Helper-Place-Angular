@@ -4,6 +4,7 @@ import { Loginservice } from '../login/LoginService/loginservice.service';
 import { CommonModule } from '@angular/common';
 import { PaymentService } from '../../services/payment.service';
 import { SubModel } from '../../models/sub-model';
+import { Modal } from 'bootstrap';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -62,4 +63,20 @@ export class NavbarComponent {
         this.router.navigateByUrl('/Login')
       }
   }
+  // ngAfterViewInit() {
+  //   const modalElement = document.getElementById('exampleModal');
+  //   if (modalElement) {
+  //     const modal = new Modal(modalElement);
+  //     modal.show();
+  //   }
+  // }
+
+ openModal() {
+    const modalElement = document.getElementById('exampleModal');
+    if (modalElement) {
+      const modal = new Modal(modalElement);
+      modal.show();
+    }
+  }
+
 }
