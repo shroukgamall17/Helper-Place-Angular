@@ -25,7 +25,6 @@ export class JobDetailsComponent implements OnInit {
       console.log(params['id']); // Convert to number (if needed)
       this.JobService.getJobById(params['id']).subscribe({
         next: (Response) => {
-          console.log(Response)
           this.Job = Response;
         },
         error: (Error) => {
