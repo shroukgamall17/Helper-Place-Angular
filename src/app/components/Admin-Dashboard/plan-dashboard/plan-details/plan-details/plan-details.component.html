@@ -12,9 +12,9 @@
           </h4>
           <p class="text-secondary mb-4">USD / Month</p>
 
-          <a class="btn bsb-btn-xl btn-outline-primary rounded-pill"
-            >Edit This Plan</a
-          >
+          <button class="btn btn-outline-success mx-1" (click)="goToEditPage(currentPlan.id)">
+            Edit
+          </button>
           <a
             class="btn bsb-btn-xl btn-outline-danger rounded-pill m-2"
             (click)="back()"

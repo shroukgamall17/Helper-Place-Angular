@@ -1,37 +1,68 @@
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Fname</th>
-            <th scope="col">Lname</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Location</th>
-            <th scope="col">DayOff</th>
-            <th scope="col">Accomodation</th>
-            <th scope="col">Salary</th>
-            <th scope="col">KidsNo</th>
-            <th scope="col">AdultNo</th>
-            <th scope="col">HasBet</th>
-            <th scope="col">Description</th>
-            <th scope="col">Title</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">{{ currentEmployer.id }}</th>
-            <td>{{ currentEmployer.fname }}</td>
-            <td>{{ currentEmployer.lname }}</td>
-            <td>{{ currentEmployer.phoneNumber }}</td>
-            <td>{{ currentEmployer.location }}</td>
-            <td>{{ currentEmployer.dayOff }}</td>
-            <td>{{ currentEmployer.accomodation }}</td>
-            <td>{{ currentEmployer.salary }}</td>
-            <td>{{ currentEmployer.kidsNo }}</td>
-            <td>{{ currentEmployer.adultNo }}</td>
-            <td>{{ currentEmployer.hasBet }}</td>
-            <td>{{ currentEmployer.description }}</td>
-            <td>{{ currentEmployer.title }}</td>
-        </tr>
-    </tbody>
-</table>
-<a class="btn bsb-btn-xl btn-outline-danger rounded-pill m-2" (click)="back()">Back</a>
+<div class="employee-card">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">{{ currentEmployer.fname }} {{ currentEmployer.lname }}</h5>
+        </div>
+        <div class="card-body">
+            <div class="employee-info">
+                <div class="info-row">
+                    <div class="info-item">
+                        <p class="info-label">ID:</p>
+                        <p class="info-value">{{ currentEmployer.id }}</p>
+                    </div>
+                    <div class="info-item">
+                        <p class="info-label">Phone:</p>
+                        <p class="info-value">{{ currentEmployer.phoneNumber }}</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <p class="info-label">Location:</p>
+                        <p class="info-value">{{ currentEmployer.location }}</p>
+                    </div>
+                    <div class="info-item">
+                        <p class="info-label">Day Off:</p>
+                        <p class="info-value">{{ currentEmployer.dayOff }}</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <p class="info-label">Accommodation:</p>
+                        <p class="info-value">{{ currentEmployer.accomodation }}</p>
+                    </div>
+                    <div class="info-item">
+                        <p class="info-label">Salary:</p>
+                        <p class="info-value">{{ currentEmployer.salary }}</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <p class="info-label">Kids No:</p>
+                        <p class="info-value">{{ currentEmployer.kidsNo }}</p>
+                    </div>
+                    <div class="info-item">
+                        <p class="info-label">Adult No:</p>
+                        <p class="info-value">{{ currentEmployer.adultNo }}</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <p class="info-label">Has a pet:</p>
+                        <p class="info-value">{{ currentEmployer.hasBet }}</p>
+                    </div>
+                    <div class="info-item">
+                        <p class="info-label">Description:</p>
+                        <p class="info-value">{{ currentEmployer.description }}</p>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-item">
+                        <p class="info-label">Title:</p>
+                        <p class="info-value">{{ currentEmployer.title }}</p>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-back" (click)="back()">Back</a>
+        </div>
+    </div>
+</div>
