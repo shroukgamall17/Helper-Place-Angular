@@ -1,6 +1,11 @@
 <!-- pagination -->
 <div class="container">
-  <mat-paginator [length]="count" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="pageChange($event)">
+  <mat-paginator
+    [length]="count"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="pageChange($event)"
+  >
   </mat-paginator>
 
   <!-- <div>{{myownfiltered[2].Name}}</div> -->
@@ -11,60 +16,64 @@
 <img [src]="'https://localhost:44376'+item.photoURL " alt="image" style="width: 150px;height: 150px;" class="rounded-circle m-2">
 <div>{{item.photoURL}}</div> -->
 
-    <div class="row rounded  mb-5" id="main">
+    <div class="row rounded mb-5" id="main">
       <div class="d-flex justify-content-between align-items-center m-3">
-        <div class="rounded-circle overflow-hidden border border-1 border-black candidatImg" >
+        <div
+          class="rounded-circle overflow-hidden border border-1 border-black candidatImg"
+        >
           <img [src]="env + item.photoURL" alt="image" width="100%" />
         </div>
-        
+
         <div class="rigthPart w-75 ms-2">
-          <h4 class="candidateName my-3 ">
-            {{ item.name }} {{ item.age }}
+          <h4 class="candidateName my-3">
+            {{ item.name }} - {{ item.age }} yr
           </h4>
           <p class="candidatePosation lead text-secondary">
             {{ item.position }}
-            <span style="color: #054a84;"> <i class="fa-solid fa-location-dot mx-2" style="color: #25ae88;"></i> {{
-              item.location }}</span>
+            <span style="color: #054a84">
+              <i
+                class="fa-solid fa-location-dot mx-2"
+                style="color: #25ae88"
+              ></i>
+              {{ item.location }}</span
+            >
           </p>
-          <p class="candidateDescription">{{ item.description }}</p>
+          <p class="candidateDescription">
+            {{ item.description | truncateWords : 20 }}
+          </p>
         </div>
       </div>
-      <div class="d-flex candiateInfo justify-content-between align-items-center">
-        <div class="directShap d-flex justify-content-center align-items-center p-2">
+      <div
+        class="d-flex candiateInfo justify-content-between align-items-center"
+      >
+        <div
+          class="directShap d-flex justify-content-center align-items-center p-2"
+        >
           Direct
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <i class="fa-solid fa-calendar-days me-2 " style="color: #25ae88;"></i>
-          <p style="color: #054a84; margin-bottom: 0; " class="">
-            
+          <i class="fa-solid fa-calendar-days me-2" style="color: #25ae88"></i>
+          <p style="color: #054a84; margin-bottom: 0" class="">
             {{ item.workexperience }} years
           </p>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <i class="fa-solid fa-hourglass-start me-2 " style="color: #25ae88;"></i>
-          <p style="color: #054a84; margin-bottom: 0; " class="">
-            
-           {{ handleDate(item.startDate).toLocaleDateString() }}
+          <i
+            class="fa-solid fa-hourglass-start me-2"
+            style="color: #25ae88"
+          ></i>
+          <p style="color: #054a84; margin-bottom: 0" class="">
+            {{ handleDate(item.startDate).toLocaleDateString() }}
           </p>
         </div>
-        <div class="col-md-4" style="color: #25ae88; cursor: pointer" (click)="navigateToDetails(item.id)">
-            <i class="fa-solid fa-circle"></i> details
-          </div>
-        
+        <div
+          class="col-md-4"
+          style="color: #25ae88; cursor: pointer"
+          (click)="navigateToDetails(item.id)"
+        >
+          <i class="fa-solid fa-circle"></i> details
+        </div>
       </div>
     </div>
   </ng-container>
 </div>
-
-<!--  <div class="product-footer d-flex">
-          <div class="d-flex align-items-center">
-          
-        </div>
-          <p style="color: #054a84">
-            <i class=""></i>
-            {{ handleDate(item.startDate).toLocaleDateString() }}
-          </p>
-          <div class="col-md-4" style="color: #25ae88; cursor: pointer" (click)="navigateToDetails(item.id)">
-            <i class="fa-solid fa-circle"></i> details
-          </div>
-        </div> -->

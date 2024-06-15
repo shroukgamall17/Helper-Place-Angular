@@ -1,45 +1,61 @@
-<div class=" rounded mb-5" id="main">
+<div class="rounded mb-5" id="main">
   <div class="d-flex justify-content-between align-items-center m-3">
-    <div class="rounded-circle overflow-hidden border border-1 border-black candidatImg">
-      <img src="../../../../assets/Images/family_images/Family.png" alt="image" width="100%" />
+    <div
+      class="rounded-circle overflow-hidden border border-1 border-black candidatImg"
+    >
+      <img
+        src="../../../../assets/Images/family_images/Family.png"
+        alt="image"
+        width="100%"
+      />
     </div>
 
     <div class="rigthPart w-75 ms-2">
-      <h4 class="jobTitle my-3 ">{{ Job.jobRequirments.basicInformation.positionOffered }} Mern Stack</h4>
-      <p class=" lead text-secondary">
-          {{ Job.jobRequirments.basicInformation.type }}
-          <span style="color: #054a84;">
-            <i class="fa-solid fa-location-dot"></i> {{ Job.jobRequirments.basicInformation.location }}
-          </span>
+      <h4 class="jobTitle my-3">
+        {{ Job.jobRequirments.basicInformation.positionOffered }}
+      </h4>
+      <p class="lead text-secondary">
+        {{ Job.jobRequirments.basicInformation.type }}
+        <span style="color: #054a84">
+          <i class="fa-solid fa-location-dot"></i>
+          {{ Job.jobRequirments.basicInformation.location }}
+        </span>
       </p>
-      <p class="jobDescription">{{ Job.jobDetails }} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, beatae earum a repellendus iusto deleniti. Quas dolorum quo facilis impedit magni tempore aspernatur iusto dolorem, molestias deleniti id optio ipsa.</p>
+      <p class="jobDescription">
+        {{ Job.jobDetails }} I Need Helper To My Home
+      </p>
     </div>
   </div>
 
   <div class="d-flex candiateInfo justify-content-between align-items-center">
-    <div class="directShap d-flex justify-content-center align-items-center p-2">
-          Direct
-        </div>
-<div class="info d-flex justify-content-between align-items-center">
- <div class="d-flex justify-content-between align-items-center me-2 ">
-        
-          <i class="fa-solid fa-hourglass-start me-2" style="color: #25ae88;"></i>
-          <p style="color: #054a84; margin-bottom: 0; ">
+    <div
+      class="directShap d-flex justify-content-center align-items-center p-2"
+    >
+      Direct
+    </div>
+    <div class="info d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-between align-items-center me-2">
+        <i class="fa-solid fa-hourglass-start me-2" style="color: #25ae88"></i>
+        <p style="color: #054a84; margin-bottom: 0">
           {{ Job.jobRequirments.basicInformation.type }}
-          </p>
-        </div>
-        <div class="d-flex justify-content-between align-items-center">
-          <i class="fa-solid fa-calendar-days me-2" style="color: #25ae88;"></i>
-          <p  style="color: #054a84; margin-bottom: 0;">
-          Job Start Date {{ Job.jobRequirments.basicInformation.startDate }}
         </p>
-        </div>
-</div>
-     
-        <div  style="color: #054a84">
-          <a class="btn btn-outline-success me-2" [routerLink]="['/JobDetails', Job.jobDetails]">
-            Details
-          </a>
-        </div>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <i class="fa-solid fa-calendar-days me-2" style="color: #25ae88"></i>
+        <p style="color: #054a84; margin-bottom: 0">
+          {{
+            handleDate(
+              Job.jobRequirments.basicInformation.startDate
+            ).toLocaleDateString()
+          }}
+        </p>
+      </div>
+    </div>
+
+    <div style="color: #054a84">
+      <a class="btn btn-outline-success me-2" [routerLink]="['/JobDetails', 1]">
+        Details
+      </a>
+    </div>
   </div>
 </div>

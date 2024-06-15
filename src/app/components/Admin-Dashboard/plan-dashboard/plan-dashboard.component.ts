@@ -20,12 +20,15 @@ export class PlanDashboardComponent {
   constructor(private planService: PlanService, private router: Router) {}
 
   ngOnInit(): void {
+    this.loadPlans();
+  }
+
+  loadPlans(): void {
     this.planService.getAllPlans().subscribe((plans) => {
       this.planslst = plans;
       console.log(plans);
     });
   }
-
   goToDetailsPage(cId: number): void {
     this.currentPlanId = cId;
     console.log(cId);
@@ -39,10 +42,7 @@ export class PlanDashboardComponent {
 
   handleDelete(cId: number): void {
     this.currentPlanId = cId;
-    this.planService.deletePlanById(cId).subscribe((res) => {
-      //console.log(res);
-      window.location.reload();
-    })
+    this.openModal();
   }
 
   goToEditPage(cId: number): void {
@@ -55,4 +55,35 @@ export class PlanDashboardComponent {
   goToAddPage(): void {
     this.router.navigate(['dashboard/planAdd']);
   }
+  confirmDelete(): void {
+    if (this.currentPlanId !== undefined) {
+      this.planService.deletePlanById(this.currentPlanId).subscribe((res) => { 
+        console.log(res);
+        this.currentPlanId = undefined;
+        this.loadPlans(); // Refresh the plans list
+      });
+      this.closeModal();
+    }
+  }
+
+  openModal() {
+    const modal = document.getElementById('deleteModal');
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  }
+
+  closeModal() {
+    const modal = document.getElementById('deleteModal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+
+
+
+
+
+
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-light bg-light  "> 
     <div class="container"> 
       <a class="navbar-brand" href="#"> 
@@ -109,46 +110,216 @@
     </ul> 
     </div> 
     </div> 
+=======
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">
+      <img
+        src="assets/Images/icononly_transparent_nobuffer.png"
+        alt=""
+        id="logo"
+      />
+    </a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span style="font-size: 7vh">≡</span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav MainLinks">
+        <li class="nav-item" *ngIf="!IsLogged">
+          <a class="nav-link taps" routerLink="/home">HOME</a>
+        </li>
+        <li class="nav-item" *ngIf="Role == 'Employer'">
+          <a class="nav-link addJob taps" (click)="handleAddJob()">ADD JOB</a>
+        </li>
+        <li class="nav-item" *ngIf="Role != 'Employer'">
+          <a class="nav-link taps" routerLink="/job">FIND JOB</a>
+        </li>
+        <li class="nav-item" *ngIf="Role != 'Candidate'">
+          <a class="nav-link taps" routerLink="/candidatepage">CANDIDATES</a>
+        </li>
+        <li class="nav-item" *ngIf="IsLogged && Role == 'Candidate'">
+          <a
+            class="nav-link taps"
+            routerLink="/candidateResume/candidatePersonalInfo"
+            >ADD RESUME</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link taps dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            PRICING & MORE
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item taps" routerLink="/aboutus">ABOUT US</a>
+            </li>
+            <li>
+              <a class="dropdown-item taps" routerLink="/pricing">PRICING</a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item taps"
+                (click)="handleGoTo('/aboutus/contact')"
+                >CONTACT US</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item taps" (click)="handleGoTo('/aboutus/FAQ')"
+                >FIND AQ</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item taps"
+                (click)="handleGoTo('/aboutus/privacy')"
+                >PRIVACY POLICY</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul *ngIf="!loginService.IsLogged" class="navbar-nav Buttons">
+        <li *ngIf="Role == 'Admin'" class="nav-item">
+          <a class="btn btn-outline-danger" routerLink="/dashboard"
+            >ADMIN DASHBOARD</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="btn btn-outline-success"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            >REGISTER</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-warning" routerLink="/Login">Login</a>
+        </li>
+      </ul>
+      <ul *ngIf="loginService.IsLogged" class="navbar-nav Buttons">
+        <li *ngIf="Role == 'Admin'" class="nav-item">
+          <a class="btn btn-outline-danger" routerLink="/dashboard"
+            >ADMIN DASHBOARD</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="loginService.LogOutUser()"
+            class="btn btn-outline-warning"
+            routerLink="/Login"
+            >LOGOUT</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link taps dropdown-toggle"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{ userName }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item taps" routerLink="myaccount/profile"
+                >MY PROFILE</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item taps"
+                routerLink="myaccount/changepassword"
+                >CHANGE PASSWORD</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+>>>>>>> 57b2e9f71441fe3d2bb57817bb72be3bb791f51b
 </nav>
 
-
-
-
-
-
-
-
-
-
-
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content z-3">
       <div class="modal-header">
-          <div class="logoImg me-3">
-            <img src="../../../assets/Images/logo.svg" alt="logo">
-          </div>
-        <h5 class="modal-title fw-bold " style="color: #054a84;" id="staticBackdropLabel">helper plan</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="logoImg me-3">
+          <img src="../../../assets/Images/logo.svg" alt="logo" />
+        </div>
+        <h5
+          class="modal-title fw-bold"
+          style="color: #054a84"
+          id="staticBackdropLabel"
+        >
+          helper plan
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
-      <h4 class="p-3 modalTitle fw-bold" style="color: #054a84;">Selet your Role</h4>
+      <h4 class="p-3 modalTitle fw-bold" style="color: #054a84">
+        Selet your Role
+      </h4>
       <div class="modal-body d-flex justify-content-evenly align-items-center">
-        <button class="modalBtnJobSeeker" style="background-color: #f2d163;" routerLink="/register" data-bs-dismiss="modal">
-          <img src="../../../assets/Images/helper-display.png" alt="helperDisplay">
-          <p class="fw-bold mt-3 text-white">
-            I am looking for a Job
-          </p>
+        <button
+          class="modalBtnJobSeeker"
+          style="background-color: #f2d163"
+          routerLink="/register"
+          data-bs-dismiss="modal"
+          [routerLink]="['/register', 'Candidate']"
+        >
+          <img
+            src="../../../assets/Images/helper-display.png"
+            alt="helperDisplay"
+          />
+          <p class="fw-bold mt-3 text-white">I am looking for a Job</p>
         </button>
-        <button class="modalBtnJobSeeker" style="background-color: #71cab2;" routerLink="/register" data-bs-dismiss="modal">
-            <img src="../../../assets/Images/helper-job.png" alt="helperJob" width="30%">
-          <p class="fw-bold mt-3 text-white">
-            I am an Employer
-          </p>
+        <button
+          class="modalBtnJobSeeker"
+          style="background-color: #71cab2"
+          routerLink="/register"
+          data-bs-dismiss="modal"
+          [routerLink]="['/register', 'Employer']"
+        >
+          <img
+            src="../../../assets/Images/helper-job.png"
+            alt="helperJob"
+            width="30%"
+          />
+          <p class="fw-bold mt-3 text-white">I am an Employer</p>
         </button>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
       </div>
     </div>
   </div>

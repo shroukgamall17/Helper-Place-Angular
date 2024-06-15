@@ -1,13 +1,14 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
   <h1 class="h2">Plans</h1>
   <div class="btn-toolbar mb-2 mb-md-0">
-    <div class="btn-group me-2">
-      <button class="btn btn-outline-primary m-1" (click)="goToAddPage()">Add New Plan</button>
+    <div class="me-2">
+      <button class="btn btn-primary m-1" (click)="goToAddPage()">Add New Plan</button>
     </div>
   </div>
 </div>
-<table class="table">
-  <thead class="thead-dark">
+<div class="table-responsive">
+<table class="table table-striped">
+  <thead class="thead-light">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
@@ -59,3 +60,18 @@
     }
   </tbody>
 </table>
+</div>
+<div id="deleteModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <div class="container">
+      <h1>Delete Employer</h1>
+      <p>Are you sure you want to delete this Employer?</p>
+      <div class="clearfix">
+        <button type="button" class="btn btn-secondary cancelbtn mx-2" (click)="closeModal()">Cancel</button>
+        <button type="button" class="btn btn-danger deletebtn" (click)="confirmDelete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+

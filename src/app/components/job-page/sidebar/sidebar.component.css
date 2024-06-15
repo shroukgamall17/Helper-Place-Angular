@@ -22,6 +22,14 @@ a.res{
   display: none;
 }
 
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  color: green;
+  font-weight: bold;
+}
+
+
 @media (max-width:1050px) {
   .filter{
     display: none;

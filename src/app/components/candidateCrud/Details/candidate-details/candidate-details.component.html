@@ -20,17 +20,30 @@
           </h4>
           <div class="d-flex justify-content-between align-items-center">
             <div class="" style="color: black; margin: 10px 0 0 150px">
+<<<<<<< HEAD
               {{ mycandidate.gender }}|{{ mycandidate.martialStatus }}|{{
                 mycandidate.noKids
               }}
               kids |{{ mycandidate.religion }}|{{ mycandidate.location }}
+=======
+              {{ mycandidate.gender }} | {{ mycandidate.martialStatus }} |
+              {{ mycandidate.noKids }} kids | {{ mycandidate.religion }} |
+              {{ mycandidate.location }}
+>>>>>>> 57b2e9f71441fe3d2bb57817bb72be3bb791f51b
             </div>
             <div class="">
               <button
                 class="btn bg-green text-white me-3"
                 (click)="handleContact(mycandidate.id)"
               >
+<<<<<<< HEAD
                 Cotact
+=======
+                Contact
+              </button>
+              <button class="btn btn-danger text-white me-3" (click)="goBack()">
+                Return
+>>>>>>> 57b2e9f71441fe3d2bb57817bb72be3bb791f51b
               </button>
             </div>
           </div>
@@ -61,7 +74,11 @@
                     <div name="map" class="me-3">
                       <i class="fa-solid fa-location-pin green"></i>
                     </div>
+<<<<<<< HEAD
                     Present Location:{{ mycandidate.location }}
+=======
+                    Present Location : {{ mycandidate.location }}
+>>>>>>> 57b2e9f71441fe3d2bb57817bb72be3bb791f51b
                   </h5>
                 </div>
               </div>
@@ -79,7 +96,16 @@
                     <div name="calendar" class="me-3">
                       <i class="fa-solid fa-calendar-days green"></i>
                     </div>
+<<<<<<< HEAD
                     {{ mycandidate.availabilityDate }} |
+=======
+                    {{
+                      handleDate(
+                        mycandidate.availabilityDate
+                      ).toLocaleDateString()
+                    }}
+                    |
+>>>>>>> 57b2e9f71441fe3d2bb57817bb72be3bb791f51b
                     {{ mycandidate.jobType }}
                   </h5>
                 </div>
