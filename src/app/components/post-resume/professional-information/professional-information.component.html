@@ -1,4 +1,1302 @@
-<div class="Post-Resume">
+<section class="addResume d-flex justify-content-center align-items-center">
+  <div class="Post-Resume w-75 bg-white">
+    <div class="w-100 d-block">
+      <div
+        class="d-flex justify-content-evenly align-items-center text-center fw-bold m-5 formSteps"
+      >
+        <div>
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div
+            class="mat-step-icon mat-step-icon-selected mat-step-icon-state-number"
+          >
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div
+            class="mat-step-label mat-step-label-active mat-step-label-selected"
+          >
+            <div class="position-icon stepper-active-border ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/user-data.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              Personal<br class="ng-star-inserted" />
+              Information
+            </div>
+          </div>
+        </div>
+        <div
+          class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"
+        ></div>
+        <div
+          role="tab"
+          class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1"
+          id="cdk-step-label-0-1"
+          aria-posinset="2"
+          aria-setsize="4"
+          aria-controls="cdk-step-content-0-1"
+          aria-selected="false"
+          aria-disabled="true"
+        >
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/briefcase.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              Professional<br class="ng-star-inserted" />
+              Information
+            </div>
+          </div>
+        </div>
+        <div
+          class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"
+        ></div>
+        <div
+          role="tab"
+          class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1"
+          id="cdk-step-label-0-2"
+          aria-posinset="3"
+          aria-setsize="4"
+          aria-controls="cdk-step-content-0-2"
+          aria-selected="false"
+          aria-disabled="true"
+        >
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/scholarship.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              Education &amp;<br class="ng-star-inserted" />
+              Experience
+            </div>
+          </div>
+        </div>
+        <div
+          class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"
+        ></div>
+        <div
+          role="tab"
+          class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1"
+          id="cdk-step-label-0-3"
+          aria-posinset="4"
+          aria-setsize="4"
+          aria-controls="cdk-step-content-0-3"
+          aria-selected="false"
+          aria-disabled="true"
+        >
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/info.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              About<br class="ng-star-inserted" />
+              You
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="" enctype="multipart/form-data">
+        <h1 class="fs-4 bg-blue">Personal Information</h1>
+        <div class="m-5">
+          <div class="mb-5">
+            <span class="col-md-8 mb-3"
+              >For which position, do you want to apply?</span
+            >
+            <br />
+            <div class="wrapper Job-wrapper col-md-12 mb-3">
+              <input
+                type="radio"
+                name="position"
+                id="option-1"
+                value="Driver"
+                [(ngModel)]="mycand.position"
+                (change)="positionbind($event)"
+                checked
+              />
+              <input
+                type="radio"
+                name="position"
+                id="option-2"
+                value="Helper"
+                [(ngModel)]="mycand.position"
+                (change)="positionbind($event)"
+              />
+              <label for="option-1" class="option option-1">
+                <img src="assets/Images/driver.png" alt="" />
+                <span> Driver</span>
+              </label>
+              <label for="option-2" class="option option-2">
+                <img src="assets/Images/maid.png" alt="" />
+                <span> Domestic Helper</span>
+              </label>
+            </div>
+          </div>
+
+          <label mdbLabel class="form-label" for="form1">
+            Years of working experience?</label
+          >
+          <input
+            class="col-md-12 mb-3 form-control"
+            placeHolder="How Many Years Of Experience"
+            type="number"
+            name="workExperience"
+            [(ngModel)]="mycand.workExperience"
+            (change)="expbind($event)"
+          />
+
+          <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+            <div class="row mt-3 mb-2">
+              <div class="col-11"><label class="fs-18">Job Type *</label></div>
+            </div>
+            <div data-toggle="buttons" class="button-group-pills text-left">
+              <label class="btn ng-star-inserted"
+                ><input
+                  type="radio"
+                  name="job_type_id"
+                  formcontrolname="job_type_id"
+                  class="d-none ng-untouched ng-pristine ng-invalid"
+                />
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/clock.svg"
+                    />
+                  </div>
+                  <div class="ml-1">Full Time</div>
+                </div> </label
+              ><label class="btn ng-star-inserted"
+                ><input
+                  type="radio"
+                  name="job_type_id"
+                  formcontrolname="job_type_id"
+                  class="d-none ng-untouched ng-pristine ng-invalid"
+                />
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/time-mgmt.svg"
+                    />
+                  </div>
+                  <div class="ml-1">Part Time</div>
+                </div> </label
+              ><label class="btn ng-star-inserted"
+                ><input
+                  type="radio"
+                  name="job_type_id"
+                  formcontrolname="job_type_id"
+                  class="d-none ng-untouched ng-pristine ng-invalid"
+                />
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/signs.svg"
+                    />
+                  </div>
+                  <div class="ml-1">Temporary</div>
+                </div>
+              </label>
+            </div>
+            <button
+              matnativecontrol=""
+              type="button"
+              data-placement="right"
+              triggers="click:blur"
+              class="col-1 text-center bg-transparent border-0 tooltips_custom"
+            >
+              <i aria-hidden="true" class="fa fa-question-circle-o"></i>
+            </button>
+          </div>
+
+          <app-search-select
+            [ReceivedValue]="mycand.jobType"
+            [Options]="Data.CurrentWorkStatus"
+            class="col-md-8 mb-3"
+            PlaceHolder="What is your current work status?"
+            (ValueSelected)="wstatbind($event)"
+          ></app-search-select>
+          <app-datepicker
+            [ReceivedDate]="mycand.availabilityDate"
+            class="col-md-8 mb-3"
+            PlaceHolder="When is the Job Start Date?"
+            (dateChange)="datebind($event)"
+          ></app-datepicker>
+
+          <div class="sprator"></div>
+        </div>
+        <h1 class="fs-4 bg-blue">Your preference for job</h1>
+        <div class="m-5">
+          <div class="d-flex justify-content-start align-items-center">
+            <div class="world-icon me-3">
+              <img
+                src="https://cdn.helperplace.com/skill_cat/1_1599642484.webp"
+                width="30px"
+              />
+            </div>
+            <div
+              class="col-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-4 space-left"
+            >
+              <app-multiple-select
+                class="col-md-8 mb-3"
+                [Options]="Data.PreferedCountryStatus"
+                PlaceHolder="Prefered job Location"
+              ></app-multiple-select>
+            </div>
+          </div>
+
+          <div
+            class="d-flex justify-content-start align-items-center"
+            style="margin-top: 11px"
+          >
+            <div class="salary-icon me-3">
+              <img
+                src="https://cdn.helperplace.com/icons/salary.svg"
+                width="30px"
+              />
+            </div>
+            <div class="col-md-3 me-3">
+              <input
+                class="col-md-3 form-control"
+                placeholder="expcted month"
+                type="number"
+                name="expectedSalary"
+                [(ngModel)]="mycand.expectedSalary"
+                (change)="salbind($event)"
+              />
+            </div>
+            <div class="col-sm-3">
+              <select
+                name=""
+                id=""
+                (change)="currbind($event)"
+                class="form-select"
+                placeholder="currency"
+              >
+                <option value=""></option>
+                <option *ngFor="let item of Data.CurrencyStatus" [value]="item">
+                  {{ item }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 row control-space mt-4">
+            <div class="d-flex justify-content-start align-items-center">
+              <div class="daypref-icon me-3">
+                <img
+                  src="https://cdn.helperplace.com/icons/deck-chair.svg"
+                  width="30px"
+                />
+              </div>
+              <div
+                class="col-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 space-left"
+              >
+                <app-search-select
+                  [ReceivedValue]="mycand.preferredDay"
+                  class="col-md-8"
+                  [Options]="Data.DayOffPreferenceStatus"
+                  PlaceHolder="Day off preference "
+                  (ValueSelected)="dayoffbind($event)"
+                ></app-search-select>
+              </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-center">
+              <div class="accomodation-icon me-3">
+                <img
+                  src="https://cdn.helperplace.com/icons/accomodation.svg"
+                  width="30px"
+                />
+              </div>
+              <div
+                class="col-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 space-left"
+              >
+                <app-search-select
+                  [ReceivedValue]="mycand.accommodationPref"
+                  class="col-md-8"
+                  [Options]="Data.AccomodationPreferenceStatus"
+                  PlaceHolder="Accomodation preference "
+                  (ValueSelected)="acobind($event)"
+                ></app-search-select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 class="fs-4 bg-blue">My Skill / Duties</h1>
+        <div class="m-5">
+          <div class="col-12 mb-3 skill ng-star-inserted">
+            <div class="row mt-3 mb-2 pt-2 bg-cdcdcd my-5">
+              <div class="col-11">
+                <img
+                  width="25"
+                  class="mr-3 me-3"
+                  src="https://cdn.helperplace.com/skill_cat/1_1599642484.webp"
+                /><label class="subtitle">
+                  Language <span class="ng-star-inserted">*</span></label
+                >
+              </div>
+            </div>
+            <div data-toggle="buttons" class="text-left button-group-pills">
+              <label class="btn ng-star-inserted active mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/united-kingdom.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>English</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Cantonese</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/china.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Mandarin</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/saudi-arabia.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Arabic</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/japan.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Japanese</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/philippines.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Filipino (Tagalog)</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted active mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/india.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Hindi</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/indonesia.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Indonesian (Bahasa)</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/country/thailand.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Thai</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-12 mb-3 skill ng-star-inserted">
+            <div class="row mt-3 mb-2 pt-2 bg-cdcdcd my-5">
+              <div class="col-11">
+                <img
+                  width="25"
+                  class="mr-3"
+                  src="https://cdn.helperplace.com/skill_cat/4_1599643968.webp"
+                /><label class="subtitle me-3">
+                  Main Skills <span class="ng-star-inserted">*</span></label
+                >
+              </div>
+            </div>
+            <div
+              data-toggle="buttons"
+              class="text-left button-group-pills-language"
+            >
+              <label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/baby-care.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid me-3"
+                    />
+                    <div>Baby Care</div>
+                  </div>
+                  <div class="ml-3 check-icon-hide ng-star-inserted">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    ></svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/child-care.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Child Care</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-hide">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    ></svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/teen-care.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Teen Care</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-hide">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    ></svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/elderly-care.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Elderly care</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-hide">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    ></svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/pet-care.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Pet Care</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-hide">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    >
+                      <polygon
+                        points="385.621,62.507 146.225,301.901 21.213,176.891 0,198.104 146.225,344.327 406.834,83.72 "
+                      ></polygon>
+                    </svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/tutoring.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Tutoring</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-hide">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    >
+                      <polygon
+                        points="385.621,62.507 146.225,301.901 21.213,176.891 0,198.104 146.225,344.327 406.834,83.72 "
+                      ></polygon>
+                    </svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/housekeeping.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Housekeeping</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-hide">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    >
+                      <polygon
+                        points="385.621,62.507 146.225,301.901 21.213,176.891 0,198.104 146.225,344.327 406.834,83.72 "
+                      ></polygon>
+                    </svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/cooking.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Cooking</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-hide">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    >
+                      <polygon
+                        points="385.621,62.507 146.225,301.901 21.213,176.891 0,198.104 146.225,344.327 406.834,83.72 "
+                      ></polygon>
+                    </svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/driving.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Driving</div>
+                  </div>
+                  <div class="ml-3 ng-star-inserted check-icon-show">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    >
+                      <polygon
+                        points="385.621,62.507 146.225,301.901 21.213,176.891 0,198.104 146.225,344.327 406.834,83.72 "
+                      ></polygon>
+                    </svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/marketing.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Marketing</div>
+                  </div>
+                  <div class="ml-3 check-icon-hide ng-star-inserted">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    >
+                      <polygon
+                        points="385.621,62.507 146.225,301.901 21.213,176.891 0,198.104 146.225,344.327 406.834,83.72 "
+                      ></polygon>
+                    </svg>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-3">
+                <div class="direction">
+                  <div class="ng-star-inserted me-3">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/groceries.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Groceries</div>
+                  </div>
+                  <div class="ml-3 check-icon-hide ng-star-inserted">
+                    <svg
+                      fill="#000000"
+                      height="15px"
+                      width="15px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 406.834 406.834"
+                      xml:space="preserve"
+                    ></svg>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-12 mb-3 skill ng-star-inserted">
+            <div class="row mt-3 mb-2 pt-2 bg-cdcdcd my-5">
+              <div class="col-11">
+                <img
+                  width="25"
+                  class="mr-3 me-3"
+                  src="https://cdn.helperplace.com/skill_cat/2_1599644151.webp"
+                /><label class="subtitle">
+                  Cooking Skills <span class="ng-star-inserted">*</span></label
+                >
+              </div>
+            </div>
+            <div data-toggle="buttons" class="text-left button-group-pills">
+              <label class="btn ng-star-inserted active mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Middle East</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Asian</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Chinese</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Chinese</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>French</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Indian</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted active mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Italian</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Japanese</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Singaporean</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-12 mb-3 skill ng-star-inserted">
+            <div class="row mt-3 mb-2 pt-2 bg-cdcdcd my">
+              <div class="col-11">
+                <img
+                  width="25"
+                  class="mr-3"
+                  src="https://cdn.helperplace.com/skill_cat/3_1599642528.webp"
+                />
+                <label class="subtitle"> Other Skills </label>
+              </div>
+            </div>
+            <div data-toggle="buttons" class="text-left button-group-pills">
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/baking.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Baking</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/caregiver.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Caregiver</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/car-wash.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Car Wash</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/computer.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Computer</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/driving-license.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Driving Licence</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/first-aid.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>First Aid</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/gardening.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Gardening</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/handyman.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Handyman</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/housework.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Housework</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/sewing.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Sewing</div>
+                  </div>
+                </div>
+              </label>
+              <label class="btn ng-star-inserted mt-4">
+                <div class="direction">
+                  <div class="ng-star-inserted">
+                    <img
+                      width="17px"
+                      src="https://cdn.helperplace.com/icons/swimming.svg"
+                    />
+                  </div>
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-pristine ng-valid"
+                    />
+                    <div>Swimming</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="col-12 mb-3 skill ng-star-inserted">
+            <div class="row mt-3 mb-2 pt-2 bg-cdcdcd my-5">
+              <div class="col-11">
+                <img
+                  width="25"
+                  class="mr-3 me-3"
+                  src="https://cdn.helperplace.com/skill_cat/5_1599644127.webp"
+                /><label class="subtitle"
+                  >Personality <span class="ng-star-inserted">*</span></label
+                >
+              </div>
+            </div>
+            <div data-toggle="buttons" class="text-left button-group-pills">
+              <label class="btn ng-star-inserted active mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Good Listener</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Hardworking</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Honest</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Independent</div>
+                  </div>
+                </div> </label
+              ><label class="btn ng-star-inserted mt-2">
+                <div class="direction">
+                  <div class="ml-2">
+                    <input
+                      type="checkbox"
+                      class="d-none ng-untouched ng-valid ng-dirty"
+                    />
+                    <div>Initiative</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            routerLink="/candidateResume/candidatePersonalInfo"
+            class="btn btn-primary mt-5"
+          >
+            Back
+          </button>
+          <button
+            [disabled]="myflag"
+            routerLink="/candidateResume/candidateEducation"
+            class="btn btn-success ms-2 mt-5"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="">
   <form class="Post-Resume-Form">
     <div class="Professional-Information col-md-12 mb-3">
       <h1>Professional Information</h1>
@@ -8,8 +1306,23 @@
         >
         <br />
         <div class="wrapper Job-wrapper col-md-12 mb-3">
-          <input type="radio" name="position" id="option-1" value="Driver" [(ngModel)]="mycand.position"  (change)="positionbind($event)"  checked />
-          <input type="radio" name="position" id="option-2" value="Helper"  [(ngModel)]="mycand.position" (change)="positionbind($event)" />
+          <input
+            type="radio"
+            name="position"
+            id="option-1"
+            value="Driver"
+            [(ngModel)]="mycand.position"
+            (change)="positionbind($event)"
+            checked
+          />
+          <input
+            type="radio"
+            name="position"
+            id="option-2"
+            value="Helper"
+            [(ngModel)]="mycand.position"
+            (change)="positionbind($event)"
+          />
           <label for="option-1" class="option option-1">
             <img src="assets/Images/driver.png" alt="" />
             <span> Driver</span>
@@ -19,7 +1332,6 @@
             <span> Domestic Helper</span>
           </label>
         </div>
-
         <input
           class="col-md-12 mb-3 form-control"
           placeHolder="How Many Years Of Experience"
@@ -34,15 +1346,14 @@
         <div class="col-md-8 mb-3"></div>
       </div>
       <app-search-select
-      [ReceivedValue]="mycand.jobType"
-
+        [ReceivedValue]="mycand.jobType"
         [Options]="Data.CurrentWorkStatus"
         class="col-md-8 mb-3"
         PlaceHolder="What is your current work status?"
         (ValueSelected)="wstatbind($event)"
       ></app-search-select>
       <app-datepicker
-      [ReceivedDate]="mycand.availabilityDate"
+        [ReceivedDate]="mycand.availabilityDate"
         class="col-md-8 mb-3"
         PlaceHolder="When is the Job Start Date?"
         (dateChange)="datebind($event)"
@@ -51,54 +1362,52 @@
     <div class="Preference-For-Job col-md-12 mb-3">
       <h1>Preference For Job</h1>
 
-      <!-- <app-multiple-select
+      <app-multiple-select
         class="col-md-8 mb-3"
         [Options]="Data.PreferedCountryStatus"
         PlaceHolder="Prefered job Location"
-      ></app-multiple-select> -->
+      ></app-multiple-select>
       <div class="row">
         <div class="col-md-3">
           <label for="" class="label-control">Salary</label>
-           </div>
-        <div class="col-md-2"> </div>
+        </div>
+        <div class="col-md-2"></div>
         <div class="col-md-3">
           <label for="" class="label-control">currency</label>
-
-           </div>
-
+        </div>
       </div>
-      <br>
+      <br />
       <div class="row">
         <div class="col-md-3">
-        <input
-          class="col-md-3 mb-3 form-control"
-          placeholder="Salary"
-          type="number"
-          name="expectedSalary"
-          [(ngModel)]="mycand.expectedSalary"
-          (change)="salbind($event)"
-        />
-      </div>
-      <div class="col-2"></div>
-      <div class="col-md-3">
-      <select name="" id=""  (change)="currbind($event)" class="">
-        <option value=""></option>
+          <input
+            class="col-md-3 mb-3 form-control"
+            placeholder="Salary"
+            type="number"
+            name="expectedSalary"
+            [(ngModel)]="mycand.expectedSalary"
+            (change)="salbind($event)"
+          />
+        </div>
+        <div class="col-2"></div>
+        <div class="col-md-3">
+          <select name="" id="" (change)="currbind($event)" class="">
+            <option value=""></option>
 
-        <option *ngFor="let item of Data.CurrencyStatus" [value]="item">{{item}}</option>
-      </select>
-    </div>
-
+            <option *ngFor="let item of Data.CurrencyStatus" [value]="item">
+              {{ item }}
+            </option>
+          </select>
+        </div>
       </div>
       <app-search-select
-      [ReceivedValue]="mycand.preferredDay"
-
+        [ReceivedValue]="mycand.preferredDay"
         class="col-md-8 mb-3"
         [Options]="Data.DayOffPreferenceStatus"
         PlaceHolder="Day off preference "
         (ValueSelected)="dayoffbind($event)"
       ></app-search-select>
       <app-search-select
-      [ReceivedValue]="mycand.accommodationPref"
+        [ReceivedValue]="mycand.accommodationPref"
         class="col-md-8 mb-3"
         [Options]="Data.AccomodationPreferenceStatus"
         PlaceHolder="Accomodation preference "
@@ -110,7 +1419,7 @@
       <div class="Language Skills">
         <h3>Language</h3>
         <app-multiple-choice
-        [SelectedValues]="mylangs"
+          [SelectedValues]="mylangs"
           [Options]="Data.LanguageStatus"
           (SetChoices)="addlangbind($event)"
         ></app-multiple-choice>
@@ -118,7 +1427,7 @@
       <div class="Main Skills">
         <h3>Main Skills</h3>
         <app-multiple-choice
-        [SelectedValues]="mymainskills"
+          [SelectedValues]="mymainskills"
           [Options]="Data.MainSkillsStatus"
           (SetChoices)="addmainbind($event)"
         ></app-multiple-choice>
@@ -126,34 +1435,43 @@
       <div class="Cooking Skills">
         <h3>Cooking Skills</h3>
         <app-multiple-choice
-        [SelectedValues]="mycookingskills"
+          [SelectedValues]="mycookingskills"
           [Options]="Data.cookingSkillsStatus"
           (SetChoices)="addcookbind($event)"
         ></app-multiple-choice>
       </div>
       <div class="Other Skills">
         <h3>Other Skills</h3>
-        <!-- <label for="" *ngFor="let item of Data.OtherSkillsStatus"  (change)="addlangbind($event)">
-        <input type="checkbox" [value]="item" >
-            {{item}}
-      </label> -->
+        <label
+          for=""
+          *ngFor="let item of Data.OtherSkillsStatus"
+          (change)="addlangbind($event)"
+        >
+          <input type="checkbox" [value]="item" />
+          {{ item }}
+        </label>
         <app-multiple-choice
-        [SelectedValues]="myotherskills"
+          [SelectedValues]="myotherskills"
           [Options]="Data.OtherSkillsStatus"
           (SetChoices)="addotherbind($event)"
         ></app-multiple-choice>
       </div>
-      <!-- <div class="Personality Skills">
+      <div class="Personality Skills">
         <h3>Personality Traits</h3>
         <app-multiple-choice
           [Options]="Data.PersonalitySkillsStatus"
         ></app-multiple-choice>
-      </div> -->
+      </div>
       <br />
-      <div class="Submit">
-        <button type="button"  routerLink="/candidateResume/candidatePersonalInfo" class="btn btn-primary">Back</button>
-        <button [disabled]="myflag" routerLink="/candidateResume/candidateEducation" class="btn btn-success ms-2">Next</button>
+      <div class="Submit"></div>
+      <div class="Language Skills">
+        <h3>Language</h3>
+        <app-multiple-choice
+          [SelectedValues]="mylangs"
+          [Options]="Data.LanguageStatus"
+          (SetChoices)="addlangbind($event)"
+        ></app-multiple-choice>
       </div>
     </div>
   </form>
-</div>
+</div> -->
