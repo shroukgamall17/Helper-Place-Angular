@@ -1,0 +1,39 @@
+body {
+    background-color: #f0f2f5;
+}
+
+.form-label {
+    color: #004085;
+}
+
+.form-control:focus {
+    border-color: #004085;
+    box-shadow: 0 0 0 0.2rem rgba(0, 64, 133, 0.25);
+}
+
+.btn-primary {
+    background-color: #004085;
+    border-color: #004085;
+}
+
+.btn-primary:hover {
+    background-color: #003066;
+    border-color: #003066;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bd2130;
+    border-color: #bd2130;
+}
+
+.needs-validation {
+    background: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}

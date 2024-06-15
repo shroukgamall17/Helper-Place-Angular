@@ -29,4 +29,12 @@ export class PlanDetailsComponent {
   back(): void {
     this.router.navigate(['/dashboard/planDashboard']);
   }
+
+  goToEditPage(cId: number): void {
+    this.currentId = cId;
+    this.planService.getPlanById(cId).subscribe((plan) => {
+      this.currentPlan = plan;
+    });
+    this.router.navigate(['dashboard/planEdit', cId]);
+  }
 }

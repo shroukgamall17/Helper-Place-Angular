@@ -1,1 +1,23 @@
-<p>admin-details works!</p>
+<div class="employee-card">
+       <div class="card">
+        <h3 class="justify-content-center text-center mt-3">Admin details</h3>
+        <div class="card-header">
+            <h5 class="card-title">{{ currentAdmin.userName }}</h5>
+        </div>
+        <div class="card-body">
+            <div class="employee-info">
+                <div class="info-row">
+                    <div class="info-item">
+                        <p class="info-label">User Name:</p>
+                        <p class="info-value">{{ currentAdmin.userName }}</p>
+                    </div>
+                    <div class="info-item">
+                        <p class="info-label">Email:</p>
+                        <p class="info-value">{{ currentAdmin.email }}</p>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-back" (click)="back()">Back</a>
+        </div>
+    </div>
+</div>

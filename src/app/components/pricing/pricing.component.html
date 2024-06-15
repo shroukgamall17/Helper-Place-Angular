@@ -1,182 +1,161 @@
 <!-- Pricing 2 - Bootstrap Brain Component -->
 <section class="bsb-pricing-2 bg-light py-5 py-xl-8">
   <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-        <h3 class="fs-6 text-secondary mb-2 text-uppercase text-center">
-          Our Pricing
-        </h3>
-        <h2 class="display-5 mb-4 mb-md-5 text-center">
-          We offer great pricing plans for everyone.
-        </h2>
-        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+    <div class="top-banner-wrapper ng-star-inserted">
+      <div class="top-banner-content small-section">
+        <h1 class="ng-star-inserted"><span>Easy
+            solution to connect Employers and Helpers</span></h1>
+        <p class="header_2 ng-star-inserted"> Select your plan and access to a large
+          database of domestic helpers looking for a new employer. Easily connect, message and interview the best
+          candidates for your family. </p>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row gy-5 gy-lg-0 gx-xl-5">
-      <!-- /* Plan A */ -->
+
+
+    <div class="row gy-5 gy-lg-0 gx-xl-5 mt-3">
+
       @for (plan of plansLst; track $index) {
-      <div class="col-12 col-lg-4">
-        <div class="card border-0 border-bottom border-primary shadow-sm">
-          <div class="card-body p-4 p-xxl-5">
-            <h2 class="h4 mb-2">{{ plan.name }} Plan</h2>
-            <h4 class="display-3 fw-bold text-primary mb-0">
-              {{ plan.price }}
-            </h4>
-            <p class="text-secondary mb-4">SAR / {{ plan.type }}</p>
-            <ul class="list-group list-group-flush mb-4">
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span
-                  ><strong>{{ plan.type }}</strong></span
-                >
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span style="color: #8c58c0"
-                  ><strong>One Time Fee</strong></span
-                >
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span><strong>Contact All Candidates</strong></span>
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span><strong>260,000+ Users</strong></span>
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span><strong>Recommended Profiles</strong></span>
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span><strong>5 Job Posting</strong></span>
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span><strong>Shortlist</strong></span>
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span><strong>Support Team</strong></span>
-              </li>
-              <li class="list-group-item">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-check"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"
-                  />
-                </svg>
-                <span><strong>30% off on Helper Insurance</strong></span>
-              </li>
-            </ul>
-            <a
-              (click)="handleSubscription(plan)"
-              class="btn bsb-btn-xl btn-primary rounded-pill"
-              >Choose Plan</a
-            >
+
+
+      <div class="blog-agency rounded mt-4 mb-5  col-12 col-lg-4">
+        <div class="blog-contain ng-star-inserted ">
+          <div class="price-container price-margin shadows text-center">
+            <div class="feature-text border-bottom-helper-green">
+              <h3 class="feature-text-heading text-center"> {{ plan.name }} Plan </h3>
+            </div>
+            <div class="price-feature-container">
+              <div class="price-value">
+                <h6 class="price text-center ng-star-inserted fs-6 mb-3
+                "> SAR / <span class="large">{{ plan.price }}</span></h6>
+                <h5 class="price-feature mt-1 text-center ng-star-inserted">  {{ plan.type }}</h5>
+              </div>
+              <a class="btn btn-pricing btn-white" (click)="handleSubscription(plan)"> GET STARTED </a>
+              <hr class="set-border">
+              <div class="price-features ng-star-inserted  ms-5 ">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div>
+                  <span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word;" class="lead fs-6">{{ plan.type }}</div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+              <div class="price-features ng-star-inserted  ms-5">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div><span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word;">
+                          <p><span style="color:#1abc9c"><span style="font-size:14px">One Time Fee</span></span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+              <div class="price-features ng-star-inserted  ms-5">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div><span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word; " class="fs-6">Contact All Candidates
+                        </div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+              <div class="price-features ng-star-inserted  ms-5">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div><span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word;" class="fs-6">
+                          <p class="m-0">260,000+ Users</p>
+                        </div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+              <div class="price-features ng-star-inserted  ms-5">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div><span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word;" class="fs-6">Recommended Profiles
+                        </div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+              <div class="price-features ng-star-inserted  ms-5">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div><span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word;" class="fs-6"> 1 Job Posting</div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+              <div class="price-features ng-star-inserted  ms-5">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div><span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word;" class="fs-6">Shortlist</div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+              <div class="price-features ng-star-inserted  ms-5">
+                <h5 class="price-feature text-center">
+                  <div class="features-price"></div><span class="ng-star-inserted">
+                    <div class="features-price">
+                      <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                          class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                        <div style="word-break: break-word;" class="fs-6">Support Team</div>
+                      </div>
+                    </div>
+                  </span>
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
 
       }
+    </div>
+  </div>
+</section>
+
+
+<section class="bg bg-dark py-4">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h4 class="text-light"> Got a question?</h4>
+        <h5 class="text-light mb-3"> We are here to help you. Check out our FAQs or
+          send an email to our support team. </h5><a href="mailto:support@helperplan.com"
+          class="btn btn_custom_color text-light text-center my-2 mx-auto btn-lg rounded bg-green"> CONTACT US </a>
+      </div>
     </div>
   </div>
 </section>

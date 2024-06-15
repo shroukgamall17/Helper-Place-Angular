@@ -165,39 +165,6 @@
                     Passwords do not match.
                   </div>
 
-
-
-
-
-                  <div class="d-flex flex-row align-items-center">
-                    <select
-                      class="col-12 Alert form-control"
-                      formControlName="Role"
-                      name="Role"
-                    >
-                      <option [value]="null" selected>Select Role</option>
-                      <option value="Employer">Employer</option>
-                      <option value="Candidate">Candidate</option>
-                    </select>
-                  </div>
-                  <div
-                    *ngIf="
-                      RegisterForm.controls['Role'].invalid &&
-                      (RegisterForm.controls['Role'].dirty ||
-                        RegisterForm.controls['Role'].touched)
-                    "
-                  >
-                    <small
-                      *ngIf="RegisterForm.controls['Role'].errors!['required']"
-                      >Role is required.</small
-                    >
-                  </div>
- 
-
-
-
-                  
-
                   <div class="d-flex flex-row align-items-center mb-3">
                     <input formControlName="AgreeToAllTerms" class="form-check-input me-2" type="checkbox" value=""
                       id="form2Example3c" />

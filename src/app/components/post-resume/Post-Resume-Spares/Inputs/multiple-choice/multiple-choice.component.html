@@ -1,9 +1,11 @@
 <section class="example-section">
     <h4>{{PlaceHolder}}</h4>
     @for (Option of Options; track Option) {
-
-        <mat-checkbox [checked]="SelectedValues.includes(Option)" (change)="PushOrPull(Option,$event)">{{Option}}</mat-checkbox>
-
+         <label class="btn ng-star-inserted"><input
+          type="checkbox" [checked]="SelectedValues.includes(Option)" (change)="PushOrPull(Option,$event)" class="d-none ng-untouched ng-pristine ng-valid">
+        <div> {{Option}}</div>
+      </label>
+    <!-- <mat-checkbox [checked]="SelectedValues.includes(Option)"
+        (change)="PushOrPull(Option,$event)">{{Option}}</mat-checkbox> -->
     }
-  </section>
-
+</section>

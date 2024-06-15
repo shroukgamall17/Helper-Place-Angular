@@ -25,7 +25,6 @@ export class UpdatelayerComponent implements OnInit {
       next: (data:ICandidates) => {
         this.candidatesservice.mycandidate = data; // Assign the fetched candidates to the candidates array
         console.log(this.mycandidate)
-        console.log('abdoooooooooo')
         this.router.navigate(['/candidateResume/candidatePersonalInfo']);
 
       },

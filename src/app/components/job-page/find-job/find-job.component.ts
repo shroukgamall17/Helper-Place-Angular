@@ -3,22 +3,26 @@ import { CommonModule } from '@angular/common';
 import { FindjobService } from '../../../services/findjob.service';
 import { JobClass } from '../../post-job/JobClass/job-class';
 import { RouterLink } from '@angular/router';
+import { TruncateWordsPipe } from '../../../pipes/truncate-words.pipe';
 
 @Component({
   selector: 'app-find-job',
   standalone: true,
-  imports: [CommonModule,RouterLink],
   templateUrl: './find-job.component.html',
-  styleUrl: './find-job.component.css'
+  styleUrl: './find-job.component.css',
+  imports: [CommonModule, RouterLink, TruncateWordsPipe],
 })
-export class FindJobComponent{
-  @Input() Job:JobClass= new JobClass();
+export class FindJobComponent {
+  @Input() Job: JobClass = new JobClass();
   jobs!: JobClass[];
-  constructor(private jobService:FindjobService) {}
+  constructor(private jobService: FindjobService) {}
   getJobs() {
-    this.jobService.GetJobHeadlines().subscribe((res)=> {
+    this.jobService.GetJobHeadlines().subscribe((res) => {
       this.jobs = res;
-      console.log(res)
-    })
+      console.log(res);
+    });
+  }
+  handleDate(date: any) {
+    return new Date(date);
   }
 }

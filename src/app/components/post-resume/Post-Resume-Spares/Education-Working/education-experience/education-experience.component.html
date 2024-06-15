@@ -1,9 +1,9 @@
 <div
-  class="card"
+  class=""
   *ngFor="let EducationExperience of EducationExperiences; index as i"
-  style="margin: 1%"
+
 >
-  <div [class.d-none]="EditDisplay[i]">
+  <!-- <div [class.d-none]="EditDisplay[i]">
     <div class="card-header d-flex justify-content-between">
       <div>
         {{ EducationExperience.Education }}
@@ -37,6 +37,61 @@
       </p>
     </div>
   </div>
+   -->
+
+
+ <div
+    class="col-11 mb-1 pt-3 px-3 pb-2 mx-auto rounded border border-success shadows educationExperienceDiv ng-star-inserted"
+  >
+    <div class="ng-star-inserted">
+      <h3 class="">
+       {{ EducationExperience.Education }}      </h3>
+      <p style="clear: both;">
+        {{ EducationExperience.CourseDuration }}
+
+        
+
+      </p>
+      <p *ngIf="EducationExperience.HaveCompletedCourse" class="ng-star-inserted">
+        Completed Course in {{ EducationExperience.CompletionYear }}
+      </p>
+
+
+       <p *ngIf="!EducationExperience.HaveCompletedCourse" class="ng-star-inserted">
+        Did not Completed Course
+      </p>
+
+      <!-- <p class="mb-2">
+        <span style="color: black;">Duties: </span
+        ><span class="ng-star-inserted"
+          ><span
+            *ngFor="let Duty of WorkingExperience.Duties"
+            class="card-text"
+          >
+            {{ Duty }} </span
+          ><span class="ng-star-inserted">| </span></span
+        ><span class="ng-star-inserted">
+          {{ WorkingExperience.EmployerType }}
+        </span>
+      </p>
+      <p class="ng-star-inserted">
+        Have reference letter : {{ WorkingExperience.HaveReferenceLetter }}
+      </p> -->
+      <div class="edit-icons">
+        <span class="h3 dark mr-2"  (click)="
+            EditDisplay[i] = !EditDisplay[i]; HideAddEducationExperiencePage.emit()
+          "><i class="fa fa-edit"></i></span
+        ><span class="h3"  (click)="DeleteEducationExperience.emit(EducationExperience)"><i class="fa fa-trash m-2"></i></span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
   <app-add-education-experience
     style="padding: 2.5%"
     [PlaceHolder]="'Edit'"

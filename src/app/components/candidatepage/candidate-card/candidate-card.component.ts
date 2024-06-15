@@ -9,11 +9,12 @@ import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment.development';
+import { TruncateWordsPipe } from '../../../pipes/truncate-words.pipe';
 
 @Component({
   selector: 'app-candidate-card',
   standalone: true,
-  imports: [HttpClientModule,FormsModule,CommonModule,MatPaginatorModule],
+  imports: [HttpClientModule,FormsModule,CommonModule,MatPaginatorModule , TruncateWordsPipe],
   templateUrl: './candidate-card.component.html',
   styleUrl: './candidate-card.component.css'
 })
