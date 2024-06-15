@@ -11,6 +11,7 @@ import {
 import { Loginservice } from '../login/LoginService/loginservice.service';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import Swal from 'sweetalert2';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -19,6 +20,7 @@ import Swal from 'sweetalert2';
   styleUrl: './register.component.css',
 })
 export class RegisterComponent {
+  role!: string | null;
   RegisterForm = new FormGroup(
     {
       UserName: new FormControl(null, [
@@ -43,15 +45,22 @@ export class RegisterComponent {
         Validators.email,
         Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$'),
       ]),
-      Role: new FormControl(null, Validators.required),
       AgreeToAllTerms: new FormControl(false, Validators.requiredTrue),
     },
     this.LoginService.passwordMatchValidator
   );
   registeredUser: UserRegister = new UserRegister();
-  constructor(public LoginService: Loginservice) {}
+  constructor(
+    public LoginService: Loginservice,
+    private route: ActivatedRoute
+  ) {}
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((params) => {
+      this.role = params.get('role');
+    });
+  }
   AddUser(): void {
-    this.LoginService.AddUser(this.RegisterForm.value['Role']!, {
+    this.LoginService.AddUser(this.role!, {
       UserName: this.RegisterForm.value['UserName']!,
       FirstName: this.RegisterForm.value['FirstName']!,
       LastName: this.RegisterForm.value['LastName']!,
@@ -73,7 +82,7 @@ export class RegisterComponent {
         err.error.msg.forEach((element: any) => {
           Swal.fire({
             title: 'Error',
-            text:element.description,
+            text: element.description,
             showCancelButton: true,
           });
         });
