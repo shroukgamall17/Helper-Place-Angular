@@ -78,7 +78,10 @@ export const routes: Routes = [
   },
   { path: 'Payment-Failed', component: PaymentFailedComponent },
   { path: 'Payment-Success', component: PaymentSuccessComponent },
-  { path: 'home', component: HomeComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
   { path: 'Login', canActivate: [loginInGuard], component: LoginComponent },
   { path: 'JobPage', component: JobPageComponent },
   { path: 'FindJob', component: FindJobComponent },
@@ -97,7 +100,7 @@ export const routes: Routes = [
     component: ContactusComponent,
   },
   {
-    path: 'register',
+    path: 'register/:role',
     canActivate: [loginInGuard],
     component: RegisterComponent,
   },
