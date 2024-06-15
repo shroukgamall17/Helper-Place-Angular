@@ -5,10 +5,11 @@ import { CommonModule } from '@angular/common';
 import { PaymentService } from '../../services/payment.service';
 import { SubModel } from '../../models/sub-model';
 import { Modal } from 'bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, RouterLinkActive, CommonModule , NgbModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
