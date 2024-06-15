@@ -143,9 +143,6 @@ export class FcandidateService {
   }
   ////get candidateDto
   getCandidates(filter: IFiltercandidate): Observable<ICandidate[]> {
-
-
-
     let params = new HttpParams();
     params = params.append('Position', filter.Position);
   // params = params.append('StartDate', `${filter.StartDate}`);

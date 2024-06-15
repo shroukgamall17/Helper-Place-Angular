@@ -1,6 +1,8 @@
 export interface ICandidate {
   id:number
   name?:string
+  fname?:string
+  lname?:string
   description?:string
   position?:string;
   startDate?:Date;
@@ -13,5 +15,4 @@ export interface ICandidate {
   age?:number;
   photoURL?:string
   location?:string;
-
 }
