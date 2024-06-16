@@ -23,5 +23,6 @@ export class MultipleChoiceComponent {
   @Input() PlaceHolder: string = '';
   @Output() SetChoices = new EventEmitter<string[]>();
   @Input()SelectedValues: string[] = [];
+  @Input()url: string = '';
   constructor() {}
 }

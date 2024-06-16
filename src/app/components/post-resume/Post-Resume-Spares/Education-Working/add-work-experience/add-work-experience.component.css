@@ -1,0 +1,13 @@
+.edit-title {
+    padding: 12px 0 0 15px;
+    color: #fff;
+}
+ .btn {
+    border-radius: 5px;
+    line-height: 1.2;
+    margin-left: 10px;
+    border-color: #bbb;
+    background-color: #fff;
+    color: #464646;
+    font-weight: 600 !important;
+}
