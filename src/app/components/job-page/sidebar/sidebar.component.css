@@ -4,13 +4,37 @@ div {
 
 #main {
     background-color: whitesmoke;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-
     border-radius: 5px;
+    padding: 15px;
+}
+a.res{
+  text-decoration: none;
+  color: green;
+  cursor: pointer;
 }
 
 .bluecolor {
     color: #054a84;
     font-weight: 600
+}
+
+.filterPopUp{
+  display: none;
+}
+
+
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  color: green;
+  font-weight: bold;
+}
+
+
+@media (max-width:1050px) {
+  .filter{
+    display: none;
+  }
+  .filterPopUp{
+    display: block;
+  }
 }

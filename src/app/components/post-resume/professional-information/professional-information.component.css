@@ -1,34 +1,126 @@
-  .Job-wrapper
-  {
+  .addResume {
+    background: center no-repeat url('../../../../assets/Images//home/Helper.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .Job-wrapper {
     height: 125px;
     width: 300px;
   }
-  span
-  {
+
+  span {
     font-size: 15px;
   }
-  #Full-Time:checked:checked ~ .Full span,
-  #Temporary-Time:checked:checked ~ .Temporary span,
-  #Part-Time:checked:checked ~ .Part span
-  {
+
+  #Full-Time:checked:checked~.Full span,
+  #Temporary-Time:checked:checked~.Temporary span,
+  #Part-Time:checked:checked~.Part span {
     color: #fff;
   }
-  #Full-Time:checked:checked ~ .Full,
-  #Temporary-Time:checked:checked ~ .Temporary,
-  #Part-Time:checked:checked ~ .Part
-  {
+
+  #Full-Time:checked:checked~.Full,
+  #Temporary-Time:checked:checked~.Temporary,
+  #Part-Time:checked:checked~.Part {
     border-color: #7b7c7d;
     background: #7b7c7d;
   }
-  .Time-wrapper .option span{
-    font-size: 12.5px;
+
+  .Time-wrapper .option span {
+ 
     text-align: center;
   }
+
   input[type="radio"]:checked {
     background-color: #3c1e1e;
   }
-  .Skills
-  {
+
+  .Skills {
     padding: 0% 10%;
   }
 
+  .button-group-pills .btn {
+    border-radius: 5px;
+    line-height: 1.2;
+    margin-left: 10px;
+    border-color: #bbb;
+    background-color: #fff;
+    color: #464646;
+    font-weight: 600 !important;
+  }
+
+  .Post-Resume {
+    margin: 80px 0;
+    border-top: 15px solid #054a84;
+  }
+
+  .bg-blue {
+    background-color: #054a84;
+  }
+
+  .sprator {
+    height: 5px;
+    /* background: #000; */
+    margin-bottom: 7px;
+    width: 100%;
+    border-top: 1px dashed #504f4f86;
+  }
+
+  @media (max-width:630px) {
+    .wrapper {
+      width: 50%;
+    }
+
+    .formSteps {
+      display: none !important;
+    }
+
+    .detailsRespon {
+      flex-direction: column;
+    }
+
+  }
+  .bg-cdcdcd {
+    background: #cdcdcd;
+}
+.subtitle {
+    font-weight: 600;
+    font-size: 16px;
+}
+.skill[_ngcontent-serverApp-c1174679048] .button-group-pills[_ngcontent-serverApp-c1174679048], .skill[_ngcontent-serverApp-c1174679048] .button-group-pills-language[_ngcontent-serverApp-c1174679048] {
+    padding-top: 16px !important;
+    padding-bottom: 13px !important;
+}
+.button-group-pills .btn.active {
+    border-color: #25ae88 !important;
+    background-color: #25ae88 !important;
+    color: #fff !important;
+    box-shadow: none;
+}
+.button-group-pills .btn {
+    border-radius: 5px;
+    line-height: 1.2;
+    margin-left: 10px;
+    border-color: #bbb;
+    background-color: #fff;
+    color: #464646;
+    font-weight: 600 !important;
+}
+.direction {
+    display: flex;
+    flex-direction: row;
+}
+.button-group-pills .btn.active {
+    border-color: #25ae88 !important;
+    background-color: #25ae88 !important;
+    color: #fff !important;
+    box-shadow: none;
+}
+.button-group-pills-language .btn {
+    line-height: 1.2;
+    margin-left: 10px;
+    font-weight: 100 !important;
+    border-radius: 0 !important;
+    padding: 10px;
+    font-weight: 600 !important;
+}

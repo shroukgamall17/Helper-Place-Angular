@@ -24,4 +24,11 @@ import { CandidateDashboardComponent } from '../candidate-dashboard/candidate-da
     CommonModule,
   ],
 })
-export class DashboardLayoutComponent {}
+export class DashboardLayoutComponent {
+
+
+
+constructor() {}
+
+  
+}

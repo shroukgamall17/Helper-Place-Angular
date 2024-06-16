@@ -1,0 +1,42 @@
+
+.helperCard .containImg{
+    width: 70px;
+    height: 70px;
+    margin: 0;
+}
+.helpers{
+    background-color: #fff9e4;
+}
+  .yellowline{
+    height: 2.5px;
+    width: 45px;
+    margin-top: 8px;
+    margin-right: 10px;
+    background-color:#ebba16 ;
+  }
+  .helperCard{
+    box-shadow:  6px 6px 14px #0000003d;
+    transition: .5s;
+  }
+  .helperCard:hover{
+    box-shadow: 0 0 0 #00000000;
+  }
+  .prevBtn,
+  .nextBtn{
+    height: 3px;
+    width: 50px;
+    top: 100%;
+    position: absolute;
+    background-color:#ebba16 ;
+  }
+.prevBtn{
+     left: 280%;
+}
+.nextBtn{
+    right: 300%;
+}
+@media (min-width:993px) {
+    .helperCard{
+        width: 33%;
+    }
+}  

@@ -1,0 +1,6 @@
+ .frequent-text {
+    font-size: calc(18px + 30 * (100vw - 300px) / 1620);
+    margin-bottom: 20px;
+    margin-top: -15px;
+    color: #054a84!important ;
+}

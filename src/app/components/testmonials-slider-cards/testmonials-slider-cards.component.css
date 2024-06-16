@@ -1,0 +1,54 @@
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heatTitle::after{
+    content: "";
+    background-color: #ebba16;
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    top: 50%;
+    margin-left: 4px;
+}
+.heatTitleContain {
+    width: 250px;
+    margin: auto;
+}
+.heatTitle::before{
+    content: "";
+    background-color: #ebba16;
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    top: 50%;
+    right: 71%;
+}
+
+@media (max-width:950px) {
+    .marginCards {
+        margin-top: 10px;
+    }
+}
+.card .img{
+    width: 60px;
+    height:  60px;
+    border-radius: 50%;
+    background-color: #ebba16;
+    overflow: hidden;
+}
+  .prevBtn,
+  .nextBtn{
+    height: 3px;
+    width: 50px;
+    top: 100%;
+    position: absolute;
+    background-color:#ebba16 ;
+  }
+.prevBtn{
+     left: 280%;
+}
+.nextBtn{
+    right: 300%;
+}

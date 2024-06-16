@@ -26,7 +26,6 @@ export class WholeCandidateComponent {
 
 
     this.testy.Ischange = value.Ischange
-   // console.log(this.testy.ischange)
 
     }
 }

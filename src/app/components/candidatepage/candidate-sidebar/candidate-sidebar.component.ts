@@ -8,15 +8,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { ICandidate } from '../../../models/ICandidate';
 import { IFiltercandidate } from '../../../models/ifiltercandidate';
 import { FcandidateService } from '../../../services/fcandidate.service';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faRotate } from '@fortawesome/free-solid-svg-icons';
+declare var $: any;
 @Component({
   selector: 'app-candidate-sidebar',
   standalone: true,
-  imports: [FormsModule,CommonModule,AppComponent,HttpClientModule,NgMultiSelectDropDownModule],
+  imports: [FormsModule,CommonModule,AppComponent,HttpClientModule,NgMultiSelectDropDownModule,FontAwesomeModule],
   templateUrl: './candidate-sidebar.component.html',
   styleUrl: './candidate-sidebar.component.css'
 })
 export class CandidateSidebarComponent implements OnInit {
+  faRotate = faRotate;
   contractDropdownList: any = [];
   contractSelectedItems: any = [];
   languageDropdownList: any = [];
@@ -139,6 +142,8 @@ onDeselectAll2(items: any)
 this.testingfilter.Mainskills.length=0
 this.filt()
 }
+
+
 empty(){
   this.testingfilter.Mainskills.length=0
   this.testingfilter.Language.length=0
@@ -149,7 +154,7 @@ empty(){
   this.testingfilter.Workexperience=0
   this.testingfilter.StartDate=new Date(2000, 0, 1);
 
- console.log(this.skillsSelectedItems)
+//  console.log(this.skillsSelectedItems)
 this.filt()
 
 }
@@ -164,8 +169,23 @@ this.filt()
   }
 
 
+openModal(): void {
+    const modal = document.getElementById('exampleModal');
+    if (modal) {
+      modal.classList.add('show');
+      modal.style.display = 'block';
+      modal.setAttribute('aria-hidden', 'false');
+    }
+  }
 
-
+  closeModal(): void {
+    const modal = document.getElementById('exampleModal');
+    if (modal) {
+      modal.classList.remove('show');
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden', 'true');
+    }
+  }
 
 
 }

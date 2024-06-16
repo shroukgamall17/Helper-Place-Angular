@@ -1,39 +1,39 @@
 <div class="container mt-5">
-    <div class="row" class="row justify-content-center">
-        <div class="col-md-6">
-            <form (ngSubmit)="onSubmit()" #adminForm="ngForm" class="needs-validation" novalidate>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <form (ngSubmit)="onSubmit()" #adminForm="ngForm" class="needs-validation bg-white p-4 rounded shadow" novalidate>
+                <h4 class="mb-4 text-primary">Admin Details</h4>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="userName" class="form-label">Name:</label>
-                            <input type="text" id="userName" name="userName" [(ngModel)]="admin.userName"
-                                class="form-control" required>
+                            <label for="userName" class="form-label text-primary">Name:</label>
+                            <input type="text" id="userName" name="userName" [(ngModel)]="admin.userName" class="form-control border-primary"
+                                required>
                             <div class="invalid-feedback">Please enter the admin name.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" id="email" name="email" [(ngModel)]="admin.email" class="form-control"
+                            <label for="email" class="form-label text-primary">Email:</label>
+                            <input type="email" id="email" name="email" [(ngModel)]="admin.email" class="form-control border-primary"
                                 required>
-                            <div class="invalid-feedback">Please enter Invalid Email.</div>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password:</label>
-                            <input type="password" id="password" name="password" [(ngModel)]="admin.password"
-                                class="form-control" required>
-                            <div class="invalid-feedback">Please enter Invalid Password.</div>
+                            <label for="password" class="form-label text-primary">Password:</label>
+                            <input type="password" id="password" name="password" [(ngModel)]="admin.password" class="form-control border-primary"
+                                required>
+                            <div class="invalid-feedback">Please enter a valid password.</div>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-2">
+                    <div class="col-12 text-center">
                         <button type="submit" [disabled]="adminForm.invalid"
-                            class="btn bsb-btn-xl btn-outline-primary rounded-pill m-2">Update</button>
-                    </div>
-                    <div class="col-2">
-                        <a class="btn bsb-btn-xl btn-outline-danger rounded-pill m-2" (click)="back()">Back</a>
+                            class="btn btn-outline-primary rounded-pill">Update</button>
+                        <a class="btn btn-outline-danger rounded-pill ms-2" (click)="back()">Back</a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+

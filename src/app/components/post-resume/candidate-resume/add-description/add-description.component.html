@@ -1,26 +1,214 @@
-<div class="text-center m-5 p-3 bg-light rounded shadow">
+ <!-- <div class="text-center m-5 p-3 bg-light rounded shadow">
   <h2 class="text-primary">Add a brief of yourself</h2>
-  <p class="lead">Please provide a brief description about yourself not less than 50 letter.</p>
+  <p class="lead">
+    Please provide a brief description about yourself not less than 50 letter.
+  </p>
 </div>
+
 <div class="d-flex justify-content-center">
-<textarea name="" id=""
-class="form-control"
- style="width: 500px;height: 500px; "
- [(ngModel)]="candService.mycandidate.description"
- (change)="onCommentChange($event)"
- ></textarea>
+  <textarea
+    name=""
+    id=""
+    class="form-control"
+    style="width: 500px; height: 500px;"
+    [(ngModel)]="candService.mycandidate.description"
+    (change)="onCommentChange($event)"
+  ></textarea>
 </div>
- <button routerLink="/candidateResume/candidateEducation" class="btn btn-primary mt-3 ms-3">back</button>
- <div class="w-100 d-flex justify-content-center mb-8">
+
+<button
+  routerLink="/candidateResume/candidateEducation"
+  class="btn btn-primary mt-3 ms-3"
+>
+  back
+</button>
+<div class="w-100 d-flex justify-content-center mb-8">
   <button
-  type="text"
-  class="btn btn-success text-center px-5 "
-  routerLink="/home"
-  (click)="sendData()"
-  [disabled]="myflag"
- >
-  Finish
- </button>
- </div>
+    type="text"
+    class="btn btn-success text-center px-5"
+    routerLink="/home"
+    (click)="sendData()"
+    [disabled]="myflag"
+  >
+    Finish
+  </button>
+</div> -->
 
 
+
+
+
+
+<section class="addResume d-flex justify-content-center align-items-center">
+  <div class="Post-Resume w-75 bg-white">
+    <div class="w-100 d-block">
+      <div
+        class="d-flex justify-content-evenly align-items-center text-center fw-bold m-5 formSteps"
+      >
+        <div>
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div
+            class="mat-step-icon mat-step-icon-selected mat-step-icon-state-number"
+          >
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div
+            class="mat-step-label mat-step-label-active mat-step-label-selected"
+          >
+            <div class="position-icon stepper-active-border ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/user-data.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              Personal<br class="ng-star-inserted" />
+              Information
+            </div>
+          </div>
+        </div>
+        <div
+          class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"
+        ></div>
+        <div
+          role="tab"
+          class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1"
+          id="cdk-step-label-0-1"
+          aria-posinset="2"
+          aria-setsize="4"
+          aria-controls="cdk-step-content-0-1"
+          aria-selected="false"
+          aria-disabled="true"
+        >
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/briefcase.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              Professional<br class="ng-star-inserted" />
+              Information
+            </div>
+          </div>
+        </div>
+        <div
+          class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"
+        ></div>
+        <div
+          role="tab"
+          class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1"
+          id="cdk-step-label-0-2"
+          aria-posinset="3"
+          aria-setsize="4"
+          aria-controls="cdk-step-content-0-2"
+          aria-selected="false"
+          aria-disabled="true"
+        >
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/scholarship.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              Education &amp;<br class="ng-star-inserted" />
+              Experience
+            </div>
+          </div>
+        </div>
+        <div
+          class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"
+        ></div>
+        <div
+          role="tab"
+          class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1"
+          id="cdk-step-label-0-3"
+          aria-posinset="4"
+          aria-setsize="4"
+          aria-controls="cdk-step-content-0-3"
+          aria-selected="false"
+          aria-disabled="true"
+        >
+          <div
+            matripple=""
+            class="mat-ripple div-ripple mat-focus-indicator"
+          ></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img
+                src="https://cdn.helperplace.com/icons/info.svg"
+                width="35px"
+              />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              About<br class="ng-star-inserted" />
+              You
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="m-5" enctype="multipart/form-data">
+        <label class="lead">
+          Resume Description (Describe your working experience and your
+          personality)*
+        </label>
+        <div class="d-flex justify-content-center align-items-center">
+          <textarea
+            name=""
+            id=""
+            class="form-control"
+            rows="10"
+            [(ngModel)]="candService.mycandidate.description"
+            (change)="onCommentChange($event)"
+          ></textarea>
+        </div>
+<div class="d-flex justify-content-start align-items-center mt-4 ">
+ <button
+          routerLink="/candidateResume/candidateEducation"
+          class="btn btn-primary  me-3"
+        >
+          back
+        </button>
+
+        <button
+          type="text"
+          class="btn btn-success text-center px-5"
+          routerLink="/home"
+          (click)="sendData()"
+          [disabled]="myflag"
+        >
+          Finish
+        </button>
+</div>
+       
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,11 +1,11 @@
-<div class="ms-3">
-  <div id="main">
+<div class="filter mt-5">
+  <div id="main" class="border border-opacity-25 border-black p-4">
     <!-- 1 -->
-    <div class="row">
-      <h3 class="col-12 bluecolor">I am looking for</h3>
+    <div class="mt-5">
+      <h3 class="bluecolor mb-4">I am looking for</h3>
     </div>
-    <div class="row">
-      <div class="col-12">
+    <div class="mb-4">
+      <div>
         <app-multiple-search-select
           [PlaceHolder]="'Country Location'"
           [Data]="SideBarServiceService.countrylocationDropdownList"
@@ -18,50 +18,50 @@
       </div>
     </div>
     <!-- 2 -->
-    <div class="row">
-      <div class="col-3 bluecolor">Filter</div>
-      <div class="col-6"></div>
-      <a class="col-3">Reset</a>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="bluecolor">Filter</div>
+      <div>
+        <a class="res d-flex justify-content-evenly align-items-center"><i class="fa-solid fa-rotate"></i>Reset</a>
+      </div>
     </div>
     <!-- 3 -->
-    <div class="row">
-      <div class="col-12 bluecolor">jop position</div>
+    <div>
+      <div class="bluecolor">Job Position</div>
     </div>
     <!-- 4 -->
     <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+      <div class="greencolor" style="height: 3px; background-color: green; margin-block:14px;"></div>
     </div>
     <!-- 5 -->
     <div>
       <input
         [(ngModel)]="queryParams.JobPosition"
-        id="f"
+        id="jobPosition1"
         type="radio"
         name="position"
         value="Domestic Helper"
+        class="me-3"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
-      <label for="gender">Domestic Helper</label><br />
+      <label for="jobPosition1">Domestic Helper</label><br />
       <input
         [(ngModel)]="queryParams.JobPosition"
-        id="f"
+        id="jobPosition2"
         type="radio"
         name="position"
         value="Driver"
+        class="me-3"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
-      <label for="f">Driver</label><br />
+      <label for="jobPosition2">Driver</label><br />
     </div>
     <!-- 6 -->
-    <div class="row">
-      <div class="col-12 bluecolor">StartDate</div>
+    <div>
+      <div class="mt-3 bluecolor">Start Date</div>
     </div>
     <!-- 7-->
-    <div class="row">
-      <div class="col-12">
+    <div>
+      <div>
         <input
           [(ngModel)]="queryParams.startdate"
           type="date"
@@ -70,41 +70,37 @@
         />
       </div>
     </div>
-
     <!-- 8-->
-    <div class="row">
-      <div class="col-12 bluecolor">job type</div>
+    <div>
+      <div class="bluecolor">Job Type</div>
     </div>
     <!-- 9 -->
-    <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+    <div>
+      <div class="greencolor" style="height: 3px; background-color: green; margin-block:14px;"></div>
     </div>
     <!-- 10-->
     <div>
       <div *ngFor="let item of SideBarServiceService.jobtypeDropdownList">
         <input
           [(ngModel)]="queryParams.JobType"
-          id="ff"
+          id="jobType{{item}}"
           type="radio"
           name="jobtype"
+          class="me-3"
           [value]="item"
           (ngModelChange)="ApplyChanges.emit(queryParams)"
         />
-        <label for="ff">{{item}}</label>
+        <label [for]="'jobType' + item">{{item}}</label>
       </div>
     </div>
-    <!-- 9-->
-    <div class="row">
-      <div class="col-12 bluecolor">Contract status</div>
+    <!-- 11-->
+    <div>
+      <div class="bluecolor mt-3">Contract Status</div>
     </div>
-    <!-- still not -->
-    <div class="row">
-      <div class="col-12">
+    <div>
+      <div>
         <app-multiple-search-select
-          [PlaceHolder]="'Contract status'"
+          [PlaceHolder]="'Contract Status'"
           [Data]="SideBarServiceService.contractDropdownList"
           [AllowSingleSelection]="false"
           (SelectedItemsChanged)="
@@ -114,41 +110,32 @@
         ></app-multiple-search-select>
       </div>
     </div>
-
-    <!-- 11-->
-    <div class="row">
-      <div class="col-12 bluecolor">working experience</div>
-    </div>
     <!-- 12 -->
-    <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+    <div>
+      <div class="mt-3 bluecolor">Working Experience</div>
     </div>
-    <!-- 14 -->
-    <div class="row">
-      <div class="col-12">
+    <div>
+      <div class="greencolor" style="height: 3px; background-color: green; margin-block:14px;"></div>
+    </div>
+    <div>
+      <div>
         <input
           class="form-control"
           type="number"
-          placeholder="experience period"
+          placeholder="Experience Period"
           [(ngModel)]="queryParams.WorkingExperience"
           (ngModelChange)="ApplyChanges.emit(queryParams)"
         />
       </div>
     </div>
-    <!-- 15 -->
-
-    <div class="row">
-      <div class="col-12 bluecolor">language</div>
+    <!-- 13 -->
+    <div>
+      <div class="bluecolor">Language</div>
     </div>
-    <!-- 16 -->
-
-    <div class="row">
-      <div class="col-12">
+    <div>
+      <div>
         <app-multiple-search-select
-          [PlaceHolder]="'language'"
+          [PlaceHolder]="'Language'"
           [Data]="SideBarServiceService.languageDropdownList"
           [AllowSingleSelection]="false"
           (SelectedItemsChanged)="
@@ -158,15 +145,12 @@
         ></app-multiple-search-select>
       </div>
     </div>
-    <!-- 17 -->
-
-    <div class="row">
-      <div class="col-12 bluecolor">Main Skills</div>
+    <!-- 14 -->
+    <div>
+      <div class="mt-3 bluecolor">Main Skills</div>
     </div>
-
-    <!-- 18 -->
     <div class="row">
-      <div class="col-12">
+      <div>
         <app-multiple-search-select
           [PlaceHolder]="'Main Skills'"
           [Data]="SideBarServiceService.skillsDropdownList"
@@ -178,64 +162,64 @@
         ></app-multiple-search-select>
       </div>
     </div>
-
-    <!-- 19 -->
-
+    <!-- 15 -->
     <div class="row">
-      <div class="col-12 bluecolor">Gender</div>
+      <div class="mt-3 bluecolor">Gender</div>
     </div>
-    <!-- 20 -->
     <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+      <div class="greencolor" style="height: 3px; background-color: green; margin-block:14px;"></div>
     </div>
-    <!-- 21-->
     <div>
       <input
         [(ngModel)]="queryParams.gender"
-        id="ff"
+        id="genderMale"
         type="radio"
         name="gender"
         value="Male"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
-      <label for="ff">Male</label><br />
+      <label for="genderMale" class="ms-2">Male</label><br />
       <input
         [(ngModel)]="queryParams.gender"
-        id="fff"
+        id="genderFemale"
         type="radio"
         name="gender"
         value="Female"
         (ngModelChange)="ApplyChanges.emit(queryParams)"
       />
-      <label for="fff">Female</label><br />
+      <label for="genderFemale" class="ms-2">Female</label><br />
     </div>
-    <!-- 22 -->
+    <!-- 16 -->
     <div class="row">
-      <div class="col-12 bluecolor">Age</div>
+      <div class="mt-3 bluecolor">Age</div>
     </div>
-    <!-- 23 -->
     <div class="row">
-      <div
-        class="col-12 greencolor"
-        style="height: 3px; background-color: green"
-      ></div>
+      <div class="greencolor" style="height: 3px; background-color: green; margin-block:14px;"></div>
     </div>
-    <!-- 24 -->
     <div class="row">
       <div class="col-12">
         <input
           [(ngModel)]="queryParams.Age"
           type="number"
           class="form-control"
-          placeholder="your age"
+          placeholder="18+"
           (ngModelChange)="ApplyChanges.emit(queryParams)"
         />
       </div>
     </div>
+    <!-- 17 -->
+    <div class="row">
+      <div class="col-12">
+        <div class="d-grid gap-2 mt-4">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            (click)="openModal()"
+          >
+            View Results
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<!-- <button (click)="ApplyChanges.emit(queryParams)"></button> -->
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

@@ -1,4 +1,4 @@
-<div class="Post-Resume">
+<!-- <div class="Post-Resume">
   <form [formGroup]="formgroup" class="Post-Resume-Form">
     <h1>Job Description</h1>
     <div class="Description">
@@ -36,3 +36,136 @@
     <button>submit</button>
   </form>
 </div>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="addResume d-flex justify-content-center align-items-center">
+  <div class="Post-Resume w-75 bg-white">
+    <div class="w-100 d-block">
+      <div class="d-flex justify-content-evenly align-items-center text-center fw-bold m-5 formSteps">
+        <div>
+          <div matripple="" class="mat-ripple div-ripple mat-focus-indicator"></div>
+          <div class="mat-step-icon mat-step-icon-selected mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label mat-step-label-active mat-step-label-selected">
+            <div class="position-icon stepper-active-border ng-star-inserted">
+              <img src="https://cdn.helperplace.com/icons/user-data.svg" width="35px" />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              1
+              Job <br class="ng-star-inserted" />
+              Requirment
+            </div>
+          </div>
+        </div>
+        <div class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"></div>
+        <div role="tab" class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1" id="cdk-step-label-0-1" aria-posinset="2" aria-setsize="4" aria-controls="cdk-step-content-0-1"
+          aria-selected="false" aria-disabled="true">
+          <div matripple="" class="mat-ripple div-ripple mat-focus-indicator"></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img src="https://cdn.helperplace.com/icons/briefcase.svg" width="35px" />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              About<br class="ng-star-inserted" />
+              You
+            </div>
+          </div>
+        </div>
+        <div class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"></div>
+        <div role="tab" class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1" id="cdk-step-label-0-2" aria-posinset="3" aria-setsize="4" aria-controls="cdk-step-content-0-2"
+          aria-selected="false" aria-disabled="true">
+          <div matripple="" class="mat-ripple div-ripple mat-focus-indicator"></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img src="https://cdn.helperplace.com/icons/scholarship.svg" width="35px" />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              Job &amp;<br class="ng-star-inserted" />
+              Detail
+            </div>
+          </div>
+        </div>
+        <div class="mat-stepper-horizontal-line ng-tns-c3676410898-30 ng-star-inserted"></div>
+        <div role="tab" class="div mat-primary ng-tns-c3676410898-30 mat-horizontal-stepper-header ng-star-inserted"
+          tabindex="-1" id="cdk-step-label-0-3" aria-posinset="4" aria-setsize="4" aria-controls="cdk-step-content-0-3"
+          aria-selected="false" aria-disabled="true">
+          <div matripple="" class="mat-ripple div-ripple mat-focus-indicator"></div>
+          <div class="mat-step-icon mat-step-icon-state-number">
+            <div class="mat-step-icon-content"></div>
+          </div>
+          <!-- <div class="mat-step-label">
+            <div class="position-icon ng-star-inserted">
+              <img src="https://cdn.helperplace.com/icons/info.svg" width="35px" />
+            </div>
+            <div class="mat-step-text-label ng-star-inserted">
+              About<br class="ng-star-inserted" />
+              You
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <form [formGroup]="formgroup" class="" enctype="multipart/form-data">
+        <h1 class="fs-4 bg-blue">Job Description</h1>
+          <div class="Description m-5">
+      <mdb-form-control class="col-md-12 mb-3">
+        <input
+          [formControlName]="'JobTitle'"
+          mdbInput
+          name="JobTitle"
+          type="text"
+          id="form1"
+          class="form-control"
+        />
+        <label mdbLabel class="form-label" for="form1">Job Title</label>
+      </mdb-form-control>
+      <p class="lead my-3">
+        Please give some information about the job position and your offer.
+      </p>
+      <app-text-editor
+        (onContentChanged)="formgroup.get('JobDescription')?.setValue($event)"
+        class="my-3 "
+      ></app-text-editor>
+      <app-slide-toggle
+        (ValueChanged)="
+          formgroup.get('SubscribeToOurTipsAndNewsletters')?.setValue($event)
+        "
+        [PlaceHolder]="'Subscribe to our tips and newsletters?'"
+      ></app-slide-toggle
+      ><br />
+      <app-slide-toggle
+        (ValueChanged)="
+          formgroup.get('ReceivePrivilegedAndDiscountOffers')?.setValue($event)
+        "
+        [PlaceHolder]="'Receive privileged and discount offers.'"
+      ></app-slide-toggle>
+
+    <button class="btn d-block my-3" style="background-color: #0f0852; color: white;">submit</button>
+
+    </div>
+      </form>
+    </div>
+  </div>
+</section>

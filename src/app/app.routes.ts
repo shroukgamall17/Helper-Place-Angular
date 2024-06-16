@@ -42,9 +42,13 @@ import { AdminDetailsComponent } from './components/Admin-Dashboard/admin-dashbo
 import { ContactDetailsComponent } from './components/candidateCrud/Details/candidate-details/contact-details/contact-details.component';
 import { roledashboardguardGuard } from '../AuthRoutes/roledashboardguard.guard';
 import { JobDetailsComponent } from './components/job-page/Job-Details/Job-details.component';
+import { SelectorListContext } from '@angular/compiler';
+import { FAQAboutComponent } from './components/faq-about/faq-about.component';
+import { AboutComponent } from './components/about/about.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-   {
+  {
     path: 'success/:message',
     component: PaymentSuccessComponent,
   },
@@ -74,21 +78,33 @@ export const routes: Routes = [
   },
   { path: 'Payment-Failed', component: PaymentFailedComponent },
   { path: 'Payment-Success', component: PaymentSuccessComponent },
-  { path: 'home', component: HomeComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
   { path: 'Login', canActivate: [loginInGuard], component: LoginComponent },
   { path: 'JobPage', component: JobPageComponent },
   { path: 'FindJob', component: FindJobComponent },
-  { path: 'aboutus', component: AboutusComponent },
+  {
+    path: 'aboutus',
+    component: AboutusComponent,
+    children: [
+      { path: 'FAQ', component: FAQAboutComponent },
+      { path: 'privacy', component: PrivacyPolicyComponent },
+      { path: 'contact', component: ContactusComponent },
+      { path: '', component: AboutComponent },
+    ],
+  },
   {
     path: 'contactus',
     component: ContactusComponent,
   },
   {
-    path: 'register',
+    path: 'register/:role',
     canActivate: [loginInGuard],
     component: RegisterComponent,
   },
-  
+
   { path: 'pricing', component: PricingComponent },
   {
     path: 'AddJob',
@@ -201,8 +217,9 @@ export const routes: Routes = [
         path: '**', // route every undefined route to the root of this feature
         redirectTo: ' ',
       },
-      { path: '**', component: ErrorPageComponent }
+      { path: '**', component: ErrorPageComponent },
     ],
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  
 ];

@@ -1,3 +1,4 @@
+import { PoppSidebarComponent } from './components/candidatepage/popp-sidebar/popp-sidebar.component';
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
@@ -6,6 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { Loginservice } from './components/login/LoginService/loginservice.service';
 import { PostJobComponent } from './components/post-job/post-job.component';
 import { DashboardLayoutComponent } from './components/Admin-Dashboard/dashboard-layout/dashboard-layout.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,6 +22,8 @@ import { DashboardLayoutComponent } from './components/Admin-Dashboard/dashboard
     NavbarComponent,
     PostJobComponent,
     DashboardLayoutComponent,
+    FontAwesomeModule,
+    PoppSidebarComponent
   ],
 })
 export class AppComponent {
