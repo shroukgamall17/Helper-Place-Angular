@@ -81,7 +81,7 @@ export class Loginservice {
             (userInfo: any) => {
               this.http
                 .post(
-                  `${environment.baseUrl}/Account/LoginUsingFaceBook`,
+                  `${environment.baseUrl}/Account/RegisterUsingFaceBook`,
                   userInfo
                 )
                 .subscribe({

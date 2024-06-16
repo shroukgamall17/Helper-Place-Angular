@@ -1,3 +1,3 @@
 export const environment = {
-  baseUrl: 'https://helperplanapi.azurewebsites.net',
+  baseUrl: 'https://localhost:44376',
 };
