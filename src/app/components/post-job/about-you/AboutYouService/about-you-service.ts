@@ -22,7 +22,14 @@ export class AboutYouService {
   DayOff: string[] = OptionsOfJobsAndCandidate.DayOffPreferenceStatus;
   Accomodation: string[] = OptionsOfJobsAndCandidate.AccomodationPreferenceStatus;
   Currency :string[]=OptionsOfJobsAndCandidate.CurrencyStatus
-  EmployerType: string[] = ['Family', 'Company', 'Other'];
+  // EmployerType: string[] = ['Family', 'Company', 'Other'];
+  EmployerType: { type: string; imgSrc: string }[] = [
+    { type: 'Family', imgSrc: '../../../../../assets/Images/family.svg' },
+    { type: 'Company', imgSrc: 'https://cdn.helperplace.com/icons/company.svg' },
+    { type: 'Other', imgSrc:'	../../../../../../../assets/Images/other.svg'},
+  ];
+
+
   SalaryOffer: string[] = ['Dont-Mention', 'Fix', 'Range', 'Else'];
   FamilyType: string[] = [
     '1 Adult',

@@ -1,6 +1,102 @@
-  .Skills,.Basic,.Preferences
-  {
-    padding: 0% 5%;
-  }
+.addResume {
+  background: center no-repeat url("../../../../assets/Images//home/Helper.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-  
+.Post-Resume {
+  margin: 80px 0;
+  border-top: 15px solid #054a84;
+}
+.bg-blue {
+  background-color: #054a84;
+}
+
+.sprator {
+  height: 5px;
+  /* background: #000; */
+  margin-bottom: 7px;
+  width: 100%;
+  border-top: 1px dashed #504f4f86;
+}
+@media (max-width: 630px) {
+  /* .wrapper {
+    width: 50%;
+  } */
+  .formSteps {
+    display: none !important;
+  }
+  .detailsRespon {
+    flex-direction: column;
+  }
+}
+.position-container {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.card-direction {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -10px;
+}
+.domestic-driver-card {
+    width: 130px;
+    overflow: hidden;
+    background: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #46464626;
+    border: 4px solid rgba(70, 70, 70, 0);
+}
+.img-cover {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}
+.desc {
+    text-align: center;
+    font-size: 14px;
+    color: #434345;
+    font-weight: 600;
+}
+.button-group-pills .btn {
+    border-radius: 5px;
+    line-height: 1.2;
+    margin-left: 10px;
+    border-color: #bbb;
+    background-color: #fff;
+    color: #464646;
+    font-weight: 600 !important;
+}
+.direction{
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+
+    display: flex;
+    flex-direction: row;
+}
+.button-group-pills .btn {
+    border-radius: 5px;
+    line-height: 1.2;
+    margin-left: 10px;
+    border-color: #bbb;
+    background-color: #fff;
+    color: #464646;
+    font-weight: 600 !important;
+}
+.star-inserted{
+  margin-right: 10px;
+}
+.bg-cdcdcd {
+    background: #cdcdcd;
+}
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
