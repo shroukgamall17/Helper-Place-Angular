@@ -34,7 +34,7 @@
 
       <td>
 
-        <button class="btn btn-outline-danger mx-1" (click)="navigateTodelete(item.id)" >Delete</button
+        <button class="btn btn-outline-danger mx-1" (click)="handleDelete(item.id)" >Delete</button
         ><button class="btn btn-outline-success mx-1"(click)="navigateToEdit(item.id)" >Edit</button>
         <button class="btn btn-outline-primary mx-1" (click)="navigateToDetails(item.id)">Details</button>
       </td>
@@ -43,3 +43,18 @@
   </tbody>
 </table>
 </div>
+<div id="deleteModal" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <div class="container">
+      <h1>Delete Candidate</h1>
+      <p>Are you sure you want to delete this Candidate?</p>
+      <div class="clearfix">
+        <button type="button" class="btn btn-secondary cancelbtn" (click)="closeModal()">Cancel</button>
+        <button type="button" class="btn btn-danger deletebtn" (click)="confirmDelete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
