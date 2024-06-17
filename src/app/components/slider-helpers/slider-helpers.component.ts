@@ -5,9 +5,11 @@ import {  faStar, faCalendar, faMapMarkerAlt } from '@fortawesome/free-solid-svg
 import { ICandidate } from '../../models/ICandidate';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FcandidateService } from '../../services/fcandidate.service';
+import { environment } from '../../../environments/environment';
 import { IFiltercandidate } from '../../models/ifiltercandidate';
 import { CandidateService } from '../../services/candidate.service';
+import { FindjobService } from '../../services/findjob.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-slider-helpers',
   standalone: true,
@@ -16,11 +18,14 @@ import { CandidateService } from '../../services/candidate.service';
   styleUrl: './slider-helpers.component.css'
 })
 export class SliderHelpersComponent implements OnInit{
+  env: string = environment.baseUrl;
   candidates: ICandidate[] = [];
+  jobs: any[] = [] as any[];
   chunkedCandidates: ICandidate[][] = [];
-  filter:IFiltercandidate = {} as IFiltercandidate
+  filter: IFiltercandidate = {} as IFiltercandidate;
+  jobFilter: string = "";
 
-  constructor(library: FaIconLibrary, private candidateService: CandidateService) {
+  constructor(library: FaIconLibrary, private candidateService: CandidateService, private jobService:FindjobService,private router:Router) {
     library.addIcons(faStar, faCalendar, faMapMarkerAlt);
   }
   ngOnInit(): void {
@@ -33,7 +38,6 @@ export class SliderHelpersComponent implements OnInit{
       next: (res) => {
         this.candidates = res;
         this.chunkedCandidates = this.chunkArray(this.candidates, 3);
-        console.log(this.candidates)
       },
       error: (err) => console.log(err)
     });
@@ -45,5 +49,8 @@ export class SliderHelpersComponent implements OnInit{
       chunks.push(array.slice(i, i + chunkSize));
     }
     return chunks;
+  }
+  navigateToDetails(candidateId:number) {
+    this.router.navigate([`details/${candidateId}`]);
   }
 }

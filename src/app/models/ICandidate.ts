@@ -6,6 +6,7 @@ export interface ICandidate {
   description?:string
   position?:string;
   startDate?:Date;
+  availabilityDate?:Date;
   jobtype?:string;
   contract?:string;
   workexperience?:number;

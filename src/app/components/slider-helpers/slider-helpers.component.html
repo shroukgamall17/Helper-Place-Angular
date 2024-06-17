@@ -5,34 +5,29 @@
       <h6 class="mb-0">OUR COMMUNITY</h6>
     </div>
     <h3>They are now looking for a Job and are near you!</h3>
-    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
       <div class="carousel-inner">
         <div class="carousel-item" [class.active]="i === 0" *ngFor="let chunk of chunkedCandidates; let i = index">
           <div class="row my-2">
-            <div class="card mb-3 helperCard col-lg-4 col-md-6 col-sm-12 mx-auto" *ngFor="let candidate of chunk">
+            <div class="card mb-2 helperCard col-lg-4 col-md-6 col-sm-12 mx-auto" *ngFor="let candidate of chunk">
               <div class="d-flex justify-content-start align-items-center">
                 <div class="rounded-circle overflow-hidden containImg me-3">
-                  <img [src]="'../../../assets/Images/female-icon.png'" class="img-fluid" alt="helper-photo"
-                    width="100">
+                  <img [src]="env + candidate.photoURL" class="img-fluid" alt="helper-photo" width="100">
                 </div>
-                <div class="card-body">
+                <div class="card-body" (click)="navigateToDetails(candidate.id)">
                   <h5 class="card-title text-info m-0">{{ candidate.fname }} {{candidate.lname}}</h5>
                   <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
                     <li class="card-text" style="color: #25ae88;">
                       <fa-icon [icon]="['fas', 'map-marker-alt']"></fa-icon>
-                      <span class="text-black">{{ candidate.description }}</span>
+                      <span class="text-black ms-2">{{ candidate.location }}</span>
                     </li>
                     <li class="card-text" style="color: #25ae88;">
                       <fa-icon [icon]="['fas', 'star']"></fa-icon>
-                      <span class="text-black">{{ candidate.position }}</span>
+                      <span class="text-black ms-2">{{ candidate.position }}</span>
                     </li>
                     <li class="card-text" style="color: #25ae88;">
                       <fa-icon [icon]="['fas', 'calendar']"></fa-icon>
-                      <span class="text-black">{{ candidate.startDate }}</span>
-                    </li>
-                    <li class="card-text" style="color: #25ae88;">
-                      <fa-icon [icon]="['fas', 'calendar']"></fa-icon>
-                      <span class="text-black">{{ candidate.age }}</span>
+                      <span class="text-black ms-2">{{ candidate.availabilityDate | date:'MMMM yyyy' }}</span>
                     </li>
                   </ul>
                 </div>
