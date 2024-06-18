@@ -5,8 +5,12 @@
         <div class="cover">
           <div class="label">very Active</div>
           <div class="img">
-            <img src="../../../../assets/Images/female-icon.png" alt="image" style="width: 120px; height: 120px"
-              class="rounded-circle m-2" />
+            <img
+              src="../../../../assets/Images/female-icon.png"
+              alt="image"
+              style="width: 120px; height: 120px"
+              class="rounded-circle m-2"
+            />
           </div>
         </div>
         <div class="resumeInfo">
@@ -14,15 +18,15 @@
             {{ Job.jobRequirments.basicInformation.positionOffered }}
           </h4>
           <div class="d-flex justify-content-between align-items-center">
-            <div class="" style="color: black; margin: 10px 0 0 140px">
-              {{ Job.jobDetails.jobTitle }}
-            </div>
-            <div class="" style="color: black; margin: 10px 0 0">
-              {{ Job.jobRequirments.basicInformation.type }}
-            </div>
-            <div class="" style="color: black; margin: 10px 0 0">
+            <div
+              class="fs-6"
+              style="color: black; margin: 10px 0 0 150px; width: 80%"
+            >
               Starting From {{ Job.jobRequirments.basicInformation.startDate }}
+              <br />
+              |{{ Job.jobRequirments.basicInformation.type }}
             </div>
+
             <div class="">
               <button class="btn bg-green text-white me-3">Apply</button>
             </div>
@@ -37,54 +41,126 @@
           </div>
 
           <div
-            class="row py-3 personal-infomation d-flex justify-content-center"
+            class="row py-3 personal-infomation d-flex justify-content-between fs-6"
           >
             <div class="col-11 mx-auto">
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                  <h5 class="footer-experience d-flex justify-content-start">
+                  <div class="footer-experience d-flex justify-content-start">
                     <div name="user" class="me-3">
                       <i class="fa-solid fa-user green"></i>
                     </div>
                     <p>
-                      {{ Job.jobRequirments.candidatePreference.gender }} Gender
-                      Required
+                      {{ Job.jobRequirments.candidatePreference.gender }} |
+                      Gender Required
                     </p>
-                  </h5>
+                  </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                  <h5 class="footer-experience d-flex justify-content-start">
+                  <div class="footer-experience d-flex justify-content-start">
                     <div name="map" class="me-3">
                       <i class="fa-solid fa-location-pin green"></i>
                     </div>
                     <p>
-                      Contract Type :
-                      {{
-                        Job.jobRequirments.candidatePreference
-                          .preferedCandidateContract
-                      }}
+                      {{ Job.aboutYou.offersToCandidate.accomodation }}
                     </p>
-                  </h5>
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                  <h5 class="footer-experience d-flex justify-content-start">
-                    <div name="certificate" class="me-3">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="certificate" class="me-3 mb-3">
                       <i class="fa-solid fa-star-of-life green"></i>
                     </div>
-                    It is prefered if candidate is
                     {{
                       Job.jobRequirments.candidatePreference
                         .preferedCandidateLocation
                     }}
-                  </h5>
+                  </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3 mb-3">
+                      <i class="fa-solid fa-calendar-days green"></i>
+                    </div>
+                    <span class="fw-bold"> Day Off: &ThinSpace; </span>
+                    {{ Job.aboutYou.offersToCandidate.dayOFF }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3">
+                      <i class="fa-solid fa-file green"></i>
+                    </div>
+                    <span class="fw-bold"> Contract Status : </span>
+                    {{
+                      Job.jobRequirments.candidatePreference
+                        .preferedCandidateContract
+                    }}
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3">
+                      <i class="fa-brands fa-slack green"></i>
+                    </div>
+                    <span class="fw-bold">
+                      experience year :
+                      {{
+                        Job.jobRequirments.candidatePreference
+                          .experienceYearsRequired[0]
+                      }}
+                      to
+                      {{
+                        Job.jobRequirments.candidatePreference
+                          .experienceYearsRequired[1]
+                      }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3">
+                      <i class="fa-solid fa-phone green"></i>
+                    </div>
+                    <span class="fw-bold">
+                      age:
+                      {{
+                        Job.jobRequirments.candidatePreference
+                          .ageRequired[0]
+                      }}
+                      to
+                      {{
+                        Job.jobRequirments.candidatePreference
+                          .ageRequired[1]
+                      }}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="sprator p-1 my-4">
+          <h5 class="ms-5">Job Description</h5>
+        </div>
+        <div class="m-5">
+          <h4 class="fw-bold" style="color: #054a84; margin-bottom: 20px">
+            {{ Job.jobDetails.jobTitle }}
+          </h4>
+
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            autem, hic quam, fugiat, necessitatibus facilis repellat aperiam
+            expedita ex mollitia esse molestias excepturi quibusdam ipsam nihil
+            commodi repellendus consectetur minima.
+          </p>
         </div>
 
         <div class="sprator p-1 my-4">
@@ -216,7 +292,6 @@
                     </ng-container>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -224,75 +299,94 @@
         <div class="sprator p-1 my-4">
           <h5 class="ms-5">About Me</h5>
         </div>
-        <div>
-          <p class="text-center m-4"> Employer Type : {{ Job.aboutYou.aboutYouSub.employerType.type }}</p>
-        </div>
-        <div class="sprator p-1 my-4">
-          <h5 class="ms-5">Work Experience</h5>
-        </div>
-        <ng-container *ngIf="Job.aboutYou.aboutYouSub.employerType.type=='Family'">
-          <div class="col-11 phone_pedding mx-auto mb-5 ng-star-2 border-bottom">
-            <div class="event-container event-container_footer_margin_custom d-flex">
-              <div class="yoga-circle">
-                <picture class="">
-                  <source srcset="
-                      https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png
-                    " width="35px" height="35px" media="(max-width:768px)" class="" />
-                  <img
-                    src="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
-                    width="40px" height="40px" loading="lazy"
-                    alt="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
-                    class="" />
-                </picture>
+        <div class="m-5">
+          <div class="row">
+            <div class="col-6">
+              <div>
+                <span class="">
+                  Employer Type :
+                  {{ Job.aboutYou.aboutYouSub.employerType.type }}</span
+                >
               </div>
-              <div class="event-info text-left">
+              <span class="primary text-left">
+                Employer Nationality :
+                {{ Job.aboutYou.aboutYouSub.employerType.nationality }}
+              </span>
+            </div>
+
+            <div class="col-6">
+              <div class="">
                 <h3 class="primary text-left mb-0">
-                  Employer Nationality :
-                  {{ Job.aboutYou.aboutYouSub.employerType.nationality }} -
-                  <span class="ng-star-2">Have Pets : {{ Job.aboutYou.aboutYouSub.employerType.havePets }}</span>
+                  <span class="ng-star-2"
+                    >Have Pets :
+                    {{ Job.aboutYou.aboutYouSub.employerType.havePets }}</span
+                  >
                 </h3>
                 <div class="d-flex align-items-center justify-content-start">
-                  <h3 class="ng-2"> Accomodation : {{ Job.aboutYou.offersToCandidate.accomodation }}</h3>
+                  <!-- <h3 class="ng-2"> Accomodation : {{ Job.aboutYou.offersToCandidate.accomodation }}</h3> -->
                   <div name="map m-0" class="icons">
-                    <i class="fa-solid fa-location-dot green mx-2"></i>
+                    <!-- <i class="fa-solid fa-location-dot green mx-2"></i> -->
                   </div>
                   <span class="location-span mb-0 ng-star-2">
-                    Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }}
+                    <!-- Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }} -->
                   </span>
                 </div>
                 <p class="text-left mb-1">Canadian Family</p>
-                <p class="text-left mb-1 ng-star-2">:Salary : {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title
-                  }}
+                <p class="text-left mb-1 ng-star-2">
+                  Salary :
+                  {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title }}
+                </p>
+                <p class="text-left mb-1 ng-star-2">
+                  <!-- {{ getref(ex.hasLetterRef) }} -->
                 </p>
               </div>
             </div>
           </div>
-        </ng-container>
+        </div>
       </div>
-
       <div class="col-lg-4 rigthSec" style="margin: 60px 0">
-        <div class="card helperCard p-2" *ngFor="let item of randomJobs;" (click)="navigateToDetails(item.id)">
+        <div
+          class="card helperCard p-2"
+          *ngFor="let item of randomJobs"
+          (click)="navigateToDetails(item.id)"
+        >
           <div class="d-flex justify-content-center align-items-center">
             <div class="">
               <div class="rounded-circle overflow-hidden containImg">
-                <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100" />
+                <img
+                  src="../../assets/Images/3.jpg"
+                  class="img-fluid rounded-start"
+                  alt="helper-phone"
+                  width="100"
+                />
               </div>
             </div>
             <div class="">
               <div class="card-body">
-                <h5 class="card-title text-info m-0">{{ item.jobRequirments.basicInformation.positionOffered }}</h5>
-                <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
+                <h5 class="card-title text-info m-0">
+                  {{ item.jobRequirments.basicInformation.positionOffered }}
+                </h5>
+                <ul
+                  class="list-unstyled mt-4 d-flex flex-column justify-content-center"
+                >
                   <li class="card-text" style="color: #25ae88">
-                    <i class="fa-solid fa-location-dot"></i><span class="text-black">{{
-                      item.jobRequirments.basicInformation.location }}</span>
+                    <i class="fa-solid fa-location-dot"></i
+                    ><span class="text-black">{{
+                      item.jobRequirments.basicInformation.location
+                    }}</span>
                   </li>
                   <li class="card-text" style="color: #25ae88">
                     <i class="fa-solid fa-star-of-life"></i>
-                    <span class="text-black">{{ item.jobRequirments.basicInformation.type }}</span>
+                    <span class="text-black">{{
+                      item.jobRequirments.basicInformation.type
+                    }}</span>
                   </li>
                   <li class="card-text" style="color: #25ae88">
-                    <i class="fa-solid fa-calendar-days"></i><span class="text-black">{{
-                      item.jobRequirments.basicInformation.startDate | date:'MMMM yyyy' }}</span>
+                    <i class="fa-solid fa-calendar-days"></i
+                    ><span class="text-black">{{
+                      item.jobRequirments.basicInformation.startDate
+                        | date : "MMMM yyyy"
+                    }}</span>
                   </li>
                 </ul>
               </div>
@@ -300,7 +394,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
