@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FcandidateService } from '../../../../services/fcandidate.service';
-import {
-  ActivatedRoute,
-  Router,
-  RouterLink,
-  RouterOutlet,
-} from '@angular/router';
+import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { ICandidates } from '../../../../models/icandidates';
 import { CommonModule, Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +8,8 @@ import { environment } from '../../../../../environments/environment.development
 import { Loginservice } from '../../../login/LoginService/loginservice.service';
 import { PaymentService } from '../../../../services/payment.service';
 import { SubModel } from '../../../../models/sub-model';
+import { ICandidate } from '../../../../models/ICandidate';
+import { CandidateService } from '../../../../services/candidate.service';
 
 @Component({
   selector: 'app-candidate-details',
@@ -23,28 +20,30 @@ import { SubModel } from '../../../../models/sub-model';
 })
 export class CandidateDetailsComponent implements OnInit {
   candidateId!: number;
-  mycandidate!: ICandidates;
+  mycandidate: ICandidates = {} as ICandidates;
   IsLogged: boolean = false;
   Role: string = '';
   url: string = environment.baseUrl;
   activeSubscriber!: SubModel;
+  candidates: ICandidate[] = [];
+  randomCandidates: any[] = [];
+  env: string = environment.baseUrl;
+
   constructor(
     private candidatesservice: FcandidateService,
     private route: ActivatedRoute,
     public loginService: Loginservice,
     private router: Router,
     private paymentServ: PaymentService,
-    private location: Location
+    private location: Location,
+    private candidateService: CandidateService,
   ) {
-    this.route.params.subscribe((params) => {
-      this.candidateId = +params['id']; // Convert to number (if needed)
-    });
     this.loginService.LoggedUser.subscribe({
       next: () => {
         if (this.loginService.LoggedUser.value != null) {
           this.Role =
             this.loginService.LoggedUser.value[
-              'http://schemas.microsoft.com/ws/2008/06/identity/claims/role'
+            'http://schemas.microsoft.com/ws/2008/06/identity/claims/role'
             ];
           this.IsLogged = true;
         } else {
@@ -52,23 +51,33 @@ export class CandidateDetailsComponent implements OnInit {
           this.Role = '';
         }
       },
-      error: () => {},
+      error: () => { },
     });
   }
+
   ngOnInit(): void {
-    console.log(this.mycandidate);
+    this.route.params.subscribe((params) => {
+      this.candidateId = params['id'];
+      this.fetchCandidateDetails();
+    });
+    this.getAllCandidates();
+  }
+
+  fetchCandidateDetails() {
     this.candidatesservice.getCandidateById(this.candidateId).subscribe({
       next: (data: ICandidates) => {
-        this.mycandidate = data; // Assign the fetched candidates to the candidates array
+        this.mycandidate = data;
+        console.log(data);
       },
       error: (error) => {
-        console.error('Error fetching candidates:', error); // Log any errors
+        console.error('Error fetching candidate:', error);
       },
       complete: () => {
-        console.log('Candidates fetched successfully'); // Log completion
+        console.log('Candidate fetched successfully');
       },
     });
   }
+
   getCompletionYearDate(ed: any): string {
     if (ed) {
       const date = new Date(ed);
@@ -76,16 +85,16 @@ export class CandidateDetailsComponent implements OnInit {
     }
     return '';
   }
+
   getref(ref: boolean): string {
-    if (ref) {
-      return 'i have reference letter';
-    } else return 'i dont have reference letter';
+    return ref ? 'I have a reference letter' : "I don't have a reference letter";
   }
+
   handleContact(id: number) {
     if (this.loginService.IsLogged) {
       this.paymentServ.getSubscribe().subscribe({
         next: (data: SubModel) => {
-          this.activeSubscriber = data; // Assign the fetched candidates to the candidates array
+          this.activeSubscriber = data;
           if (this.activeSubscriber.isActive) {
             this.router.navigate(['/contactDetails', id]);
           } else {
@@ -93,20 +102,51 @@ export class CandidateDetailsComponent implements OnInit {
           }
         },
         error: (error) => {
-          console.error('Error fetching candidates:', error); // Log any errors
+          console.error('Error fetching subscription:', error);
         },
         complete: () => {
-          console.log('Candidates fetched successfully'); // Log completion
+          console.log('Subscription fetched successfully');
         },
       });
     } else {
       this.router.navigateByUrl('/Login');
     }
   }
+
   handleDate(date: any) {
     return new Date(date);
   }
+
   goBack(): void {
     this.location.back();
+  }
+
+  getAllCandidates() {
+    this.candidateService.getAllCandidates().subscribe({
+      next: (res) => {
+        this.candidates = res;
+        this.selectRandomCandidates();
+      },
+      error: (err) => console.log(err),
+    });
+  }
+
+  selectRandomCandidates() {
+    const usedIndexes = new Set<number>();
+
+    while (this.randomCandidates.length < 4 && usedIndexes.size < this.candidates.length) {
+      const randomIndex = Math.floor(Math.random() * this.candidates.length);
+      if (!usedIndexes.has(randomIndex)) {
+        usedIndexes.add(randomIndex);
+        this.randomCandidates.push(this.candidates[randomIndex]);
+      }
+    }
+  }
+
+  navigateToDetails(id: number): void {
+    this.router.navigate(['/details', id]).then(() => {
+      this.candidateId = id;
+      this.fetchCandidateDetails();
+    });
   }
 }

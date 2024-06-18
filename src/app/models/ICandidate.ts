@@ -1,9 +1,12 @@
 export interface ICandidate {
   id:number
   name?:string
+  fname?:string
+  lname?:string
   description?:string
   position?:string;
   startDate?:Date;
+  availabilityDate?:Date;
   jobtype?:string;
   contract?:string;
   workexperience?:number;
@@ -13,5 +16,4 @@ export interface ICandidate {
   age?:number;
   photoURL?:string
   location?:string;
-
 }

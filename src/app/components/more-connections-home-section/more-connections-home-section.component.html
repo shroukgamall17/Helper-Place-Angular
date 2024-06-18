@@ -26,11 +26,46 @@
                     </div>
                 </div>
                 <p>Get instant access to today’s most powerful hiring tools – post jobs, search resumes, screen candidates and streamline your entire hiring process.</p>
-                <button class="btn text-white RegBtn">Register</button>
+                <button class="btn text-white RegBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Register</button>
             </div>
         </div>
         <div class="col-md-5 rightSection">
             <img src="../../../assets/Images/mobileimage1.webp" alt="Candidate Image" class="candidate-image">
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content z-3">
+            <div class="modal-header">
+                <div class="logoImg me-3">
+                    <img src="../../../assets/Images/logo.svg" alt="logo">
+                </div>
+                <h5 class="modal-title fw-bold " style="color: #054a84;" id="staticBackdropLabel">helper plan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h4 class="p-3 modalTitle fw-bold" style="color: #054a84;">Selet your Role</h4>
+            <div class="modal-body d-flex justify-content-evenly align-items-center">
+                <button class="modalBtnJobSeeker" style="background-color: #f2d163;" routerLink="/register"
+                    data-bs-dismiss="modal">
+                    <img src="../../../assets/Images/helper-display.png" alt="helperDisplay">
+                    <p class="fw-bold mt-3 text-white">
+                        I am looking for a Job
+                    </p>
+                </button>
+                <button class="modalBtnJobSeeker" style="background-color: #71cab2;" routerLink="/register"
+                    data-bs-dismiss="modal">
+                    <img src="../../../assets/Images/helper-job.png" alt="helperJob" width="30%">
+                    <p class="fw-bold mt-3 text-white">
+                        I am an Employer
+                    </p>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
     </div>
 </div>

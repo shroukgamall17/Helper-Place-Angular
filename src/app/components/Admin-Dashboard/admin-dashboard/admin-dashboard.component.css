@@ -127,19 +127,42 @@ body {
 
   .table {
     width: 100%;
+    
   }
   
   .modal-content {
-    max-width: 90%; /* Example adjustment */
+    max-width: 90%;
   }
   
   
-
-/* Change styles for cancel button and delete button on extra small screens */
-/* @media screen and (max-width: 300px) {
-
-    .cancelbtn,
-    .deletebtn {
-        width: 100%;
+  
+  .clearfix {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .clearfix button {
+    flex: 1;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      width: 90%; 
     }
-} */
+  }
+  
+  @media screen and (max-width: 480px) {
+    .modal-content {
+      width: 95%; 
+    }
+    
+    .clearfix {
+      flex-direction: column; 
+    }
+    
+    .clearfix button {
+      margin-bottom: 10px; 
+    }
+  }
