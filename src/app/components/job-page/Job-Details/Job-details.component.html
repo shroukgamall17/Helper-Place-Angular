@@ -5,12 +5,8 @@
         <div class="cover">
           <div class="label">very Active</div>
           <div class="img">
-            <img
-              src="../../../../assets/Images/female-icon.png"
-              alt="image"
-              style="width: 120px; height: 120px"
-              class="rounded-circle m-2"
-            />
+            <img src="../../../../assets/Images/female-icon.png" alt="image" style="width: 120px; height: 120px"
+              class="rounded-circle m-2" />
           </div>
         </div>
         <div class="resumeInfo">
@@ -84,7 +80,8 @@
                     }}
                   </h5>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                </div>
               </div>
             </div>
           </div>
@@ -219,6 +216,7 @@
                     </ng-container>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -227,88 +225,82 @@
           <h5 class="ms-5">About Me</h5>
         </div>
         <div>
-          <p class="text-center m-4">
-            Employer Type : {{ Job.aboutYou.aboutYouSub.employerType.type }}
-          </p>
-          <ng-container
-            *ngIf="Job.aboutYou.aboutYouSub.employerType.type == 'Family'"
-          >
-            <div
-              class="col-11 phone_pedding mx-auto mb-5 ng-star-2 border-bottom"
-            >
-              <div
-                class="event-container event-container_footer_margin_custom d-flex"
-              >
-                <!-- <div class="yoga-circle">
-                  <picture class="">
-                    <source
-                      srcset="
-                        https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png
-                      "
-                      width="35px"
-                      height="35px"
-                      media="(max-width:768px)"
-                      class=""
-                    />
-                    <img
-                      src="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
-                      width="40px"
-                      height="40px"
-                      loading="lazy"
-                      alt="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
-                      class=""
-                    />
-                  </picture>
-                </div> -->
-                <div class="event-info text-left">
-                  <h3 class="primary text-center mb-0">
-                    Employer Nationality :
-                    {{ Job.aboutYou.aboutYouSub.employerType.nationality }} -
-                    <span class="ng-star-2"
-                      >Have Pets :
-                      {{ Job.aboutYou.aboutYouSub.employerType.havePets }}</span
-                    >
-                  </h3>
-                  <br>
+          <p class="text-center m-4"> Employer Type : {{ Job.aboutYou.aboutYouSub.employerType.type }}</p>
+        </div>
+        <div class="sprator p-1 my-4">
+          <h5 class="ms-5">Work Experience</h5>
+        </div>
+        <ng-container *ngIf="Job.aboutYou.aboutYouSub.employerType.type=='Family'">
+          <div class="col-11 phone_pedding mx-auto mb-5 ng-star-2 border-bottom">
+            <div class="event-container event-container_footer_margin_custom d-flex">
+              <div class="yoga-circle">
+                <picture class="">
+                  <source srcset="
+                      https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png
+                    " width="35px" height="35px" media="(max-width:768px)" class="" />
+                  <img
+                    src="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
+                    width="40px" height="40px" loading="lazy"
+                    alt="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
+                    class="" />
+                </picture>
+              </div>
+              <div class="event-info text-left">
+                <h3 class="primary text-left mb-0">
+                  Employer Nationality :
+                  {{ Job.aboutYou.aboutYouSub.employerType.nationality }} -
+                  <span class="ng-star-2">Have Pets : {{ Job.aboutYou.aboutYouSub.employerType.havePets }}</span>
+                </h3>
+                <div class="d-flex align-items-center justify-content-start">
+                  <h3 class="ng-2"> Accomodation : {{ Job.aboutYou.offersToCandidate.accomodation }}</h3>
+                  <div name="map m-0" class="icons">
+                    <i class="fa-solid fa-location-dot green mx-2"></i>
+                  </div>
+                  <span class="location-span mb-0 ng-star-2">
+                    Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }}
+                  </span>
                 </div>
+                <p class="text-left mb-1">Canadian Family</p>
+                <p class="text-left mb-1 ng-star-2">:Salary : {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title
+                  }}
+                </p>
               </div>
             </div>
-          </ng-container>
-          <p class="text-center m-4">
-            Salary :
-            {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title }}
-          </p>  
-        </div>
-        <div class="d-flex align-items-center justify-content-start">
-          <h3 class="ng-2">
-            Accomodation :
-            {{ Job.aboutYou.offersToCandidate.accomodation }}
-          </h3>
-          <div name="map m-0" class="icons">
-            <i class="fa-solid fa-location-dot green mx-2"></i>
           </div>
-          <span class="location-span mb-0 ng-star-2">
-            Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }}
-          </span>
-        </div>
+        </ng-container>
       </div>
 
       <div class="col-lg-4 rigthSec" style="margin: 60px 0">
-        <div class="card helperCard p-2">
+        <div class="card helperCard p-2" *ngFor="let item of randomJobs;" (click)="navigateToDetails(item.id)">
           <div class="d-flex justify-content-center align-items-center">
             <div class="">
               <div class="rounded-circle overflow-hidden containImg">
-                <img
-                  src="../../assets/Images/3.jpg"
-                  class="img-fluid rounded-start"
-                  alt="helper-phone"
-                  width="100"
-                />
+                <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100" />
+              </div>
+            </div>
+            <div class="">
+              <div class="card-body">
+                <h5 class="card-title text-info m-0">{{ item.jobRequirments.basicInformation.positionOffered }}</h5>
+                <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
+                  <li class="card-text" style="color: #25ae88">
+                    <i class="fa-solid fa-location-dot"></i><span class="text-black">{{
+                      item.jobRequirments.basicInformation.location }}</span>
+                  </li>
+                  <li class="card-text" style="color: #25ae88">
+                    <i class="fa-solid fa-star-of-life"></i>
+                    <span class="text-black">{{ item.jobRequirments.basicInformation.type }}</span>
+                  </li>
+                  <li class="card-text" style="color: #25ae88">
+                    <i class="fa-solid fa-calendar-days"></i><span class="text-black">{{
+                      item.jobRequirments.basicInformation.startDate | date:'MMMM yyyy' }}</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
