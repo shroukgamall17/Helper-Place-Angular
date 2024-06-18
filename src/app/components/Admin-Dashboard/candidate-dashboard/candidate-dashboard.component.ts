@@ -37,9 +37,17 @@ export class CandidateDashboardComponent implements OnInit {
     this.router.navigate(['/details', id]);
   }
   navigateTodelete(id: number) {
-    this.router.navigate(['/delete', id]);
+   this.deleteCandidate(id);
   }
   navigateToEdit(id: number) {
     this.router.navigate(['/candidateResume/Updatelayer', id]);
+  }
+  deleteCandidate(candidateId:number){
+  
+    this.candidatesservice.deleteCandidate(candidateId).subscribe(
+      ()=>{
+        console.log('Candidate deleted')
+      }
+    );
   }
 }

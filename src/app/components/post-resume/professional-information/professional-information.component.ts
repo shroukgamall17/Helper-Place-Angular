@@ -261,29 +261,29 @@ console.log(this.candservice.mycandidate)
    }
 
    flagy() {
-    // //Specify the fields you want to check for emptiness in the main object
-    // const fieldsToCheck: (keyof ICandidates)[] = ['position', 'workExperience', 'jobType', 'availabilityDate', 'expectedSalary', 'preferredDay', 'accommodationPref'];
+    //Specify the fields you want to check for emptiness in the main object
+    const fieldsToCheck: (keyof ICandidates)[] = ['position', 'workExperience', 'jobType', 'availabilityDate', 'expectedSalary', 'preferredDay', 'accommodationPref'];
 
-    // // Check if any of the specified fields in the main object are empty
-    // this.myflag = fieldsToCheck.some(field => !this.mycand[field]);
+    // Check if any of the specified fields in the main object are empty
+    this.myflag = fieldsToCheck.some(field => !this.mycand[field]);
 
 
-    // // Check properties in nested arrays
-    // if (!this.myflag) {
-    //   const nestedArraysToCheck: (keyof ICandidates)[] = ['languages', 'mainSkills', 'cookingSkills', 'otherSkills'];
-    //   for (const arrayKey of nestedArraysToCheck) {
-    //     // Narrow down the type of array using a type guard
-    //     if (Array.isArray(this.mycand[arrayKey])) {
-    //       const array = this.mycand[arrayKey] as Array<{ name: string }>; // Assuming 'Name' is the property you want to check
-    //       for (const item of array) {
-    //         if (!item.name) {
-    //           this.myflag = true;
-    //           return; // Exit early if any empty property is found
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+    // Check properties in nested arrays
+    if (!this.myflag) {
+      const nestedArraysToCheck: (keyof ICandidates)[] = ['languages', 'mainSkills', 'cookingSkills', 'otherSkills'];
+      for (const arrayKey of nestedArraysToCheck) {
+        // Narrow down the type of array using a type guard
+        if (Array.isArray(this.mycand[arrayKey])) {
+          const array = this.mycand[arrayKey] as Array<{ name: string }>; // Assuming 'Name' is the property you want to check
+          for (const item of array) {
+            if (!item.name) {
+              this.myflag = true;
+              return; // Exit early if any empty property is found
+            }
+          }
+        }
+      }
+    }
     // console.log(this.myflag)
   }
 

@@ -130,9 +130,9 @@ passbind(ele:any)
 }
 flagy() {
 
-  // const fieldsToCheck: (keyof ICandidates)[] = [ 'fname', 'lname', 'age', 'gender', 'martialStatus', 'nationality', 'religion', 'educationLevel', 'location', 'contactEmail', 'phoneNumber', 'whatappNumber'];
-  // this.myflag = fieldsToCheck.some(field => !this.mycand[field]);
-  // console.log(this.myflag);
+  const fieldsToCheck: (keyof ICandidates)[] = [ 'fname', 'lname', 'age', 'gender', 'martialStatus', 'nationality', 'religion', 'educationLevel', 'location', 'contactEmail', 'phoneNumber', 'whatappNumber'];
+  this.myflag = fieldsToCheck.some(field => !this.mycand[field]);
+  console.log(this.myflag);
 }
 
 }
