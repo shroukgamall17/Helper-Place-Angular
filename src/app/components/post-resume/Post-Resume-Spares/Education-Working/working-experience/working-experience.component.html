@@ -1,16 +1,12 @@
-<div
-  class="card"
-  *ngFor="let WorkingExperience of WorkingExperiences ;index as i"
-  style="margin: 1%"
->
-  <div [class.d-none]="EditDisplay[i]">
-    <div class="card-header d-flex justify-content-between">
+<div class="" *ngFor="let WorkingExperience of WorkingExperiences ;index as i">
+  <!-- <div [class.d-none]="EditDisplay[i]"> -->
+    <!-- <div class="card-header d-flex justify-content-between">
       <div>
-        From {{ month[WorkingExperience.StartDate.getMonth()] }}
-        {{ WorkingExperience.StartDate.getFullYear() }} to
-        {{ month[WorkingExperience.EndDate.getMonth()] }}
-        {{ WorkingExperience.EndDate.getFullYear() }} in
-        {{ WorkingExperience.WorkingCountry }}
+        From {{ month[WorkingExperience.StartDate.getMonth()] }} {{
+        WorkingExperience.StartDate.getFullYear() }} to {{
+        month[WorkingExperience.EndDate.getMonth()] }} {{
+        WorkingExperience.EndDate.getFullYear() }} in {{
+        WorkingExperience.WorkingCountry }}
       </div>
       <div>
         <button
@@ -30,25 +26,70 @@
           Delete
         </button>
       </div>
-    </div>
-    <div class="card-body">
+    </div> -->
+
+    <!-- <div class="card-body">
       <h5 class="card-title">{{ WorkingExperience.EmployerType }}</h5>
       <span class="card-text">Duties : </span>
       <span *ngFor="let Duty of WorkingExperience.Duties" class="card-text">
         {{ Duty }}
       </span>
       <p class="card-text">
-        Have reference letter : {{ WorkingExperience.HaveReferenceLetter }} 
+        Have reference letter : {{ WorkingExperience.HaveReferenceLetter }}
       </p>
+    </div> -->
+  <!-- </div> -->
+
+  <div
+    class="col-11 mb-1 pt-3 px-3 pb-2 mx-auto rounded border border-success shadows educationExperienceDiv ng-star-inserted"
+  >
+    <div class="ng-star-inserted">
+      <h3 class="">
+        From {{ month[WorkingExperience.StartDate.getMonth()] }} {{
+        WorkingExperience.StartDate.getFullYear() }} to {{
+        month[WorkingExperience.EndDate.getMonth()] }} {{
+        WorkingExperience.EndDate.getFullYear() }} in {{
+        WorkingExperience.WorkingCountry }}|{{ WorkingExperience.WorkingCountry
+        }}
+      </h3>
+      <p style="clear: both;">
+        {{ WorkingExperience.JobPosition }}
+
+        <span class="ng-star-inserted"> |</span>American Family
+        <span class="ng-star-inserted my-2">1 adult + 3 kids</span>
+      </p>
+      <p class="mb-2">
+        <span style="color: black;">Duties: </span
+        ><span class="ng-star-inserted"
+          ><span
+            *ngFor="let Duty of WorkingExperience.Duties"
+            class="card-text"
+          >
+            {{ Duty }} </span
+          ><span class="ng-star-inserted">| </span></span
+        ><span class="ng-star-inserted">
+          {{ WorkingExperience.EmployerType }}
+        </span>
+      </p>
+      <p class="ng-star-inserted">
+        Have reference letter : {{ WorkingExperience.HaveReferenceLetter }}
+      </p>
+      <div class="edit-icons">
+        <span class="h3 dark mr-2" (click)="
+            EditDisplay[i] = !EditDisplay[i]; HideAddWorkingExperiencePage.emit(true)
+          "><i class="fa fa-edit"></i></span
+        ><span class="h3" (click)="DeleteWorkingExperience.emit(WorkingExperience)"><i class="fa fa-trash m-2"></i></span>
+      </div>
     </div>
   </div>
-  <app-add-work-experience style="padding: 2.5%;"
-[RequiredWorkingToEdit]="WorkingExperience"
-[PlaceHolder]="'Edit'"
-(OnClose)="EditDisplay[i] = !EditDisplay[i]"
-(OnSave) ="UpdateWorkingExperienceToIndex($event,i)"
-[class.d-none]="!EditDisplay[i]"
->
-</app-add-work-experience>
-</div>
 
+  <app-add-work-experience
+    style="padding: 2.5%;"
+    [RequiredWorkingToEdit]="WorkingExperience"
+    [PlaceHolder]="'Edit'"
+    (OnClose)="EditDisplay[i] = !EditDisplay[i]"
+    (OnSave)="UpdateWorkingExperienceToIndex($event,i)"
+    [class.d-none]="!EditDisplay[i]"
+  >
+  </app-add-work-experience>
+</div>

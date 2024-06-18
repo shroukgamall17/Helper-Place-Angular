@@ -1,27 +1,117 @@
-<div class="container my-5">
-  <div class="row gy-5 gy-lg-0 gx-xl-5">
-    <div class="col-12 col-lg-4 m-auto">
-      <div
-        class="card border-0 border-bottom border-primary shadow-lg pt-md-4 pb-md-4 bsb-pricing-popular"
-      >
-        <div class="card-body p-4 p-xxl-5">
-          <h4 class="h4 mb-2" >{{ currentPlan.name }} Plan</h4>
-          <h4 class="h4 mb-2" >{{ currentPlan.type }} Type</h4>
-          <h4 class="display-3 fw-bold text-primary mb-0">
-            ${{ currentPlan.price }}
-          </h4>
-          <p class="text-secondary mb-4">USD / Month</p>
-
-          <button class="btn btn-outline-success mx-1" (click)="goToEditPage(currentPlan.id)">
-            Edit
-          </button>
-          <a
-            class="btn bsb-btn-xl btn-outline-danger rounded-pill m-2"
-            (click)="back()"
-            >Back</a
-          >
+<div class="d-flex justify-content-center">
+<div class="blog-agency rounded mt-4 mb-5 col-12 col-lg-4">
+  <div class="blog-contain ng-star-inserted ">
+    <div class="price-container price-margin shadows text-center">
+      <div class="feature-text border-bottom-helper-green">
+        <h3 class="feature-text-heading text-center"> {{ currentPlan.name }} Plan </h3>
+      </div>
+      <div class="price-feature-container">
+        <div class="price-value">
+          <h6 class="price text-center ng-star-inserted fs-6 mb-3
+          "> SAR / <span class="large">{{ currentPlan.price }}</span></h6>
+          <h5 class="price-feature mt-1 text-center ng-star-inserted">  {{ currentPlan.type }}</h5>
+        </div>
+        <a class="btn btn-pricing btn-white"> GET STARTED </a>
+        <hr class="set-border">
+        <div class="price-features ng-star-inserted  ms-5 ">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div>
+            <span class="ng-star-inserted">
+              <div class="features-price">
+                <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                    class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                  <div style="word-break: break-word;" class="lead fs-6">{{ currentPlan.type }}</div>
+                </div>
+              </div>
+            </span>
+          </h5>
+        </div>
+        <div class="price-features ng-star-inserted  ms-5">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div><span class="ng-star-inserted">
+              <div class="features-price">
+              </div>
+            </span>
+          </h5>
+        </div>
+        <div class="price-features ng-star-inserted  ms-5">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div><span class="ng-star-inserted">
+              <div class="features-price">
+                <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                    class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                  <div style="word-break: break-word; " class="fs-6">Contact All Candidates
+                  </div>
+                </div>
+              </div>
+            </span>
+          </h5>
+        </div>
+        <div class="price-features ng-star-inserted  ms-5">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div><span class="ng-star-inserted">
+              <div class="features-price">
+                <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                    class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                  <div style="word-break: break-word;" class="fs-6">
+                    <p class="m-0">260,000+ Users</p>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </h5>
+        </div>
+        <div class="price-features ng-star-inserted  ms-5">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div><span class="ng-star-inserted">
+              <div class="features-price">
+                <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                    class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                  <div style="word-break: break-word;" class="fs-6">Recommended Profiles
+                  </div>
+                </div>
+              </div>
+            </span>
+          </h5>
+        </div>
+        <div class="price-features ng-star-inserted  ms-5">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div><span class="ng-star-inserted">
+              <div class="features-price">
+                <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                    class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                  <div style="word-break: break-word;" class="fs-6"> 1 Job Posting</div>
+                </div>
+              </div>
+            </span>
+          </h5>
+        </div>
+        <div class="price-features ng-star-inserted  ms-5">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div><span class="ng-star-inserted">
+              <div class="features-price">
+                <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                    class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                  <div style="word-break: break-word;" class="fs-6">Shortlist</div>
+                </div>
+              </div>
+            </span>
+          </h5>
+        </div>
+        <div class="price-features ng-star-inserted  ms-5">
+          <h5 class="price-feature text-center">
+            <div class="features-price"></div><span class="ng-star-inserted">
+              <div class="features-price">
+                <div class="price-label d-flex justify-contant-start align-items-center "><i aria-hidden="true"
+                    class="fa fa-check mr-2 ng-star-inserted me-3"></i>
+                  <div style="word-break: break-word;" class="fs-6">Support Team</div>
+                </div>
+              </div>
+            </span>
+          </h5>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>

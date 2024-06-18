@@ -1,212 +1,471 @@
-<div class="pt-5 pb-5 mt-md-3 mb-3 mym">
-  <div class="row rounded" id="main">
+<section class="resume">
+  <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <img
-          alt="image"
-          style="width: 150px; height: 150px"
-          class="rounded-circle m-2"
-        />
-      </div>
-      <div class="col-6">
-        <div class="row mt-md-3 mb-1">
-          <h4 class="col-12" style="color: #054a84">
+      <div class="candidateResume bg-white col-lg-8 col-md-12 col-sm-11">
+        <div class="cover">
+          <div class="label">very Active</div>
+          <div class="img">
+            <img src="../../../../assets/Images/female-icon.png" alt="image" style="width: 120px; height: 120px"
+              class="rounded-circle m-2" />
+          </div>
+        </div>
+        <div class="resumeInfo">
+          <h4 class="" style="color: #054a84; margin: 10px 0 0 150px">
             {{ Job.jobRequirments.basicInformation.positionOffered }}
           </h4>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="fs-6" style="color: black; margin: 10px 0 0 150px; width: 80%;">
+              Starting From {{ Job.jobRequirments.basicInformation.startDate }}
+              <br> |{{ Job.jobRequirments.basicInformation.type }}
+
+            </div>
+
+            <div class="">
+              <button class="btn bg-green text-white me-3">
+                Apply
+              </button>
+            </div>
+          </div>
+          <div class="directShap d-flex justify-content-center align-items-center p-2">
+            Direct
+          </div>
+          <div class="sprator p-1 my-4">
+            <h5 class="ms-5">professional info</h5>
+          </div>
+
+          <div class="row py-3 personal-infomation d-flex justify-content-between fs-6">
+            <div class="col-11 mx-auto">
+
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="user" class="me-3">
+                      <i class="fa-solid fa-user green"></i>
+                    </div>
+                    <p>{{ Job.jobRequirments.candidatePreference.gender }} | Gender Required</p>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="map" class="me-3">
+                      <i class="fa-solid fa-location-pin green"></i>
+                    </div>
+                    <p>
+                      {{ Job.aboutYou.offersToCandidate.accomodation }}
+
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="certificate" class="me-3 mb-3">
+                      <i class="fa-solid fa-star-of-life green"></i>
+                    </div>
+                    {{ Job.jobRequirments.candidatePreference.preferedCandidateLocation }}
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3 mb-3">
+                      <i class="fa-solid fa-calendar-days green"></i>
+                    </div>
+                    <span class="fw-bold">
+                      Day Off: &ThinSpace;
+                    </span>
+                    {{ Job.aboutYou.offersToCandidate.dayOFF }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3 ">
+                      <i class="fa-solid fa-file green"></i>
+                    </div>
+                    <span class="fw-bold">
+                      Contract Status :
+                    </span>
+                    {{ Job.jobRequirments.candidatePreference.preferedCandidateContract }}
+                  </div>
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3 ">
+                      <i class="fa-brands fa-slack green"></i>
+                    </div>
+                    <span class="fw-bold">
+                      expriance year:
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+                  <div class="footer-experience d-flex justify-content-start">
+                    <div name="calendar" class="me-3 ">
+                      <i class="fa-solid fa-phone green"></i>
+                    </div>
+                    <span class="fw-bold">
+                      age:
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
         </div>
-        <div class="row mt-md-3 mb-1">
-          <h4 class="col-12" style="color: #054a84">
+        <div class="sprator p-1 my-4">
+          <h5 class="ms-5">Job Description</h5>
+        </div>
+        <div class="m-5">
+          <h4 class="fw-bold" style="color: #054a84; margin-bottom: 20px;">
             {{ Job.jobDetails.jobTitle }}
           </h4>
+
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit autem, hic quam, fugiat, necessitatibus
+            facilis
+            repellat aperiam expedita ex mollitia esse molestias excepturi quibusdam ipsam nihil commodi repellendus
+            consectetur minima.
+          </p>
         </div>
-        <div class="row mt-md-3 mb-1 description">
-          <h4 class="col-12" style="color: #054a84">
-            {{ Job.jobDetails.jobDescription }}
-          </h4>
+
+
+        <div class="sprator p-1 my-4">
+
+
+          <h5 class="ms-5">Skills / Duties</h5>
         </div>
-        <div class="row mb-2">
-          <div class="col-md-12" style="color: black">
-            {{ Job.jobRequirments.basicInformation.type }}
+
+        <div class="row yoga mt-3 event">
+          <div class="col-11">
+            <div class="col-11 phone_pedding mx-auto">
+              <div class="event-container event-container_footer_margin_custom d-flex">
+                <div class="yoga-circle">
+                  <img loading="lazy" width="100%" height="auto" class=""
+                    src="https://cdn.helperplace.com/skill_cat/1_1599642484.webp"
+                    alt="https://cdn.helperplace.com/skill_cat/1_1599642484.webp" />
+                </div>
+                <div class="event-info">
+                  <h3 class="primary">Language:</h3>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <ng-container *ngFor="let lang of Job.jobRequirments.requiredSkillsAndDuties.languageSkills">
+                      <h4 class="color_1 ng-star-inserted">{{ lang }}</h4>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row mb-2">
-          <div class="col-md-12" style="color: black">
-            Starting From {{ Job.jobRequirments.basicInformation.startDate }}
+          <div class="col-11">
+            <div class="col-11 phone_pedding mx-auto">
+              <div class="event-container event-container_footer_margin_custom d-flex">
+                <div class="yoga-circle">
+                  <img loading="lazy" width="100%" height="auto" class=""
+                    src="https://cdn.helperplace.com/skill_cat/4_1599643968.webp"
+                    alt="https://cdn.helperplace.com/skill_cat/4_1599643968.webp" />
+                </div>
+                <div class="event-info">
+                  <h3 class="primary ar">Main Skills:</h3>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <ng-container *ngFor="let skill of Job.jobRequirments.requiredSkillsAndDuties.mainSkills ">
+                      <h4 class="float-left color_2 ng-star-inserted">
+                        {{ skill }}
+                      </h4>
+                    </ng-container>
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-3">
-        <button class="btn btn-success">Cotact me</button>
-      </div>
-    </div>
-  </div>
-  <div class="row pt-3 pb-3" style="background-color: #eee">
-    <div class="row">
-      <h3 class="col-12 text-center">professional info</h3>
-    </div>
-    <div class="row">
-      <div class="col-2"></div>
-      <div class="col-5">
-        <p>
-          {{ Job.jobRequirments.candidatePreference.gender }} Gender Required
-        </p>
-      </div>
-      <div class="col-5">
-        <p>
-          Contract Type :
-          {{ Job.jobRequirments.candidatePreference.preferedCandidateContract }}
-        </p>
-      </div>
-      <div class="col-5">
-        <p>
-          It is prefered if candidate is in :
-          {{ Job.jobRequirments.candidatePreference.preferedCandidateLocation }}
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-2"></div>
-    </div>
-  </div>
-  <div class="row pt-3 pb-3">
-    <div class="row">
-      <h3 class="col-12 text-center">Skills info</h3>
-    </div>
-    <!-- // -->
-    <div class="mb-2">
-      <div class="row">
-        <div class="col-4">
-          <h4 style="color: #054a84">Languages</h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <div
-            *ngFor="
-              let lang of Job.jobRequirments.requiredSkillsAndDuties
-                .languageSkills
-            "
-          >
-            <p>{{ lang }}</p>
+          <div class="col-11">
+            <div class="col-11 phone_pedding mx-auto">
+              <div class="event-container event-container_footer_margin_custom d-flex">
+                <div class="yoga-circle">
+                  <img loading="lazy" width="100%" height="auto" class=""
+                    src="https://cdn.helperplace.com/skill_cat/2_1599644151.webp"
+                    alt="https://cdn.helperplace.com/skill_cat/2_1599644151.webp" />
+                </div>
+                <div class="event-info">
+                  <h3 class="primary ar">Cooking Skills:</h3>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <h4 class="float-left color_3 ng-star-inserted">Asian</h4>
+                    <h4 class="float-left color_3 ng-star-inserted">Chinese</h4>
+                    <h4 class="float-left color_3 ng-star-inserted">Thai</h4>
+                    <h4 class="float-left color_3 ng-star-inserted">
+                      Singaporean
+                    </h4>
+                    <h4 class="float-left color_3 ng-star-inserted">Western</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- // -->
-    <div class="row pt-3 pb-3">
-      <div class="row">
-        <div class="col-4">
-          <h5 style="color: #054a84">Main Skills</h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <ng-container
-            *ngFor="
-              let skill of Job.jobRequirments.requiredSkillsAndDuties.mainSkills
-            "
-          >
-            <span>{{ skill }} |</span>
-          </ng-container>
-        </div>
-      </div>
-    </div>
-    <!-- // -->
-    <!-- // -->
-    <div>
-      <div class="row">
-        <div class="col-4">
-          <h5 style="color: #054a84">Cooking Skills</h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <ng-container
-            *ngFor="
+          <div class="col-11">
+            <div class="col-11 phone_pedding mx-auto">
+              <div class="event-container event-container_footer_margin_custom d-flex">
+                <div class="yoga-circle">
+                  <img loading="lazy" width="100%" height="auto" class=""
+                    src="https://cdn.helperplace.com/skill_cat/3_1599642528.webp"
+                    alt="https://cdn.helperplace.com/skill_cat/3_1599642528.webp" />
+                </div>
+                <div class="event-info">
+                  <h3 class="primary ar">Other Skills:</h3>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <ng-container *ngFor="
               let skill of Job.jobRequirments.requiredSkillsAndDuties
                 .cookingSkills
-            "
-          >
-            <span>{{ skill }} |</span>
+            ">
+                      <h4 class="float-left color_4 ng-star-inserted">
+                        {{ skill }}
+                      </h4>
+                    </ng-container>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sprator p-1 my-4">
+          <h5 class="ms-5">About Me</h5>
+        </div>
+        <div class="m-5">
+          <div class="row">
+            <div class="col-6">
+              <div>
+                <span class=""> Employer Type : {{ Job.aboutYou.aboutYouSub.employerType.type }}</span>
+              </div>
+              <span class="primary text-left ">
+                Employer Nationality :
+                {{ Job.aboutYou.aboutYouSub.employerType.nationality }}
+              </span>
+            </div>
+      
+            <div class="col-6">
+              <div class="">
+                <h3 class="primary text-left mb-0">
+
+                  <span class="ng-star-2">Have Pets : {{ Job.aboutYou.aboutYouSub.employerType.havePets }}</span>
+                </h3>
+                <div class="d-flex align-items-center justify-content-start">
+                  <!-- <h3 class="ng-2"> Accomodation : {{ Job.aboutYou.offersToCandidate.accomodation }}</h3> -->
+                  <div name="map m-0" class="icons">
+                    <!-- <i class="fa-solid fa-location-dot green mx-2"></i> -->
+                  </div>
+                  <span class="location-span mb-0 ng-star-2">
+                    <!-- Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }} -->
+                  </span>
+                </div>
+                <p class="text-left mb-1">Canadian Family</p>
+                <p class="text-left mb-1 ng-star-2">Salary : {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title
+                  }}
+                </p>
+                <p class="text-left mb-1 ng-star-2">
+                  <!-- {{ getref(ex.hasLetterRef) }} -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- 
+         <ng-container *ngIf="Job.aboutYou.aboutYouSub.employerType.type=='Family'">
+          <div class="col-11 phone_pedding mx-auto mb-5 ng-star-2 border-bottom">
+            <div class="event-container event-container_footer_margin_custom d-flex">
+              <div class="yoga-circle">
+                <picture class="">
+                  <source srcset="
+                      https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png
+                    " width="35px" height="35px" media="(max-width:768px)" class="" />
+                  <img
+                    src="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
+                    width="40px" height="40px" loading="lazy"
+                    alt="https://cdn.helperplace.com/web-asset/images/icon/prize-badge-with-star-and-ribbon-black.png"
+                    class="" />
+                </picture>
+              </div>
+              <div class="event-info text-left">
+                <h3 class="primary text-left mb-0">
+<<<<<<< HEAD
+
+=======
+                  Employer Nationality :
+                  {{ Job.aboutYou.aboutYouSub.employerType.nationality }} -
+>>>>>>> 566fd17759a1a5ee1ab2727b8ab1c64e567e615c
+                  <span class="ng-star-2">Have Pets : {{ Job.aboutYou.aboutYouSub.employerType.havePets }}</span>
+                </h3>
+                <div class="d-flex align-items-center justify-content-start">
+                  <h3 class="ng-2"> Accomodation : {{ Job.aboutYou.offersToCandidate.accomodation }}</h3>
+                  <div name="map m-0" class="icons">
+                    <i class="fa-solid fa-location-dot green mx-2"></i>
+                  </div>
+                  <span class="location-span mb-0 ng-star-2">
+                    Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }}
+                  </span>
+                </div>
+                <p class="text-left mb-1">Canadian Family</p>
+                <p class="text-left mb-1 ng-star-2">:Salary : {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title
+                  }}
+                </p>
+                 <p class="text-left mb-1 ng-star-2">
+                  {{ getref(ex.hasLetterRef) }}
+                </p> 
+              </div>
+            </div>
+          </div>
+        </ng-container>  -->
+
+
+
+        <!-- <div class="sprator p-1 my-4">
+          <h5 class="ms-5">My Expectations</h5>
+        </div>
+        <div
+          class="event-container event-container_footer_margin_custom d-flex p-4 border-1 border-bottom border-black">
+          <div class="yoga-circle">
+            <picture class="ng-tns-c1181781737-1">
+              <source srcset="
+                  https://cdn.helperplace.com/web-asset/images/icon/give-money.png
+                " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
+              <img src="https://cdn.helperplace.com/web-asset/images/icon/give-money.png" width="40px" height="40px"
+                loading="lazy" alt="https://cdn.helperplace.com/web-asset/images/icon/give-money.png"
+                class="ng-tns-c1181781737-1" />
+            </picture>
+          </div>
+          <div class="event-info text-left">
+            <h3 class="primary text-left mb-0">Salary:</h3>
+            <h3 class="mb-0 ng-star-2">
+              {{ mycandidate.expectedSalary }}
+              <span class="ng-tns-c1181781737-1 ng-star-2">(≈ US$ 628)</span>
+            </h3>
+          </div>
+        </div>
+        <div
+          class="event-container event-container_footer_margin_custom d-flex p-4 border-1 border-bottom border-black">
+          <div class="yoga-circle">
+            <picture class="ng-tns-c1181781737-1">
+              <source srcset="
+                  https://cdn.helperplace.com/web-asset/images/icon/bed.png
+                " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
+              <img src="https://cdn.helperplace.com/web-asset/images/icon/bed.png" width="40px" height="40px"
+                loading="lazy" alt="https://cdn.helperplace.com/web-asset/images/icon/bed.png"
+                class="ng-tns-c1181781737-1" />
+            </picture>
+          </div>
+          <div class="event-info text-left">
+            <h3 class="primary text-left mb-0">Accommodation:</h3>
+            <h3 class="mb-0 ng-star-2">{{ mycandidate.accommodationPref }}</h3>
+          </div>
+        </div>
+        <div
+          class="event-container event-container_footer_margin_custom d-flex p-4 border-1 border-bottom border-black">
+          <div class="yoga-circle">
+            <picture class="ng-tns-c1181781737-1">
+              <source srcset="
+                  https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png
+                " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
+              <img src="	https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png" width="40px"
+                height="40px" loading="lazy"
+                alt="	https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png"
+                class="ng-tns-c1181781737-1" />
+            </picture>
+          </div>
+          <div class="event-info text-left">
+            <h3 class="primary text-left mb-0">Day Off:</h3>
+            <h3 class="mb-0 ng-star-2">{{ mycandidate.preferredDay }}</h3>
+          </div>
+        </div> -->
+
+
+        <!-- 
+        <div class="row pt-3 pb-3">
+          <div class="row">
+            <h3 class="col-12 text-center ">Education</h3>
+          </div>
+          <ng-container *ngFor="let ed of mycandidate.educations">
+            <div>{{ed.educationLevel}} / {{ getCompletionYearDate(ed.completionYear)}} </div>
+            <div>{{ed.crsDuration}}</div>
           </ng-container>
+        </div>  -->
+
+
+        <!-- //////////exp -->
+
+        <!-- /////////expec -->
+        <!-- <div class="row pt-3 pb-3">
+          <div class="row">
+            <h3 class="col-12 text-center ">Expectations</h3>
+          </div>
+          <div style="color: #054a84; font-weight: bold;">Salary: <span
+              style="color: black;">{{mycandidate.expectedSalary}} $</span> </div>
+          <div style="color: #054a84; font-weight: bold;">accommodation Preference: <span
+              style="color: black;">{{mycandidate.accommodationPref}}</span></div>
+          <div style="color: #054a84; font-weight: bold;">DayOff: <span
+              style="color: black;">{{mycandidate.preferredDay}}</span></div>
+        </div> -->
+
+      </div>
+
+
+
+
+
+
+
+
+      <div class="col-lg-4 rigthSec" style="margin: 60px 0">
+        <div class="card helperCard p-2" *ngFor="let item of randomJobs;" (click)="navigateToDetails(item.id)">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="">
+              <div class="rounded-circle overflow-hidden containImg">
+                <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100" />
+              </div>
+            </div>
+            <div class="">
+              <div class="card-body">
+                <h5 class="card-title text-info m-0">{{ item.jobRequirments.basicInformation.positionOffered }}</h5>
+                <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
+                  <li class="card-text" style="color: #25ae88">
+                    <i class="fa-solid fa-location-dot"></i><span class="text-black">{{
+                      item.jobRequirments.basicInformation.location }}</span>
+                  </li>
+                  <li class="card-text" style="color: #25ae88">
+                    <i class="fa-solid fa-star-of-life"></i>
+                    <span class="text-black">{{ item.jobRequirments.basicInformation.type }}</span>
+                  </li>
+                  <li class="card-text" style="color: #25ae88">
+                    <i class="fa-solid fa-calendar-days"></i><span class="text-black">{{
+                      item.jobRequirments.basicInformation.startDate | date:'MMMM yyyy' }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <div class="row">
-        <div class="col-4">
-          <h5 style="color: #054a84">Most Important Skills</h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <ng-container
-            *ngFor="
-              let skill of Job.jobRequirments.requiredSkillsAndDuties
-                .mostImportantSkills
-            "
-          >
-            <span>{{ skill }} |</span>
-          </ng-container>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <ng-container
-            *ngFor="
-              let skill of Job.jobRequirments.requiredSkillsAndDuties
-                .otherSkills
-            "
-          >
-            <span>{{ skill }} |</span>
-          </ng-container>
-        </div>
-      </div>
-    </div>
-    <!-- // -->
-  </div>
-  <!-- ///////about me  -->
-  <div class="row pt-3 pb-3" style="background-color: #eee">
-    <div class="row">
-      <h3 class="col-12 text-center">About Employer</h3>
-    </div>
-    <div>
-      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
-        Employer Type : {{ Job.aboutYou.aboutYouSub.employerType.type }}
-      </p>
-    </div>
-    <div *ngIf="Job.aboutYou.aboutYouSub.employerType.type == 'Family'">
-      <div>
-        <p class="text-center" style="max-width: 95%; word-wrap: break-word">
-          Employer Nationality :
-          {{ Job.aboutYou.aboutYouSub.employerType.nationality }}
-        </p>
-      </div>
-      <div>
-        <p class="text-center" style="max-width: 95%; word-wrap: break-word">
-          Have Pets : {{ Job.aboutYou.aboutYouSub.employerType.havePets }}
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="row pt-3 pb-3" style="background-color: #eee">
-    <div class="row">
-      <h3 class="col-12 text-center">About Offers</h3>
-    </div>
-    <div>
-      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
-        Accomodation : {{ Job.aboutYou.offersToCandidate.accomodation }}
-      </p>
-    </div>
-    <div>
-      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
-        Holiday : {{ Job.aboutYou.offersToCandidate.dayOFF }}
-      </p>
-    </div>
-    <div>
-      <p class="text-center" style="max-width: 95%; word-wrap: break-word">
-        Salary : {{ Job.aboutYou.offersToCandidate.monthlySalaryOffer.title }}
-      </p>
+
     </div>
   </div>
-</div>
+</section>

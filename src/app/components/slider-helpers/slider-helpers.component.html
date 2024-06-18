@@ -1,236 +1,49 @@
 <section class="helpers p-5">
   <div class="container">
-    <div class="d-flex">
+    <div class="d-flex align-items-center mb-3">
       <div class="yellowline"></div>
-      <h6> OUR COMMUNITY</h6>
+      <h6 class="mb-0">OUR COMMUNITY</h6>
     </div>
-    <h3> They are now looking for a Job and are near you! </h3>
-<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row container my-4 ">
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
+    <h3>They are now looking for a Job and are near you!</h3>
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+      <div class="carousel-inner">
+        <div class="carousel-item" [class.active]="i === 0" *ngFor="let chunk of chunkedCandidates; let i = index">
+          <div class="row my-2">
+            <div class="card mb-2 helperCard col-lg-4 col-md-6 col-sm-12 mx-auto" *ngFor="let candidate of chunk">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="rounded-circle overflow-hidden containImg me-3">
+                  <img [src]="env + candidate.photoURL" class="img-fluid" alt="helper-photo" width="100">
                 </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
+                <div class="card-body" (click)="navigateToDetails(candidate.id)">
+                  <h5 class="card-title text-info m-0">{{ candidate.fname }} {{candidate.lname}}</h5>
                   <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
+                    <li class="card-text" style="color: #25ae88;">
+                      <fa-icon [icon]="['fas', 'map-marker-alt']"></fa-icon>
+                      <span class="text-black ms-2">{{ candidate.location }}</span>
+                    </li>
+                    <li class="card-text" style="color: #25ae88;">
+                      <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                      <span class="text-black ms-2">{{ candidate.position }}</span>
+                    </li>
+                    <li class="card-text" style="color: #25ae88;">
+                      <fa-icon [icon]="['fas', 'calendar']"></fa-icon>
+                      <span class="text-black ms-2">{{ candidate.availabilityDate | date:'MMMM yyyy' }}</span>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12 mx-auto">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon prevBtn" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon nextBtn" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-item">
-       <div class="row container my-4">
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12 mx-auto">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-    <span class="border-2 prevBtn  " aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-    <span class=" nextBtn" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
   </div>
 </section>
-
-
-
-
-
-
-<!-- 
- <div class="row container my-4  g-3 ">
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12 mx-auto">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3 helperCard col-lg-4 col-md-12 col-sm-12">
-            <div class="d-flex justify-content-start align-items-center "> 
-              <div class="">
-                <div class=" rounded-circle overflow-hidden containImg ">
-                  <img src="../../assets/Images/3.jpg" class="img-fluid rounded-start" alt="helper-phone" width="100">
-                </div>
-              </div>
-              <div class="">
-                <div class="card-body ">
-                  <h5 class="card-title text-info m-0">Hnin</h5>
-                  <ul class="list-unstyled mt-4 d-flex flex-column justify-content-center">
-                    <li class="card-text " style="color: #25ae88;"><fa-icon
-                        [icon]="['fas', 'map-marker-alt']"></fa-icon><span class="text-black"> Indonesia </span></li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'star']"></fa-icon> <span
-                        class="text-black"> Domestic Helper | Full Time </span> </li>
-                    <li class="card-text" style="color: #25ae88;"><fa-icon [icon]="['fas', 'calendar']"></fa-icon> <span
-                        class="text-black"> From 01 Jul 2024 </span> </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div> -->

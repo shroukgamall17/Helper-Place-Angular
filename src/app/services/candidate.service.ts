@@ -11,23 +11,23 @@ export class CandidateService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getAllEmployers(): Observable<ICandidates[]> {
-    return this.httpClient.get<ICandidates[]>(`${environment.baseUrl}/ICandidates/GetAll`)
+  getAllCandidates(): Observable<ICandidates[]> {
+    return this.httpClient.get<ICandidates[]>(`${environment.baseUrl}/Candidate/GetAll`);
   }
 
-  createEmployer(Candidate: ICandidates): Observable<ICandidates> {
+  addCandidate(Candidate: ICandidates): Observable<ICandidates> {
     return this.httpClient.post<ICandidates>(`${environment.baseUrl}/Candidate/Insert`, Candidate);
   }
 
-  getEmployerById(id: number): Observable<ICandidates> {
+  GetCandidateById(id: number): Observable<ICandidates> {
     return this.httpClient.get<ICandidates>(`${environment.baseUrl}/Candidate/GetById/${id}`);
   }
 
-  updateEmployer(Candidate: ICandidates, id: number): Observable<ICandidates> {
+  UpdateCandidate(Candidate: ICandidates, id: number): Observable<ICandidates> {
     return this.httpClient.put<ICandidates>(`${environment.baseUrl}/Candidate/Update/${Candidate.id}`, Candidate);
   }
 
-  deleteEmployer(id: number): Observable<void> {
+  DeleteCandidate(id: number): Observable<void> {
     return this.httpClient.delete<void>(`${environment.baseUrl}/Candidate/Delete/${id}`);
   }
 }

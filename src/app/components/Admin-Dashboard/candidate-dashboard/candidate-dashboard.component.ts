@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './candidate-dashboard.component.css',
 })
 export class CandidateDashboardComponent implements OnInit {
+  candidateId!: number | null;
   allcandidates!: ICandidates[];
   constructor(
     private candidatesservice: FcandidateService,
@@ -22,32 +23,50 @@ export class CandidateDashboardComponent implements OnInit {
   ngOnInit(): void {
     this.candidatesservice.getAllCandidates().subscribe({
       next: (data: ICandidates[]) => {
-        this.allcandidates = data; // Assign the fetched candidates to the candidates array
+        this.allcandidates = data;
         console.log(this.allcandidates);
       },
       error: (error) => {
-        console.error('Error fetching candidates:', error); // Log any errors
+        console.error('Error fetching candidates:', error);
       },
       complete: () => {
-        console.log('Candidates fetched successfully'); // Log completion
+        console.log('Candidates fetched successfully');
       },
     });
   }
   navigateToDetails(id: number) {
     this.router.navigate(['/details', id]);
   }
-  navigateTodelete(id: number) {
-   this.deleteCandidate(id);
-  }
+  // navigateTodelete(id: number) {
+  //   this.router.navigate(['/delete', id]);
+  // }
   navigateToEdit(id: number) {
     this.router.navigate(['/candidateResume/Updatelayer', id]);
   }
-  deleteCandidate(candidateId:number){
-  
-    this.candidatesservice.deleteCandidate(candidateId).subscribe(
-      ()=>{
-        console.log('Candidate deleted')
-      }
-    );
+  openModal() {
+    const modal = document.getElementById('deleteModal');
+    if (modal) {
+      modal.style.display = 'block';
+    }
   }
+  closeModal() {
+    const modal = document.getElementById('deleteModal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+  handleDelete(id: number) {
+    this.candidateId = id;
+    this.openModal();
+  }
+  confirmDelete() {
+    if (this.candidateId !== null) {
+      this.candidatesservice.deleteCandidate(this.candidateId).subscribe((res) => {
+        this.candidateId = null;
+        this.candidatesservice.getAllCandidates()
+      });
+      this.closeModal();
+    }
+  }
+
 }
