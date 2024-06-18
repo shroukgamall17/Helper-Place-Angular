@@ -50,6 +50,10 @@
     margin-top: 10px;
     background-color: #46464626;
     border: 4px solid rgba(70, 70, 70, 0);
+    transition: background-color 0.3s ease;
+}
+.selectedJobPosition {
+  background-color: #278164
 }
 .img-cover {
     position: relative;
@@ -64,14 +68,20 @@
     color: #434345;
     font-weight: 600;
 }
-.button-group-pills .btn {
+
+.btn {
     border-radius: 5px;
     line-height: 1.2;
     margin-left: 10px;
     border-color: #bbb;
-    background-color: #fff;
+    background-color: #ffffff;
     color: #464646;
     font-weight: 600 !important;
+    transition: background-color 0.3s ease;
+}
+.clickedJobType {
+  background-color: #278164;
+  color: #ffffff;
 }
 .direction{
     display: flex;
@@ -80,15 +90,6 @@
 
     display: flex;
     flex-direction: row;
-}
-.button-group-pills .btn {
-    border-radius: 5px;
-    line-height: 1.2;
-    margin-left: 10px;
-    border-color: #bbb;
-    background-color: #fff;
-    color: #464646;
-    font-weight: 600 !important;
 }
 .star-inserted{
   margin-right: 10px;

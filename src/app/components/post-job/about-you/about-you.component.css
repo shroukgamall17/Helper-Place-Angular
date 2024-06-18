@@ -50,6 +50,10 @@
     margin-top: 10px;
     background-color: #46464626;
     border: 4px solid rgba(70, 70, 70, 0);
+    transition: background-color 0.3s ease;
+}
+.clickedEmployerType{
+  background-color: #2e9683;
 }
 .img-cover {
     position: relative;

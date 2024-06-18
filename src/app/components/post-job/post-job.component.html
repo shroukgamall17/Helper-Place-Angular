@@ -5,7 +5,6 @@
       <app-job-requirment [formGroup]="PostJobService.JobRequirmentsForm">
       </app-job-requirment>
       <div>
-
         <button
           (click)="
             job.jobRequirments = PostJobService.ReturnJobRequirmentObject()
@@ -49,13 +48,12 @@
         <button
           [disabled]="PostJobService.JobDetailsForm.invalid"
           (click)="
-            job.jobDetails = PostJobService.ReturnJobDetailsObject();
-            AddJob()
+            job.jobDetails = PostJobService.ReturnJobDetailsObject(); AddJob()
           "
           mat-button
           matStepperNext
         >
-          Next
+          Add the Job
         </button>
       </div>
     </form>

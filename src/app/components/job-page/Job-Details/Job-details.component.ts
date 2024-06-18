@@ -26,6 +26,7 @@ export class JobDetailsComponent implements OnInit {
       this.JobService.getJobById(params['id']).subscribe({
         next: (Response) => {
           this.Job = Response;
+          console.log(this.Job)
         },
         error: (Error) => {
           console.log(Error);

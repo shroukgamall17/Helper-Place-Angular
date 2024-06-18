@@ -17,10 +17,17 @@ export class FindJobComponent {
   jobs!: JobClass[];
   constructor(private jobService: FindjobService) {}
   getJobs() {
-    this.jobService.GetJobHeadlines().subscribe((res) => {
-      this.jobs = res;
-      console.log(res);
-    });
+    // this.jobService.GetJobHeadlines().subscribe((res) => {
+    //   this.jobs = res;
+    // });
+    this.jobService.GetJobHeadlines().subscribe({
+      next:(res)=>{
+        this.jobs=res;
+      },
+      error:(error)=>{
+        console.log(error)
+      }
+    })
   }
   handleDate(date: any) {
     return new Date(date);

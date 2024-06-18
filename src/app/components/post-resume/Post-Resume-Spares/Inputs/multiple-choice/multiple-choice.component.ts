@@ -22,7 +22,7 @@ export class MultipleChoiceComponent {
   @Input() Options: string[] = [];
   @Input() PlaceHolder: string = '';
   @Output() SetChoices = new EventEmitter<string[]>();
-  @Input()SelectedValues: string[] = [];
-  @Input()url: string = '';
+  @Input()  SelectedValues: string[] = [];
+  @Input()  url: string = '';
   constructor() {}
 }

@@ -31,6 +31,7 @@
     "bootstrap": "^5.3.3",
     "chart.js": "^3.1.1",
     "fontawesome-free": "^1.0.4",
+    "fortawesome": "^0.0.1-security",
     "jquery": "^3.7.1",
     "jwt-decode": "^4.0.0",
     "libphonenumber-js": "^1.10.60",

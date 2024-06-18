@@ -89,7 +89,7 @@ export class PostJobService {
       Nationality: new FormControl(''),
     }),
     ReceiveByEmail: new FormControl(false),
-    Email: new FormControl('', [Validators.required, Validators.email]),
+    Email: new FormControl(''),
     DayOFF: new FormControl('', Validators.required),
     Accomodation: new FormControl('', Validators.required),
     MonthlySalaryOffer: new FormControl('', Validators.required),

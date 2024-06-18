@@ -10,7 +10,6 @@ import { JobDetailsComponent } from './job-details/job-details.component';
 import { JobRequirmentComponent } from './job-requirment/job-requirment.component';
 import { JobClass } from './JobClass/job-class';
 import { PostJobService } from './post-job-service/post-job-service.service';
-import { PricingComponent } from '../pricing/pricing.component';
 import { Loginservice } from '../login/LoginService/loginservice.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -44,6 +43,9 @@ export class PostJobComponent {
       ];
   }
   job = new JobClass();
+  display(){
+    console.log(this.job.aboutYou);
+  }
   isOptional = false;
   AddJob() {
     this.PostJobService.AddJob(this.job).subscribe({

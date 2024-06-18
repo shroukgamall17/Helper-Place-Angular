@@ -26,11 +26,8 @@ h3
 .wrapper{
   display: flex;
     flex-wrap: wrap;
-    /* height: 75px; */
     width: 450px;
     align-items: center;
-    /* justify-content: flex-start; */
-    /* border-radius: 5px; */
     padding: 20px 0;
 }
 .wrapper .option{

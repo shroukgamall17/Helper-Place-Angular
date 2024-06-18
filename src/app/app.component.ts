@@ -8,8 +8,6 @@ import { Loginservice } from './components/login/LoginService/loginservice.servi
 import { PostJobComponent } from './components/post-job/post-job.component';
 import { DashboardLayoutComponent } from './components/Admin-Dashboard/dashboard-layout/dashboard-layout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -31,7 +29,7 @@ export class AppComponent {
     if (localStorage.getItem('HelperPlanJWTToken') != null) {
       this.loginService.DecodeUser(localStorage.getItem('HelperPlanJWTToken'));
       if (loginService.IfTokenIsExpired()) {
-        this.loginService.LogOutUser();
+        // this.loginService.LogOutUser();
       }
     } else {
     }
