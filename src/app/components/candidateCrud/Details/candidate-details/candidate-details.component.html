@@ -141,13 +141,11 @@
                 <div class="event-info">
                   <h3 class="primary ar">Cooking Skills:</h3>
                   <div class="d-flex justify-content-start align-items-center">
-                    <h4 class="float-left color_3 ng-star-inserted">Asian</h4>
-                    <h4 class="float-left color_3 ng-star-inserted">Chinese</h4>
-                    <h4 class="float-left color_3 ng-star-inserted">Thai</h4>
-                    <h4 class="float-left color_3 ng-star-inserted">
-                      Singaporean
-                    </h4>
-                    <h4 class="float-left color_3 ng-star-inserted">Western</h4>
+                    <ng-container *ngFor="let cook of mycandidate.cookingSkills">
+                      <h4 class="float-left color_2 ng-star-inserted">
+                        {{ cook.name }}
+                      </h4>
+                    </ng-container>
                   </div>
                 </div>
               </div>
@@ -188,14 +186,6 @@
                     <h4 class="color_5 ng-star-inserted">Good Listener</h4>
                     <h4 class="color_5 ng-star-inserted">Hardworking</h4>
                     <h4 class="color_5 ng-star-inserted">Honest</h4>
-                    <h4 class="color_5 ng-star-inserted">Independent</h4>
-                    <h4 class="color_5 ng-star-inserted">Initiative</h4>
-                    <h4 class="color_5 ng-star-inserted">Kids Lover</h4>
-                    <h4 class="color_5 ng-star-inserted">Love Cooking</h4>
-                    <h4 class="color_5 ng-star-inserted">Loyal</h4>
-                    <h4 class="color_5 ng-star-inserted">Patience</h4>
-                    <h4 class="color_5 ng-star-inserted">Pet Lover</h4>
-                    <h4 class="color_5 ng-star-inserted">Trustworthy</h4>
                   </div>
                 </div>
               </div>
@@ -237,12 +227,11 @@
                   <h3 class="ng-2">{{ ex.jobPosition }}</h3>
                   <div name="map m-0" class="icons">
                     <i class="fa-solid fa-location-dot green mx-2"></i>
+                    {{ex.workingCountry}}
                   </div>
-                  <span class="location-span mb-0 ng-star-2">
-                    {{ ex.duties }}
-                  </span>
+
                 </div>
-                <p class="text-left mb-1">Canadian Family</p>
+                <p class="text-left mb-1">Employer-Type : {{ex.employerType}}</p>
                 <p class="text-left mb-1 ng-star-2">Duties:{{ ex.duties }}</p>
                 <p class="text-left mb-1 ng-star-2">
                   {{ getref(ex.hasLetterRef) }}
@@ -269,8 +258,8 @@
           <div class="event-info text-left">
             <h3 class="primary text-left mb-0">Salary:</h3>
             <h3 class="mb-0 ng-star-2">
-              {{ mycandidate.expectedSalary }}
-              <span class="ng-tns-c1181781737-1 ng-star-2">(≈ US$ 628)</span>
+              {{ mycandidate.expectedSalary }} US$
+
             </h3>
           </div>
         </div>

@@ -29,7 +29,7 @@ export class PersonalInformationComponent implements OnInit {
     new PersonalInformationDataProviderService();
   mycand!: ICandidates;
   disabledflag: number = 0;
-  myflag: boolean = false;
+  myflag: boolean = true;
 
   constructor(
     private candservice: FcandidateService,
@@ -109,9 +109,9 @@ export class PersonalInformationComponent implements OnInit {
     this.mycand.hasPassport = ele.target.checked;
   }
   flagy() {
-    // const fieldsToCheck: (keyof ICandidates)[] = [ 'fname', 'lname', 'age', 'gender', 'martialStatus', 'nationality', 'religion', 'educationLevel', 'location', 'contactEmail', 'phoneNumber', 'whatappNumber'];
-    // this.myflag = fieldsToCheck.some(field => !this.mycand[field]);
-    // console.log(this.myflag);
+    const fieldsToCheck: (keyof ICandidates)[] = [ 'fname', 'lname', 'age', 'gender', 'martialStatus', 'nationality', 'religion', 'educationLevel', 'location', 'contactEmail', 'phoneNumber', 'whatappNumber'];
+    this.myflag = fieldsToCheck.some(field => !this.mycand[field]);
+    console.log(this.myflag);
   }
   goBack(): void {
     this.location.back();
