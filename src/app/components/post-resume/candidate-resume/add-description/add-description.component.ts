@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './add-description.component.css'
 })
 export class AddDescriptionComponent implements OnInit {
-  myflag:boolean=false;
+  myflag:boolean=true;
   constructor(public candService:FcandidateService){}
   ngOnInit(): void {
    this.flagy()
@@ -62,9 +62,9 @@ export class AddDescriptionComponent implements OnInit {
   }
 
   flagy(){
-    // if( this.candService.mycandidate.description.length>50)
-    //   {
-    //     this.myflag=false
-    //   }
+    if( this.candService.mycandidate.description.length>50)
+      {
+        this.myflag=false
+      }
   }
 }

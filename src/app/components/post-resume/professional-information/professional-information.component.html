@@ -99,12 +99,12 @@
           <input class="col-md-12 mb-3 form-control" placeholder="How Many Years Of Experience" type="number"
             name="workExperience" [(ngModel)]="mycand.workExperience" (change)="expbind($event)" />
 
-          <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+          <!-- <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
             <div class="row mt-3 mb-2">
               <div class="col-11"><label class="fs-18">Job Type *</label></div>
             </div>
             <div data-toggle="buttons" class="button-group-pills text-left">
-              <label class="btn ng-star-inserted"><input type="radio" name="job_type_id" formcontrolname="job_type_id"
+              <label class="btn ng-star-inserted"><input type="radio" name="job_type_id" (change)="wstatbind($event)" [(ngModel)]="mycand.jobType"
                   class="d-none ng-untouched ng-pristine ng-invalid" />
                 <div class="direction">
                   <div class="ng-star-inserted me-3">
@@ -114,7 +114,7 @@
                 </div>
               </label>
               <label class="btn ng-star-inserted my-sm-3"><input type="radio" name="job_type_id"
-                  formcontrolname="job_type_id" class="d-none ng-untouched ng-pristine ng-invalid" />
+                (change)="wstatbind($event)" [(ngModel)]="mycand.jobType" class="d-none ng-untouched ng-pristine ng-invalid" />
                 <div class="direction">
                   <div class="ng-star-inserted me-3">
                     <img width="17px" src="https://cdn.helperplace.com/icons/time-mgmt.svg" />
@@ -122,7 +122,7 @@
                   <div class="ml-1">Part Time</div>
                 </div>
               </label>
-              <label class="btn ng-star-inserted"><input type="radio" name="job_type_id" formcontrolname="job_type_id"
+              <label class="btn ng-star-inserted"><input type="radio" name="job_type_id" (change)="wstatbind($event)"[(ngModel)]="mycand.jobType"
                   class="d-none ng-untouched ng-pristine ng-invalid" />
                 <div class="direction">
                   <div class="ng-star-inserted me-3">
@@ -136,7 +136,7 @@
               class="col-1 text-center bg-transparent border-0 tooltips_custom">
               <i aria-hidden="true" class="fa fa-question-circle-o"></i>
             </button>
-          </div>
+          </div> -->
 
           <app-search-select [ReceivedValue]="mycand.jobType" [Options]="Data.CurrentWorkStatus" class="col-md-8 mb-3"
             PlaceHolder="What is your current work status?" (ValueSelected)="wstatbind($event)">
@@ -225,7 +225,7 @@
                     />
                     <div>English</div>
                   </div>
-                </div> 
+                </div>
                 </label >
               <label class="btn ng-star-inserted mt-2">
                 <div class="direction">
@@ -238,7 +238,7 @@
                   </div>
                 </div> </label
               > -->
-           
+
               <app-multiple-choice [SelectedValues]="mylangs" [Options]="Data.LanguageStatus"
                 (SetChoices)="addlangbind($event)"></app-multiple-choice>
             </div>
@@ -253,7 +253,7 @@
               </div>
             </div>
             <div data-toggle="buttons" class="text-left button-group-pills-language">
-             
+
               <!-- <label class="btn ng-star-inserted mt-3">
                 <div class="direction">
                   <div class="ng-star-inserted me-3">
@@ -319,7 +319,7 @@
                 </div> </label
               >
     -->
-           
+
               <app-multiple-choice [SelectedValues]="mymainskills" [Options]="Data.MainSkillsStatus"
                 (SetChoices)="addmainbind($event)"></app-multiple-choice>
             </div>
@@ -343,7 +343,7 @@
                     />
                     <div>Middle East</div>
                   </div>
-                </div> 
+                </div>
                 </label
               >
               <label class="btn ng-star-inserted mt-2">
@@ -357,7 +357,7 @@
                   </div>
                 </div> </label
               > -->
-     
+
 
               <app-multiple-choice [SelectedValues]="mycookingskills" [Options]="Data.cookingSkillsStatus"
                 (SetChoices)="addcookbind($event)"></app-multiple-choice>
@@ -440,7 +440,7 @@
                   </div>
                 </div>
               </label> -->
-         
+
 
 
 
@@ -521,7 +521,7 @@
 
 
 
-<!-- 
+<!--
 <div class="">
   <form class="Post-Resume-Form">
     <div class="Professional-Information col-md-12 mb-3">
