@@ -4,6 +4,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown'; // Import
 import { MultipleSearchSelectComponent } from '../../post-resume/Post-Resume-Spares/Inputs/multiple-search-select/multiple-search-select.component';
 import { SideBarServiceService } from './SideBarService/side-bar-service.service';
 import { CommonModule } from '@angular/common';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-sidebar',
@@ -22,16 +23,16 @@ export class SidebarComponent {
   queryParams: QueryParams = new QueryParams();
   @Output() ApplyChanges = new EventEmitter<QueryParams>();
 
-  constructor() {}
+  constructor(private modalService: NgbModal) {}
 
-  openModal(): void {
-    const modal = document.getElementById('exampleModal');
-    if (modal) {
-      modal.classList.add('show');
-      modal.style.display = 'block';
-      modal.setAttribute('aria-hidden', 'false');
-    }
-  }
+  // openModal(): void {
+  //   const modal = document.getElementById('exampleModal');
+  //   if (modal) {
+  //     modal.classList.add('show');
+  //     modal.style.display = 'block';
+  //     modal.setAttribute('aria-hidden', 'false');
+  //   }
+  // }
 
   closeModal(): void {
     const modal = document.getElementById('exampleModal');

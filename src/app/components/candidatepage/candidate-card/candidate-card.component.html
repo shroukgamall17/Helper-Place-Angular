@@ -44,9 +44,10 @@
           Direct
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <i class="fa-solid fa-calendar-days me-2" style="color: #25ae88"></i>
+     
+          <i class="fa-solid fa-certificate me-2" style="color: #25ae88"></i>
           <p style="color: #054a84; margin-bottom: 0" class="">
-            {{ item.workexperience }} years
+            {{ item.workexperience }}yr expeience
           </p>
         </div>
         <div class="d-flex justify-content-between align-items-center">
@@ -55,7 +56,7 @@
             style="color: #25ae88"
           ></i>
           <p style="color: #054a84; margin-bottom: 0" class="">
-            {{ handleDate(item.startDate).toLocaleDateString() }}
+            {{ handleDate(item.startDate).toLocaleDateString()| dateFormat }}
           </p>
         </div>
         <div
@@ -63,7 +64,7 @@
           style="color: #25ae88; cursor: pointer"
           (click)="navigateToDetails(item.id)"
         >
-          <i class="fa-solid fa-circle"></i> details
+          <i class="fa-solid fa-circle"></i> Very Active
         </div>
       </div>
     </div>

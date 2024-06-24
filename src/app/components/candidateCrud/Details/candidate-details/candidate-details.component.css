@@ -27,7 +27,8 @@
   }
 }
 
-.cover {
+
+/* .cover {
   background: center no-repeat url("../../../../../assets/Images/resume-lg.webp");
   width: 100%;
   background-size: cover;
@@ -35,7 +36,7 @@
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
   position: relative;
-}
+} */
 
 .label {
   padding: 5px 7px;

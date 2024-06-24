@@ -12,11 +12,15 @@ html,
 body {
   height: 100%;
 }
-
+.container{
+  width: 100% !important;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   padding-top: 45px;
+  text-transform: capitalize;
 }
 
 @font-face {

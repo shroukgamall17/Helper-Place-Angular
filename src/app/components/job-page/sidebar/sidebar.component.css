@@ -38,3 +38,11 @@ input[type="checkbox"]:checked + label {
     display: block;
   }
 }
+/* @media (max-width:580px) {
+  .filter{
+    display: none;
+  }
+  .filterPopUp{
+    display: block;
+  }
+} */

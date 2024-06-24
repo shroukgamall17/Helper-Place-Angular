@@ -10,11 +10,12 @@ import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment.development';
 import { TruncateWordsPipe } from '../../../pipes/truncate-words.pipe';
+import { DateFormatPipe } from '../../../pipes/date-format.pipe';
 
 @Component({
   selector: 'app-candidate-card',
   standalone: true,
-  imports: [HttpClientModule,FormsModule,CommonModule,MatPaginatorModule , TruncateWordsPipe],
+  imports: [HttpClientModule,FormsModule,CommonModule,MatPaginatorModule , TruncateWordsPipe, DateFormatPipe],
   templateUrl: './candidate-card.component.html',
   styleUrl: './candidate-card.component.css'
 })

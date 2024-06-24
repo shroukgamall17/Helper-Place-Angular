@@ -1,8 +1,15 @@
 <section class="resume">
   <div class="container">
     <div class="row">
-      <div class="candidateResume bg-white col-lg-8 col-md-12 col-sm-11">
-        <div class="cover">
+      <div class="candidateResume bg-white col-lg-9 col-md-12 col-sm-11">
+        <div class="bgImg w-100 position-relative ">
+          <img src="../../../../../assets/Images/resume-lg.webp" alt="" width="100%" class="rounded-top-3">
+          <div class="label">very Active</div>
+          <div class="img">
+            <img src="../../../../assets/Images/female-icon.png" alt="image" style="width: 120px; height: 120px"
+              class="rounded-circle m-2" />
+          </div></div>
+        <!-- <div class="cover">
           <div class="label">very Active</div>
           <div class="img">
             <img
@@ -12,7 +19,7 @@
               class="rounded-circle m-2"
             />
           </div>
-        </div>
+        </div> -->
         <div class="resumeInfo">
           <h4 class="" style="color: #054a84; margin: 10px 0 0 150px">
             {{ Job.jobRequirments.basicInformation.positionOffered }}
@@ -22,9 +29,9 @@
               class="fs-6"
               style="color: black; margin: 10px 0 0 150px; width: 80%"
             >
-              Starting From {{ Job.jobRequirments.basicInformation.startDate }}
+              Starting From {{Job.jobRequirments.basicInformation.startDate }}
               <br />
-              |{{ Job.jobRequirments.basicInformation.type }}
+              |&nbsp;{{ Job.jobRequirments.basicInformation.type }}
             </div>
 
             <div class="">
@@ -150,12 +157,12 @@
         <div class="sprator p-1 my-4">
           <h5 class="ms-5">Job Description</h5>
         </div>
-        <div class="m-5">
-          <h4 class="fw-bold" style="color: #054a84; margin-bottom: 20px">
+        <div class="mx-5">
+          <h5 class="fw-bold" style="color: #054a84; margin-bottom: 20px">
             {{ Job.jobDetails.jobTitle }}
-          </h4>
+          </h5 >
 
-          <p class="lead">
+          <p class="fw-medium fs-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
             autem, hic quam, fugiat, necessitatibus facilis repellat aperiam
             expedita ex mollitia esse molestias excepturi quibusdam ipsam nihil
@@ -344,9 +351,9 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 rigthSec" style="margin: 60px 0">
+      <div class="col-lg-3 rigthSec" style="margin: 60px 0">
         <div
-          class="card helperCard p-2"
+          class="card helperCard px-2"
           *ngFor="let item of randomJobs"
           (click)="navigateToDetails(item.id)"
         >

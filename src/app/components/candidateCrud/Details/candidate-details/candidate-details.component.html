@@ -1,31 +1,39 @@
 <section class="resume">
   <div class="container">
     <div class="row">
-      <div class="candidateResume bg-white col-lg-8 col-md-12 col-sm-11">
-        <div class="cover">
+      <div class="candidateResume bg-white col-lg-9 col-md-12 col-sm-11">
+        <div class="bgImg w-100 position-relative ">
+          <img src="../../../../../assets/Images/resume-lg.webp" alt="" width="100%" class="rounded-top-3">
           <div class="label">very Active</div>
           <div class="img">
             <img [src]="url + mycandidate.photoURL" alt="image" style="width: 120px; height: 120px"
               class="rounded-circle m-2" />
           </div>
         </div>
-        <div class="resumeInfo">
+        <div class="cover">
+          <!-- <div class="label">very Active</div>
+          <div class="img">
+            <img [src]="url + mycandidate.photoURL" alt="image" style="width: 120px; height: 120px"
+              class="rounded-circle m-2" />
+          </div> -->
+        </div>
+        <div class="resumeInfo ">
           <h4 class="" style="color: #054a84; margin: 10px 0 0 150px">
             {{ mycandidate.fname }} {{ mycandidate.lname }} (
             {{ mycandidate.age }} years)
           </h4>
           <div class="d-flex justify-content-between align-items-center">
             <div class="" style="color: black; margin: 10px 0 0 150px">
-              {{ mycandidate.gender }}|{{ mycandidate.martialStatus }}|{{
+              {{ mycandidate.gender }} &nbsp;| &nbsp;{{ mycandidate.martialStatus }}&nbsp;| &nbsp;{{
               mycandidate.noKids
               }}
-              kids |{{ mycandidate.religion }}|{{ mycandidate.location }}
+              kids &nbsp;| &nbsp;{{ mycandidate.religion }}&nbsp;| &nbsp;{{ mycandidate.location }}
             </div>
             <div class="">
               <button class="btn bg-green text-white me-3" (click)="handleContact(mycandidate.id)">
                 Contact
               </button>
-              <button class="btn btn-danger text-white me-3" (click)="goBack()">
+              <button class="btn btn-danger text-white me-3 " (click)="goBack()">
                 Return
               </button>
             </div>
@@ -33,19 +41,19 @@
           <div class="directShap d-flex justify-content-center align-items-center p-2">
             Direct
           </div>
-          <div class="sprator p-1 my-4">
+          <div class="sprator p-2 my-4">
             <h5 class="ms-5">professional info</h5>
           </div>
 
           <div class="row py-3 personal-infomation d-flex justify-content-center">
             <div class="col-11 mx-auto">
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="row ">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
                   <h5 class="footer-experience d-flex justify-content-start">
                     <div name="user" class="me-3">
                       <i class="fa-solid fa-user green"></i>
                     </div>
-                    <p>{{ mycandidate.position }}</p>
+                    <p class="fs-6 fw-bold">{{ mycandidate.position }}</p>
                   </h5>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -53,7 +61,8 @@
                     <div name="map" class="me-3">
                       <i class="fa-solid fa-location-pin green"></i>
                     </div>
-                    Present Location:{{ mycandidate.location }}
+                    <p class="fs-6 fw-bold"> <span class="me-2">Present Location:</span> {{ mycandidate.location }}</p>
+
                   </h5>
                 </div>
               </div>
@@ -63,7 +72,10 @@
                     <div name="certificate" class="me-3">
                       <i class="fa-solid fa-star-of-life green"></i>
                     </div>
-                    {{ mycandidate.workExperience }} Years Experience
+                    <p class="fs-6 fw-bold">
+                      {{mycandidate.workExperience }} Years Experience
+
+                    </p>
                   </h5>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -71,13 +83,16 @@
                     <div name="calendar" class="me-3">
                       <i class="fa-solid fa-calendar-days green"></i>
                     </div>
-                    {{
-                    handleDate(
-                    mycandidate.availabilityDate
-                    ).toLocaleDateString()
-                    }}
-                    |
-                    {{ mycandidate.jobType }}
+                    <p class="fs-6 fw-bold">
+                      {{
+                      handleDate(
+                      mycandidate.availabilityDate
+                      ).toLocaleDateString()
+                      }}
+                      |
+                      {{ mycandidate.jobType }}
+                    </p>
+
                   </h5>
                 </div>
               </div>
@@ -85,7 +100,7 @@
           </div>
         </div>
 
-        <div class="sprator p-1 my-4">
+        <div class="sprator p-2 my-4">
           <h5 class="ms-5">Skills / Duties</h5>
         </div>
 
@@ -100,7 +115,7 @@
                 </div>
                 <div class="event-info">
                   <h3 class="primary">Language:</h3>
-                  <div class="d-flex justify-content-start align-items-center">
+                  <div class="d-flex justify-content-start align-items-center flex-wrap">
                     <ng-container *ngFor="let lang of mycandidate.languages">
                       <h4 class="color_1 ng-star-inserted">{{ lang.name }}</h4>
                     </ng-container>
@@ -119,7 +134,7 @@
                 </div>
                 <div class="event-info">
                   <h3 class="primary ar">Main Skills:</h3>
-                  <div class="d-flex justify-content-start align-items-center">
+                  <div class="d-flex justify-content-start align-items-center flex-wrap">
                     <ng-container *ngFor="let skill of mycandidate.mainSkills">
                       <h4 class="float-left color_2 ng-star-inserted">
                         {{ skill.name }}
@@ -140,7 +155,7 @@
                 </div>
                 <div class="event-info">
                   <h3 class="primary ar">Cooking Skills:</h3>
-                  <div class="d-flex justify-content-start align-items-center">
+                  <div class="d-flex justify-content-start align-items-center flex-wrap">
                     <ng-container *ngFor="let cook of mycandidate.cookingSkills">
                       <h4 class="float-left color_2 ng-star-inserted">
                         {{ cook.name }}
@@ -161,7 +176,7 @@
                 </div>
                 <div class="event-info">
                   <h3 class="primary ar">Other Skills:</h3>
-                  <div class="d-flex justify-content-start align-items-center">
+                  <div class="d-flex justify-content-start align-items-center flex-wrap">
                     <ng-container *ngFor="let skill of mycandidate.otherSkills">
                       <h4 class="float-left color_4 ng-star-inserted">
                         {{ skill.name }}
@@ -192,17 +207,17 @@
             </div>
           </div>
         </div>
-        <div class="sprator p-1 my-4">
+        <div class="sprator p-2 my-4">
           <h5 class="ms-5">About Me</h5>
         </div>
         <div>
-          <p class="text-center m-4">{{ mycandidate.description }}</p>
+          <p class=" m-4">{{ mycandidate.description }}</p>
         </div>
-        <div class="sprator p-1 my-4">
+        <div class="sprator p-2 my-4">
           <h5 class="ms-5">Work Experience</h5>
         </div>
         <ng-container *ngFor="let ex of mycandidate.experiences">
-          <div class="col-11 phone_pedding mx-auto mb-5 ng-star-2 border-bottom">
+          <div class="col-11 phone_pedding mx-auto mb-5 ng-star-2 ">
             <div class="event-container event-container_footer_margin_custom d-flex">
               <div class="yoga-circle">
                 <picture class="">
@@ -240,70 +255,77 @@
             </div>
           </div>
         </ng-container>
-        <div class="sprator p-1 my-4">
+        <div class="sprator p-2 my-4">
           <h5 class="ms-5">My Expectations</h5>
         </div>
-        <div
-          class="event-container event-container_footer_margin_custom d-flex p-4 border-1 border-bottom border-black">
-          <div class="yoga-circle">
-            <picture class="ng-tns-c1181781737-1">
-              <source srcset="
-                  https://cdn.helperplace.com/web-asset/images/icon/give-money.png
-                " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
-              <img src="https://cdn.helperplace.com/web-asset/images/icon/give-money.png" width="40px" height="40px"
-                loading="lazy" alt="https://cdn.helperplace.com/web-asset/images/icon/give-money.png"
-                class="ng-tns-c1181781737-1" />
-            </picture>
-          </div>
-          <div class="event-info text-left">
-            <h3 class="primary text-left mb-0">Salary:</h3>
-            <h3 class="mb-0 ng-star-2">
-              {{ mycandidate.expectedSalary }} US$
-
-            </h3>
-          </div>
+        <div class="mx-5">
+            <div class="event-container event-container_footer_margin_custom d-flex pb-md-2 border-1 border-bottom border-black">
+              <div class="yoga-circle">
+                <picture class="ng-tns-c1181781737-1">
+                  <source srcset="
+                              https://cdn.helperplace.com/web-asset/images/icon/give-money.png
+                            " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
+                  <img src="https://cdn.helperplace.com/web-asset/images/icon/give-money.png" width="40px" height="40px"
+                    loading="lazy" alt="https://cdn.helperplace.com/web-asset/images/icon/give-money.png"
+                    class="ng-tns-c1181781737-1" />
+                </picture>
+              </div>
+              <div class="event-info text-left">
+                <h3 class="primary text-left mb-0">Salary:</h3>
+                <h3 class="mb-0 ng-star-2 text-black">
+                  {{ mycandidate.expectedSalary }} US$
+            
+                </h3>
+              </div>
+            </div>
+            <div class="event-container event-container_footer_margin_custom d-flex  border-1 border-bottom border-black p-2">
+              <div class="yoga-circle">
+                <picture class="ng-tns-c1181781737-1">
+                  <source srcset="
+                              https://cdn.helperplace.com/web-asset/images/icon/bed.png
+                            " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
+                  <img src="https://cdn.helperplace.com/web-asset/images/icon/bed.png" width="40px" height="40px" loading="lazy"
+                    alt="https://cdn.helperplace.com/web-asset/images/icon/bed.png" class="ng-tns-c1181781737-1" />
+                </picture>
+              </div>
+              <div class="event-info text-left">
+                <h3 class="primary text-left mb-0">Accommodation:</h3>
+                <h3 class="mb-0 ng-star-2 text-black">{{ mycandidate.accommodationPref }}</h3>
+              </div>
+            </div>
+            <div class="event-container event-container_footer_margin_custom d-flex p-2 border-1 border-bottom border-black">
+              <div class="yoga-circle">
+                <picture class="ng-tns-c1181781737-1">
+                  <source srcset="
+                              https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png
+                            " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
+                  <img src="	https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png" width="40px"
+                    height="40px" loading="lazy"
+                    alt="	https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png"
+                    class="ng-tns-c1181781737-1" />
+                </picture>
+              </div>
+              <div class="event-info text-left">
+                <h3 class="primary text-left mb-0">Day Off:</h3>
+                <h3 class="mb-0 ng-star-2 text-black">{{ mycandidate.preferredDay }}</h3>
+              </div>
+            </div>
         </div>
-        <div
-          class="event-container event-container_footer_margin_custom d-flex p-4 border-1 border-bottom border-black">
-          <div class="yoga-circle">
-            <picture class="ng-tns-c1181781737-1">
-              <source srcset="
-                  https://cdn.helperplace.com/web-asset/images/icon/bed.png
-                " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
-              <img src="https://cdn.helperplace.com/web-asset/images/icon/bed.png" width="40px" height="40px"
-                loading="lazy" alt="https://cdn.helperplace.com/web-asset/images/icon/bed.png"
-                class="ng-tns-c1181781737-1" />
-            </picture>
-          </div>
-          <div class="event-info text-left">
-            <h3 class="primary text-left mb-0">Accommodation:</h3>
-            <h3 class="mb-0 ng-star-2">{{ mycandidate.accommodationPref }}</h3>
-          </div>
-        </div>
-        <div
-          class="event-container event-container_footer_margin_custom d-flex p-4 border-1 border-bottom border-black">
-          <div class="yoga-circle">
-            <picture class="ng-tns-c1181781737-1">
-              <source srcset="
-                  https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png
-                " width="35px" height="35px" media="(max-width:768px)" class="ng-tns-c1181781737-1" />
-              <img src="	https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png" width="40px"
-                height="40px" loading="lazy"
-                alt="	https://cdn.helperplace.com/web-asset/images/icon/home-rest-day-calendar-page.png"
-                class="ng-tns-c1181781737-1" />
-            </picture>
-          </div>
-          <div class="event-info text-left">
-            <h3 class="primary text-left mb-0">Day Off:</h3>
-            <h3 class="mb-0 ng-star-2">{{ mycandidate.preferredDay }}</h3>
-          </div>
-        </div>
+      
       </div>
 
-      <div class="col-lg-4 rigthSec" style="margin: 60px 0">
-        <div class="card helperCard p-2" *ngFor="let candidate of randomCandidates"
+
+
+
+
+
+      
+
+
+      <div class="col-lg-3 rigthSec" style="margin: 60px 0">
+        <div class="card helperCard px-3 " *ngFor="let candidate of randomCandidates"
           [routerLink]="['/details', candidate.id]" routerLinkActive="active-link">
-          <div class="d-flex justify-content-center align-items-center">
+          <div class="d-flex justify-content-evenly align-items-center">
             <div class="">
               <div class="rounded-circle overflow-hidden containImg">
                 <img [src]="env + candidate.photoURL" class="img-fluid rounded-start" alt="helper-phone" width="100" />
