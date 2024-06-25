@@ -17,9 +17,7 @@ a.res {
   cursor: pointer;
 }
 
-.filterPopUp {
-  display: none;
-}
+
 
 input[type="radio"]:checked + label,
 input[type="checkbox"]:checked + label {
@@ -27,11 +25,20 @@ input[type="checkbox"]:checked + label {
   font-weight: bold;
 }
 
-@media (max-width: 1000px) {
-  .filter {
+
+
+
+
+@media (max-width:1000px) {
+  .filterRes{
     display: none;
   }
-  .filterPopUp {
-    display: block;
+  .filterPopUp{
+    display: block !important;
   }
+}
+
+.modal-body {
+  max-height: 100vh; 
+  overflow-y: auto;
 }

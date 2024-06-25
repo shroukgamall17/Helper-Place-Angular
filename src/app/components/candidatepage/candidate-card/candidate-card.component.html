@@ -1,18 +1,11 @@
 <!-- pagination -->
 <div class="container">
-  <mat-paginator
-    [length]="count"
-    [pageSize]="10"
-    [pageSizeOptions]="[5, 10, 25, 100]"
-    (page)="pageChange($event)"
-  >
+  <mat-paginator [length]="count" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="pageChange($event)">
   </mat-paginator>
   <ng-container *ngFor="let item of myownfiltered">
     <div class="row rounded mb-5" id="main">
       <div class="d-flex justify-content-between align-items-center m-3">
-        <div
-          class="rounded-circle overflow-hidden border border-1 border-black candidatImg"
-        >
+        <div class="rounded-circle overflow-hidden border border-1 border-black candidatImg">
           <img [src]="env + item.photoURL" alt="image" width="100%" />
         </div>
 
@@ -23,24 +16,16 @@
           <p class="candidatePosation lead text-secondary">
             {{ item.position }}
             <span style="color: #054a84">
-              <i
-                class="fa-solid fa-location-dot mx-2"
-                style="color: #25ae88"
-              ></i>
-              {{ item.location }}</span
-            >
+              <i class="fa-solid fa-location-dot mx-2" style="color: #25ae88"></i>
+              {{ item.location }}</span>
           </p>
           <p class="candidateDescription">
             {{ item.description | truncateWords : 20 }}
           </p>
         </div>
       </div>
-      <div
-        class="d-flex candiateInfo justify-content-between align-items-center"
-      >
-        <div
-          class="directShap d-flex justify-content-center align-items-center p-2"
-        >
+      <div class="d-flex candiateInfo justify-content-between align-items-center ps-0">
+        <div class="directShap d-flex justify-content-center align-items-center p-2">
           Direct
         </div>
         <div class="d-flex justify-content-between align-items-center">
@@ -50,20 +35,13 @@
           </p>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <i
-            class="fa-solid fa-hourglass-start me-2"
-            style="color: #25ae88"
-          ></i>
+          <i class="fa-solid fa-hourglass-start me-2" style="color: #25ae88"></i>
           <p style="color: #054a84; margin-bottom: 0" class="">
             {{ handleDate(item.startDate).toLocaleDateString() | dateFormat }} |
             {{ item.jobtype }}
           </p>
         </div>
-        <div
-          class=""
-          style="color: #25ae88; cursor: pointer"
-          (click)="navigateToDetails(item.id)"
-        >
+        <div class="" style="color: #25ae88; cursor: pointer" (click)="navigateToDetails(item.id)">
           <i class="fa-solid fa-circle"></i> Very Active
         </div>
       </div>

@@ -1,4 +1,3 @@
-import { PoppSidebarComponent } from './components/candidatepage/popp-sidebar/popp-sidebar.component';
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,7 +20,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PostJobComponent,
     DashboardLayoutComponent,
     FontAwesomeModule,
-    PoppSidebarComponent
+    
   ],
 })
 export class AppComponent {

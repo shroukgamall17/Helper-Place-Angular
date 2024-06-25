@@ -31,18 +31,15 @@ input[type="checkbox"]:checked + label {
 
 
 @media (max-width:1050px) {
-  .filter{
+  .filterRes{
     display: none;
   }
   .filterPopUp{
-    display: block;
+    display: block !important;
   }
 }
-/* @media (max-width:580px) {
-  .filter{
-    display: none;
-  }
-  .filterPopUp{
-    display: block;
-  }
-} */
+
+.modal-body {
+  max-height: 100vh; 
+  overflow-y: auto;
+}
