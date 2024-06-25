@@ -32,3 +32,6 @@ body {
 body {
   font-family: Poppins;
 }
+.model{
+  z-index: 999;
+}

@@ -31,36 +31,30 @@
     </div>
   </div>
 
-  <div class="d-flex candiateInfo justify-content-between align-items-center">
-    <div class="d-flex candiateInfo justify-content-between align-items-center">
-      <div
-        class="directShap d-flex justify-content-center align-items-center p-2"
-      >
-        Direct
-      </div>
-      <div class="d-flex justify-content-between align-items-center">
-        <i class="fa-solid fa-certificate me-2" style="color: #25ae88"></i>
-        <p style="color: #054a84; margin-bottom: 0" class="">
-          {{ Job.jobRequirments.basicInformation.positionOffered }} |
-          {{ Job.jobRequirments.basicInformation.type }}
-        </p>
-      </div>
-      <div class="d-flex justify-content-between align-items-center">
-        <i class="fa-solid fa-hourglass-start me-2" style="color: #25ae88"></i>
-        <p style="color: #054a84; margin-bottom: 0" class="">
-          {{
-            handleDate(
-              Job.jobRequirments.basicInformation.startDate
-            ).toLocaleDateString() | dateFormatForJob
-          }}
-        </p>
-      </div>
-      <div
-        style="color: #25ae88; cursor: pointer"
-        [routerLink]="['/JobDetails', Job.id]"
-      >
+
+  <div class="d-flex candiateInfo justify-content-between align-items-center ps-0">
+    <div class="directShap d-flex justify-content-center align-items-center p-2">
+      Direct
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <i class="fa-solid fa-certificate me-2" style="color: #25ae88"></i>
+      <p style="color: #054a84; margin-bottom: 0" class="">
+        {{ Job.jobRequirments.basicInformation.positionOffered }} |
+        {{ Job.jobRequirments.basicInformation.type }}
+      </p>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <i class="fa-solid fa-hourglass-start me-2" style="color: #25ae88"></i>
+      <p style="color: #054a84; margin-bottom: 0" class="">
+        {{
+        handleDate(
+        Job.jobRequirments.basicInformation.startDate
+        ).toLocaleDateString() |  dateFormatForJob
+        }}
+      </p>
+    </div>
+      <div style="color: #25ae88; cursor: pointer" [routerLink]="['/JobDetails', Job.id]">
         <i class="fa-solid fa-circle"></i> Very Active
       </div>
-    </div>
   </div>
 </div>
