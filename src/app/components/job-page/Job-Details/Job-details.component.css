@@ -11,7 +11,7 @@
 
 .helperCard {
   box-shadow: 1px 1px 3px #0000003d;
-  transition: .5s;
+  transition: 0.5s;
   margin-bottom: 10px;
 }
 
@@ -21,14 +21,14 @@
   margin: 0;
 }
 
-@media (max-width:994px) {
+@media (max-width: 994px) {
   .rigthSec {
     display: none;
   }
 }
 
 .cover {
-  background: center no-repeat url("../../../../assets/Images/resume-lg.webp");
+  background: center no-repeat url("../../../../assets/Images/resume-lg.jpg");
   width: 100%;
   background-size: cover;
   height: 150px;
@@ -82,14 +82,13 @@
 .sprator {
   border-bottom: 3px solid #054a84;
   color: #054a84;
-  background-color: rgba(5, 74, 132, .1490196078);
+  background-color: rgba(5, 74, 132, 0.1490196078);
 }
 
 .yoga-circle {
   padding: 6px 10px 6px 0;
   height: auto;
   width: 50px;
-
 }
 
 .event-info {
@@ -101,10 +100,9 @@
 }
 
 .primary {
-    font-size: calc(12px + 3 * (100vw - 300px) / 1620) !important;
-    margin-bottom: 10px;
-    font-weight: 700;
-
+  font-size: calc(12px + 3 * (100vw - 300px) / 1620) !important;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .ng-star-inserted {
@@ -117,42 +115,42 @@
   margin: 0 10px 10px 0;
   padding: 5px 8px;
 }
-h3{
+h3 {
   color: #054a84;
   font-weight: bold;
   margin-block: 10px;
 }
-.color_5{
+.color_5 {
   background: transparent;
-    border: 1px solid #054a84;
-    color: #054a84;
+  border: 1px solid #054a84;
+  color: #054a84;
 }
-.color_4{
-      background: #054a84;
-    border: 1px solid #054a84;
-    color: #fff;
+.color_4 {
+  background: #054a84;
+  border: 1px solid #054a84;
+  color: #fff;
 }
-.color_3{
-      background: #25ae88;
-    border: 1px solid #25ae88;
-    color: #fff;
+.color_3 {
+  background: #25ae88;
+  border: 1px solid #25ae88;
+  color: #fff;
 }
-.color_2{
-      background: #7a7a7a;
-    color: #fff;
-    border: 1px solid #7a7a7a;
+.color_2 {
+  background: #7a7a7a;
+  color: #fff;
+  border: 1px solid #7a7a7a;
 }
-.yoga-circle{
-      padding: 6px 10px 6px 0;
-    height: auto;
-    width: 50px;
+.yoga-circle {
+  padding: 6px 10px 6px 0;
+  height: auto;
+  width: 50px;
 }
-.ng-star-2{
-      font-size: calc(12px + 3 * (100vw - 300px) / 1620) !important;
-    margin-bottom: 10px;
-    font-weight: 700;
+.ng-star-2 {
+  font-size: calc(12px + 3 * (100vw - 300px) / 1620) !important;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
-.ng-2{
-      font-size: calc(12px + 3 * (100vw - 300px) / 1620) !important;
-    font-weight: 700;
+.ng-2 {
+  font-size: calc(12px + 3 * (100vw - 300px) / 1620) !important;
+  font-weight: 700;
 }

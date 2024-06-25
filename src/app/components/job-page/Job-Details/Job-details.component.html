@@ -2,14 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="candidateResume bg-white col-lg-9 col-md-12 col-sm-11">
-        <div class="bgImg w-100 position-relative ">
-          <img src="../../../../../assets/Images/resume-lg.webp" alt="" width="100%" class="rounded-top-3">
-          <div class="label">very Active</div>
-          <div class="img">
-            <img src="../../../../assets/Images/female-icon.png" alt="image" style="width: 120px; height: 120px"
-              class="rounded-circle m-2" />
-          </div></div>
-        <!-- <div class="cover">
+        <div class="bgImg w-100 position-relative">
+          <img
+            src="../../../../../assets/Images/resume-lg.jpg"
+            alt=""
+            width="100%"
+            class="rounded-top-3"
+          />
           <div class="label">very Active</div>
           <div class="img">
             <img
@@ -19,7 +18,7 @@
               class="rounded-circle m-2"
             />
           </div>
-        </div> -->
+        </div>
         <div class="resumeInfo">
           <h4 class="" style="color: #054a84; margin: 10px 0 0 150px">
             {{ Job.jobRequirments.basicInformation.positionOffered }}
@@ -29,7 +28,7 @@
               class="fs-6"
               style="color: black; margin: 10px 0 0 150px; width: 80%"
             >
-              Starting From {{Job.jobRequirments.basicInformation.startDate }}
+              Starting From {{ Job.jobRequirments.basicInformation.startDate }}
               <br />
               |&nbsp;{{ Job.jobRequirments.basicInformation.type }}
             </div>
@@ -43,7 +42,7 @@
           >
             Direct
           </div>
-          <div class="sprator p-1 my-4">
+          <div class="sprator pt-3 pb-2 my-1">
             <h5 class="ms-5">professional info</h5>
           </div>
 
@@ -139,13 +138,11 @@
                     <span class="fw-bold">
                       age:
                       {{
-                        Job.jobRequirments.candidatePreference
-                          .ageRequired[0]
+                        Job.jobRequirments.candidatePreference.ageRequired[0]
                       }}
                       to
                       {{
-                        Job.jobRequirments.candidatePreference
-                          .ageRequired[1]
+                        Job.jobRequirments.candidatePreference.ageRequired[1]
                       }}
                     </span>
                   </div>
@@ -154,23 +151,23 @@
             </div>
           </div>
         </div>
-        <div class="sprator p-1 my-4">
+        <div class="sprator pt-3 pb-2 my-1">
           <h5 class="ms-5">Job Description</h5>
         </div>
         <div class="mx-5">
           <h5 class="fw-bold" style="color: #054a84; margin-bottom: 20px">
             {{ Job.jobDetails.jobTitle }}
-          </h5 >
+          </h5>
 
           <p class="fw-medium fs-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            autem, hic quam, fugiat, necessitatibus facilis repellat aperiam
-            expedita ex mollitia esse molestias excepturi quibusdam ipsam nihil
-            commodi repellendus consectetur minima.
+            We are new to Singapore and looking for a helper to assist with
+            housekeeping, greeting children on arrival home via the school bus,
+            cooking dinner and getting children ready for bed. My husband and I
+            work long hours so need someone to assist with car.
           </p>
         </div>
 
-        <div class="sprator p-1 my-4">
+        <div class="sprator pt-3 pb-2 my-1">
           <h5 class="ms-5">Skills / Duties</h5>
         </div>
 
@@ -303,14 +300,14 @@
             </div>
           </div>
         </div>
-        <div class="sprator p-1 my-4">
+        <div class="sprator pt-3 pb-2 my-1">
           <h5 class="ms-5">About Me</h5>
         </div>
-        <div class="m-5">
+        <div class="mt-1 mb-1 ms-4 me-4">
           <div class="row">
             <div class="col-6">
               <div>
-                <span class="">
+                <span class="primary text-left">
                   Employer Type :
                   {{ Job.aboutYou.aboutYouSub.employerType.type }}</span
                 >
@@ -361,7 +358,7 @@
             <div class="">
               <div class="rounded-circle overflow-hidden containImg">
                 <img
-                  src="../../assets/Images/3.jpg"
+                  src="../../assets/Images/family_images/Family.png"
                   class="img-fluid rounded-start"
                   alt="helper-phone"
                   width="100"
