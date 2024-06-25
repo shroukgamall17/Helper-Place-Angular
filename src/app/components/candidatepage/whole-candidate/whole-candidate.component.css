@@ -1,6 +1,26 @@
-.canbody{
-  margin-top: 10px;
+/* custom.css */
+.custom-margin {
+  margin-left: 40px; /* Adjust the left margin */
+  margin-right: 40px; /* Adjust the right margin */
 }
-.maincont{
+
+@media (max-width: 768px) {
+  .custom-margin {
+    margin-left: 30px; /* Adjust the left margin for smaller screens */
+    margin-right: 30px; /* Adjust the right margin for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-margin {
+    margin-left: 20px; /* Adjust the left margin for extra small screens */
+    margin-right: 20px; /* Adjust the right margin for extra small screens */
+  }
+}
+.canbody {
+  margin-top: 10px;
+  margin: auto;
+}
+.maincont {
   padding-block: 30px;
 }

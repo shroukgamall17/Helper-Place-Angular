@@ -1,26 +1,25 @@
-div{
+div {
   margin-bottom: 3px;
 }
-#main{
+#main {
   background-color: whitesmoke;
   padding: 15px;
   border-radius: 5px;
 }
-.bluecolor{
-color: #054a84;
-  font-weight: 600
+.bluecolor {
+  color: #054a84;
+  font-weight: 600;
 }
 
-a.res{
+a.res {
   text-decoration: none;
   color: green;
   cursor: pointer;
 }
 
-.filterPopUp{
+.filterPopUp {
   display: none;
 }
-
 
 input[type="radio"]:checked + label,
 input[type="checkbox"]:checked + label {
@@ -28,11 +27,11 @@ input[type="checkbox"]:checked + label {
   font-weight: bold;
 }
 
-@media (max-width:1000px) {
-  .filter{
+@media (max-width: 1000px) {
+  .filter {
     display: none;
   }
-  .filterPopUp{
+  .filterPopUp {
     display: block;
   }
 }

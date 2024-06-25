@@ -44,7 +44,6 @@
           Direct
         </div>
         <div class="d-flex justify-content-between align-items-center">
-     
           <i class="fa-solid fa-certificate me-2" style="color: #25ae88"></i>
           <p style="color: #054a84; margin-bottom: 0" class="">
             {{ item.workexperience }}yr expeience
@@ -56,11 +55,12 @@
             style="color: #25ae88"
           ></i>
           <p style="color: #054a84; margin-bottom: 0" class="">
-            {{ handleDate(item.startDate).toLocaleDateString()| dateFormat }}
+            {{ handleDate(item.startDate).toLocaleDateString() | dateFormat }} |
+            {{ item.jobtype }}
           </p>
         </div>
         <div
-          class="col-md-4"
+          class=""
           style="color: #25ae88; cursor: pointer"
           (click)="navigateToDetails(item.id)"
         >

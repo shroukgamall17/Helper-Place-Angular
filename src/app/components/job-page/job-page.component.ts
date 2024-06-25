@@ -8,6 +8,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FindjobService } from '../../services/findjob.service';
 import { JobClass } from '../post-job/JobClass/job-class';
 import { QueryParams } from './sidebar/Query-Params/query-params';
+import { DateFormatPipe } from '../../pipes/date-format.pipe';
 @Component({
   selector: 'app-job-page',
   standalone: true,
@@ -22,21 +23,34 @@ import { QueryParams } from './sidebar/Query-Params/query-params';
   ],
 })
 export class JobPageComponent {
-  QueryOverData($event: QueryParams) {
-     this.JobData.Filter($event).subscribe({
-      next: (response) => {
-        this.Jobs = response;
-        console.log(response)
-      },
-      error:(error)=>{
-        console.log(error)
-      }
-     })
-  }
   Jobs!: JobClass[];
   currentPage: number = 1;
   pageSize: number = 5;
-
+  constructor(
+    private _findJob: FindjobService,
+    public JobData: JobListService
+  ) {}
+  ngOnInit(): void {
+    this._findJob.GetJobHeadlines().subscribe({
+      next: (response) => {
+        this.Jobs = response;
+        console.log(this.Jobs);
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
+  QueryOverData($event: QueryParams) {
+    this.JobData.Filter($event).subscribe({
+      next: (response) => {
+        this.Jobs = response;
+      },
+      error: (error) => {
+        console.log(error);
+      },
+    });
+  }
   get startIndex(): number {
     return (this.currentPage - 1) * this.pageSize;
   }
@@ -45,15 +59,5 @@ export class JobPageComponent {
   }
   onPageChange(event: { pageIndex: number }): void {
     this.currentPage = event.pageIndex + 1;
-  }
-  constructor(_findJob: FindjobService, public JobData: JobListService) {
-    _findJob.GetJobHeadlines().subscribe({
-      next: (response) => {
-        this.Jobs = response;
-      },
-      error: (error) => {
-        console.log(error);
-      },
-    });
   }
 }

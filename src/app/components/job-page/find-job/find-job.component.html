@@ -22,40 +22,45 @@
         </span>
       </p>
       <p class="jobDescription">
-        
+        <!-- {{ Job.jobDetails.jobDescription }} -->
+        Hi, We are a loving indian family of 4 ppl (2 adults , 1 kid and 1
+        baby). We are looking for our second helper, who can help with some
+        daily chores and take our elder son to classes. We treat as family, so
+        looking for someone who is equally happy goi
       </p>
     </div>
   </div>
 
   <div class="d-flex candiateInfo justify-content-between align-items-center">
-    <div
-      class="directShap d-flex justify-content-center align-items-center p-2"
-    >
-      Direct
-    </div>
-    <div class="info d-flex justify-content-between align-items-center">
-      <!-- <div class="d-flex justify-content-between align-items-center me-2">
-        <i class="fa-solid fa-hourglass-start me-2" style="color: #25ae88"></i>
-        <p style="color: #054a84; margin-bottom: 0">
+    <div class="d-flex candiateInfo justify-content-between align-items-center">
+      <div
+        class="directShap d-flex justify-content-center align-items-center p-2"
+      >
+        Direct
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <i class="fa-solid fa-certificate me-2" style="color: #25ae88"></i>
+        <p style="color: #054a84; margin-bottom: 0" class="">
+          {{ Job.jobRequirments.basicInformation.positionOffered }} |
           {{ Job.jobRequirments.basicInformation.type }}
         </p>
-      </div> -->
+      </div>
       <div class="d-flex justify-content-between align-items-center">
-        <i class="fa-solid fa-calendar-days me-2" style="color: #25ae88"></i>
-        <p style="color: #054a84; margin-bottom: 0">
+        <i class="fa-solid fa-hourglass-start me-2" style="color: #25ae88"></i>
+        <p style="color: #054a84; margin-bottom: 0" class="">
           {{
             handleDate(
               Job.jobRequirments.basicInformation.startDate
-            ).toLocaleDateString()
+            ).toLocaleDateString() | dateFormatForJob
           }}
         </p>
       </div>
-    </div>
-
-    <div style="color: #054a84">
-      <a class="btn btn-outline-success me-2" [routerLink]="['/JobDetails',Job.id]">
-        Details
-      </a>
+      <div
+        style="color: #25ae88; cursor: pointer"
+        [routerLink]="['/JobDetails', Job.id]"
+      >
+        <i class="fa-solid fa-circle"></i> Very Active
+      </div>
     </div>
   </div>
 </div>

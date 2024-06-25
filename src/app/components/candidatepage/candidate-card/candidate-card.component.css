@@ -1,51 +1,50 @@
-*{
+* {
   font-weight: 700;
 }
-#main{
+#main {
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.2);
-  padding:10px 0;
+  padding: 10px 0;
 }
-.candidateName{
+.candidateName {
   font-size: 18px;
-    color: #054a84;
-    font-weight: 600;
-    margin-bottom: 0;
-    transition: all .5s ease;
+  color: #054a84;
+  font-weight: 600;
+  margin-bottom: 0;
+  transition: all 0.5s ease;
 }
-#trian{
+#trian {
   width: 120px;
   height: 30px;
   background-color: lightblue;
   margin-left: 0;
-
 }
-  .candidatImg{
-    width: 150px;
-    height: 150px;
-  }
-.candidateDescription{
-  font-weight:normal;
+.candidatImg {
+  width: 150px;
+  height: 150px;
+}
+.candidateDescription {
+  font-weight: normal;
   width: 90%;
   margin-right: auto;
 }
 
-.directShap{
-  margin:8px 0 ;
+.directShap {
+  margin: 8px 0;
   background-color: #054a84;
   z-index: 2;
-    width: 20%;
-    height: auto;
-    text-align: center;
-    display: flex;
-    font-size: 15px;
-    line-height: 23px;
-    height: 24px;
-    color: #fefefe;
-    font-weight: 500;
-    clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 0 0%, 0% 0%);
-    border-bottom: 3px solid #ebba16;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  font-size: 15px;
+  line-height: 23px;
+  height: 24px;
+  color: #fefefe;
+  font-weight: 500;
+  clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 0 0%, 0% 0%);
+  border-bottom: 3px solid #ebba16;
 }
-#trian::after{
+#trian::after {
   content: "";
   width: 0px;
   height: 0px;
@@ -56,17 +55,15 @@
   position: absolute;
   right: -30px;
 }
-
-@media (max-width:768px) {
-  .candidatImg{
-    width:90px;
-    height:90px;
+@media (max-width: 768px) {
+  .candidatImg {
+    width: 90px;
+    height: 90px;
   }
-  .candidatImg img{
+  .candidatImg img {
     width: 100%;
   }
-  .candidateDescription{
+  .candidateDescription {
     display: none;
   }
 }
-

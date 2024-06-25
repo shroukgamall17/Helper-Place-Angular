@@ -10,13 +10,15 @@ import { PaymentService } from '../../../../services/payment.service';
 import { SubModel } from '../../../../models/sub-model';
 import { ICandidate } from '../../../../models/ICandidate';
 import { CandidateService } from '../../../../services/candidate.service';
+import { DateFormatWihtoutStringPipe } from '../../../../pipes/date-format-wihtout-string.pipe';
+import { DateFormatPipe } from "../../../../pipes/date-format.pipe";
 
 @Component({
-  selector: 'app-candidate-details',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, CommonModule, FormsModule],
-  templateUrl: './candidate-details.component.html',
-  styleUrl: './candidate-details.component.css',
+    selector: 'app-candidate-details',
+    standalone: true,
+    templateUrl: './candidate-details.component.html',
+    styleUrl: './candidate-details.component.css',
+    imports: [RouterOutlet, RouterLink, CommonModule, FormsModule, DateFormatWihtoutStringPipe, DateFormatPipe]
 })
 export class CandidateDetailsComponent implements OnInit {
   candidateId!: number;

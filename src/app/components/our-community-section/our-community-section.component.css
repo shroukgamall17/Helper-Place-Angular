@@ -1,95 +1,93 @@
-  .ourCommunityHomeSection
-  {
-    margin-block: 5rem;
-  }
+.ourCommunityHomeSection {
+  margin-block: 5rem;
+}
+.content {
+  margin-top: 10rem;
+  margin-left: 20px;
+}
+
+.content h6 {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.content h3 {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: rgb(62, 62, 62);
+}
+
+.content p {
+  font-size: 0.9rem;
+  color: rgb(142, 142, 142);
+  line-height: 27px;
+  margin-top: 1rem;
+}
+
+.content .btn {
+  margin-right: 15px;
+  height: 3.2rem;
+  width: 10.5rem;
+  margin-top: 25px;
+}
+
+.findCan {
+  background-color: #25ae88;
+}
+
+.GetAJob {
+  background-color: #ebba16;
+}
+
+.yellowlineSection {
+  display: flex;
+}
+.yellowline {
+  height: 2.5px;
+  width: 45px;
+  margin-top: 8px;
+  margin-right: 10px;
+  background-color: #ebba16;
+}
+.leftSection {
+  background-color: #ffffff;
+}
+img {
+  width: 80%;
+}
+
+@media (max-width: 1200px) {
   .content {
-    margin-top: 10rem;
-    margin-left: 20px;}
-  
-  .content h6 {
-    color: #000000;
-    margin-bottom: 20px;
+    margin-top: 0rem;
   }
-  
-  .content h3 {
-    font-weight: bold;
-    margin-top: 1rem;
-    color: rgb(62, 62, 62);
-  }
-  
-  .content p {
-    font-size: 0.9rem;
-    color: rgb(142, 142, 142);
-    line-height: 27px;
+
+  .content h2 {
     margin-top: 1rem;
   }
-  
   .content .btn {
-    margin-right: 15px;
-    height: 3.2rem;
-    width: 10.5rem;
-    margin-top: 25px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 3px;
   }
-  
-  .findCan {
-    background-color: #25ae88;
-  }
-  
-  .GetAJob {
-    background-color: #ebba16;
-  }
-  
-  .yellowlineSection {
-   display: flex;
-  }
-  .yellowline{
-    height: 2.5px;
-    width: 45px;
-    margin-top: 8px;
-    margin-right: 10px;
-    background-color:#ebba16 ;
-  }
-  .leftSection{
-    background-color: #EFFFFA;
-  }
-  img{
-    width: 80%;
-  }
-  
-  @media (max-width: 1200px) {
-    .content {
-      margin-top: 0rem;
 }
-    
-    .content h2 {
-      margin-top: 1rem;
-    }
-    .content .btn {
-      width: 100%;
-      margin-bottom: 10px;
-      margin-right: 3px;
-    }
+
+@media (max-width: 600px) {
+  .content {
+    margin-top: 0rem;
   }
-  
-  @media (max-width: 600px) {
-    .content {
-      margin-top: 0rem;
+  .rightSection {
+    margin-right: 8px;
+  }
+  .content h2 {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .content p {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  .content .btn {
+    width: 50%;
+    margin-bottom: 10px;
+  }
 }
-    .rightSection {
-      margin-right:8px ;
-      
-    }
-    .content h2 {
-      margin-top: 0.5rem;
-      font-size: 1.5rem;
-    }
-    .content p {
-      font-size: 0.7rem;
-      line-height: 20px;
-    }
-    .content .btn {
-      width: 50%;
-      margin-bottom: 10px;
-    }
-  }
-  

@@ -1,17 +1,20 @@
-<div class="maincont container">
-<div class=" ">
-  <div class=" mb-2">
-    <app-candidate-header></app-candidate-header>
+<div class="maincont custom-margin">
+  <div class=" ">
+    <div class="mb-2">
+      <app-candidate-header></app-candidate-header>
+    </div>
+  </div>
+  <div class="row canbody">
+    <div class="col-lg-4 mt-1">
+      <app-candidate-sidebar
+        (ontotalorder)="change($event)"
+      ></app-candidate-sidebar>
+    </div>
+    <div class="col-lg-8 col-md-12">
+      <app-candidate-card
+        [recievedtest]="testy"
+        [recievedchange]="testy.Ischange"
+      ></app-candidate-card>
+    </div>
   </div>
 </div>
-<div class="row canbody  ">
-  <div class="col-lg-4 mt-1 ">
-    <app-candidate-sidebar (ontotalorder)="change($event)"></app-candidate-sidebar>
-  </div>
-  <div class="col-lg-8 col-md-12">
-    <app-candidate-card [recievedtest]="testy" [recievedchange]="testy.Ischange"></app-candidate-card>
-  </div>
-</div>
-</div>
-
-
